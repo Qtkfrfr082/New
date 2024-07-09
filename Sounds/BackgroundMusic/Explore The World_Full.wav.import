@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://621mi8rc6xk4"
+path="res://.godot/imported/Explore The World_Full.wav-d19d0d162e804b85abf6f953a05111ac.sample"
+
+[deps]
+
+source_file="res://Sounds/BackgroundMusic/Explore The World_Full.wav"
+dest_files=["res://.godot/imported/Explore The World_Full.wav-d19d0d162e804b85abf6f953a05111ac.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

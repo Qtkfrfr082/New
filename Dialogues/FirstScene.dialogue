@@ -1,0 +1,13 @@
+~ FIRSTSCENE
+set PlayerData.can_move = false
+
+You: Uuhhhhh… my head feels dizzy….
+You: [shake rate=20 level=10]??.. my hands? what’s this?... their paws!? Why do I look like a cat?! [/shake]
+You: WHY am I pixelated?
+You: Where am I?? what even is this place?
+You: Whatever looks fun dream huh? maybe i go walk and find's interesting here.
+
+Press [A] and [D] to move.
+set PlayerData.can_move = true
+
+=> END

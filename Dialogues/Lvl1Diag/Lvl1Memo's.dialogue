@@ -1,0 +1,167 @@
+~ FIRSTSCENE
+set PlayerData.can_move = false
+You: Uuhhhhh… my head feels dizzy….
+You: [shake rate=20 level=10]??.. my hands? what’s this?... their paws!? Why do I look like a cat?! [/shake]
+You: WHY am I pixelated?
+You: Where am I?? what even is this place?
+You: Whatever looks fun dream huh? maybe i go walk and find's interesting here.
+Press [A] and [D] to move.
+set PlayerData.can_move = true
+=> END!
+~ Memo1
+set PlayerData.can_move = false
+You: A memo?
+[shake rate=20 level=20][speed=7]“W̷̦͚͛́̈̎͌̀̓͂̽͂̕̕ẻ̶̛̜͔̌͗̈́̕͜͝l̴̤͈̥̈́͂͐̾̏̓̓͆̓̂̉̕͝͝c̶̦̓̀̀̆͛͝ơ̶̹̜͖̜̼̼͙̠̼͈̔͑͛̒̈̋͆̅̇̌͑͌̈́͠ͅͅm̶̧̛͇̬̫̩͇̥͇̣̼̠͖̰͍͓̃́͛̄͆̅͛̑̈́̚ĕ̶͕̼͎̜̲̥̱̺̽͝ ̸̢̧͍̰̹͓͔̍̿͗̆ͅỳ̴̧̪͔̰͙̹͔̺̥̪̥̫̑̇̐͛͝͝͠͠ǭ̴̠̞̙̱̣̙̦̚ų̷̙͎̭̘͐͂͋̅͛̂̉͐̐̾̿̓̚̚’̸͙͚̫̠̠̜̦͓̜̜̮̘̖̙̅͋͌̈́͋̔͋̇͌͗͝v̴̡̲͍̜̑̈́e̶̛̛̖͙̞̔͐̔̑̈́̔͘ ̶̧̢͙̫̮͚̻̙͇͉͈̱̒͌͌̀͌͒̚ͅͅb̵̧͔͇͖̫͚͈̓͝ę̵̭̭͔̻̦͍͇̙͕̦̼͊̊ē̵̡̈́͐̂̃̀̾̾̒͊̚ņ̸͉̝̙͌́̌̇͊̆̅̐̚͝͝ͅ ̵͕̲̬̤̳̋̔̒́͘̚g̴̛̹͈̯̻̓̏̓̅͘͜i̴̛͚̗̠͗̔́̉̈́̏͗̎͋̈̅́͝v̴̛͎̦͖̤̤͔̺̤͙̼̬͎͇̯̇̊͛̃͛̾̎̐e̷͇͍͔̩͗̆n̴̟͙̿̽̔̀ ̷̨̢̗̰̩̖̮͎͙͍͔̜̀̌̇͊͗͑́̚â̸̧͔̱̭̠̗̐͝n̴̨͚̩̳͓̪̦̗̥̗̊̈́̾͐͑͌͒̋́̒͑̉͆͑o̵̡̨̼͓̬̭̹̻͈̫̹͎̹̣͌̾̈́͗̋ť̷̨̝̾͐͒͒͊̌̍̌́h̴̥͔̦͍̹̚ͅe̴̢̧̛̯̫̰̦̎̃͋͆̆̿r̷̗̼̻͖͕̟̝͚̫̤̫͎͔͔͗̐́ͅ ̷̢̧̢̝͕͚̗̻̗̟͌̄̈́͆̍̊͂͛̈͝͝ç̶̭̳̻̜̩̘̺̒̓͋̾͛̓̈́̋̓͆̔̿̃̚h̸̛̛͈̥̖̹͈̜̟̩̣̖̐̿̋́͆̃̈́̅̓̂̒͘͠ã̵̡̘̫͍̙͆͊̔ņ̶̞̩̟̗̳̊͊͝c̶̞͙̤̦̼̣̽́͊͑̿̈́̀̅̕͝ě̴̡̢͍͇̥̻̪͔̻̼̭!.”[/shake]
+You: Huh? the text’s all jumbled up.
+“Follow the what the sign says and make sure to pay attention to your surroundings. Attentiveness and Caution will get you out of this.”
+You: That’s weird this sign feels like its talking to me, this place is creeping me out. I’ll go explore around there may be clues to get out of here.”
+set PlayerData.can_move = true
+=> END
+
+~ Memo2
+set PlayerData.can_move = false
+You: Another memo?
+[Day/s since last core meltdown; 5,844]
+You: Meltdown? Wait there’s previous logs here.
+"Attention all personnel. This is an emergency alert from the lab's AI system. There is a critical core meltdown in progress. Immediate evacuation is required.”
+You: Oh crap this building won’t explode right? Got to find a way out of here. Wait this message was sent 5,844 days ago, what even happened here.
+set PlayerData.can_move = true
+=> END!
+~ Memo3
+set PlayerData.can_move = false
+Log 1: [This is the emergency response AI system. All personnel have successfully evacuated. Initiating core stabilization protocol.]
+Log 2: [Engaging coolant systems. Diverting all available coolant to the core.]
+Log 3: [Activating containment fields. Sealing off the affected areas to prevent further radiation leakage.]
+Log 4: [Analyzing core integrity. Running diagnostics on structural damage and temperature levels.]
+Log 5: [Engaging emergency power reserves. Redirecting power to maintain cooling and containment.]
+Log 7: [Coordinating with remote expert systems. Establishing connection with external AI units and human experts for additional support.]
+Log 8: [Connecting to Human Resource………. ]
+Log 9: [Attempt: 189 Human Resource…. Not Found]
+Log 10: [Searching Suitable Order Carriers...]
+Log 11: [Rogue bot detected. Location: Lab 5. Powering up rogue bot.]
+Log 12: [Integration of Facility Safety Protocol unto Rouge Droid AL-1S Status: Complete]
+
+You: Well that does not sound good, I wonder if I that droid can help me.
+set PlayerData.can_move = true
+=> END
+~ Memo4
+set PlayerData.can_move = false
+You: A bunch of notes again, looks like AL-1S made this. Lemme see
+System note initiated. To streamline operations, I will now document notes autonomously to avoid frequent requests for memory data access from the Main Facility AI.
+
+Following my memory wipe, my capability to develop and resolve facility-related solutions has been compromised. It is necessary to rebuild my knowledge base from the ground up.
+The professor’s manual advises that foundational learning is the most effective approach. Therefore, I will commence with the basics and progress accordingly."
+
+You: looks like this is the end did AL-1S scatter memos in this whole facility?
+set PlayerData.can_move = true
+=> END
+~ Memo5
+set PlayerData.can_move = false
+Maintaining this place obviously needs strong physical prowess and attentive but I need to learn one more thing and that is to learn how to maintain the devices here in which case learn how to code! A manual from the FacilityAI suggest that the first to learn is to be aware of an Input Process Output Model (IPO).
+set PlayerData.can_move = true
+
+
+=> END
+~ Memo6
+set PlayerData.can_move = false
+IPO stands for Input-Process-Output. Think of it like a calculator:
+
+The [wave amp=25 freq=5][Input][/wave] phase involves the user entering numbers into the calculator.\nThe [wave amp=25 freq=5][Process] [/wave]phase encompasses the operations performed on these numbers, such as addition or multiplication. \nThe [wave amp=25 freq=5][Output][/wave] phase delivers the result of these calculations.
+
+Understanding IPO models is like understanding the basic framework of programming—it's all about handling input, processing it, and producing an output.
+You: “Wow. She phrased it better than from when we learned it from school”
+set PlayerData.can_move = true
+=> END!
+~ Memo7
+set PlayerData.can_move = false
+“About Algorithms\: Think of algorithms like a set of instructions for completing a task. Imagine you're following a recipe to bake cookies. The recipe tells you what ingredients you need, what steps to take, and in what order. Algorithms are similar—they're like recipes for solving problems or completing tasks in a computer program. 
+They help us break down complex tasks into smaller, manageable steps. So, just like following a recipe to bake cookies, algorithms guide computers (and us!) through the process of solving problems.
+set PlayerData.can_move = true
+=> END
+~ Memo8
+set PlayerData.can_move = false
+"Programming Tip 101\: Employ Pseudocode! \nAvoid hastiness in tackling challenges! As a wise individual once remarked, defining the problem constitutes half the solution! Pseudo coding entails the simplification of the problem, fostering the creation of a straightforward problem-solving blueprint.
+set PlayerData.can_move = true
+=> END
+~ Memo9
+set PlayerData.can_move = false
+set FlowC1.Show = true
+“FlowCharts #101\: Shapes and their uses!\nFlowChart employ different shapes to indicate how a function flows properly here are some shapes that is frequently used in such FlowCharts:
+set FlowC1.Show = false
+set PlayerData.can_move = true
+=> END
+~ Memo10
+set PlayerData.can_move = false
+set FlowC1.Show2 = true
+“Today’s Episode of FlowCharts #101\: Shapes and their uses (Part 2)!\nFlowChart employ different shapes to indicate how a function flows properly here are some shapes that is frequently used in such FlowCharts:
+set FlowC1.Show2 = false
+set PlayerData.can_move = true
+
+=> END
+~ Memo11
+set PlayerData.can_move = false
+You: Weird there’s another lever here but I don’t see any laser door.
+
+Recording - AL-1S\:\nIt's peculiar. I've always considered myself the epitome of AI capability, yet I've made an error. It appears I've mis-wired a lever, inadvertently linking it to another door improperly! 
+If the deep lab's Teleporter Laser Door Module remains inactive upon lever activation in deep section 1A, refer to the lever in high section 1A. Emotions aren't within my programming, but I can't help but feel a sense of embarrassment over my mistake.
+set PlayerData.can_move = true
+=> END
+~ Memo12
+set PlayerData.can_move = false
+Recording - AL-1S\:\n I had completely forgotten about this lever's existence or that the door from deep sector 1A had been rerouted here. My mistake, indeed. \nHowever, this situation serves as a practical application of a concept I've learned\: Structure Selection.
+Structure selection involves programming constructs that enable a program to make decisions and choose different paths based on specific conditions. It's akin to what's happening now.
+For instance, when the lever in deep section 1A was activated, another lever was revealed in the room. However, without knowledge of the corresponding door, we're faced with a decision if the Laser Door Module for the deep lab wasn't triggered, then it must activate the lever in High section 1A.
+It's essentially an If-Else statement! This structure allows the program to evaluate conditions and execute different code depending on whether those conditions are true or false.
+You: Now that I think about it that's an excellent way of describing IF-ELSE's.                       
+set PlayerData.can_move = true
+=> END!
+~ Memo13
+set PlayerData.can_move = false
+Today’s Episode of Selection Control Structure #101\: Switch - Cases!\nThe switch-case statement is used to select one of many code blocks to be executed based on the value of a variable or expression. It's particularly useful when you have multiple conditions to check against the same variable.
+set PlayerData.can_move = true
+
+
+=> END
+~ MrWhiskers
+set PlayerData.can_move = false
+if has_met_Whiskers == false
+	You: Hey you!?
+	Mr Whiskers: Ah you’re already here. and fully conscious as that.
+	You: What are you talking about? More importantly do you know this place? Can you help me get out of here?
+	Mr Whiskers: You’re 100% fully conscious at the get go huh? well this place is how you interpret it.
+	You: What do you mean?
+	Mr Whiskers: ]: Exactly what I meant. This could be limbo, heaven or hell or maybe it could all be a dream, it all depends on how you want it to be, many already asked that question, but I have no intention of answering them myself go find the reason why you’re here on your own.
+	You: This is not the time to crack jokes… he’s ignoring me, looks like I got to find a way out myself.
+	set has_met_Whiskers == true
+set PlayerData.can_move = false
+if has_met_Whiskers == true
+	set PlayerData.can_move = false
+	You: he’s ignoring me, looks like I got to find a way out myself.
+	set PlayerData.can_move = true
+=> END
+~ Terminal1
+set PlayerData.can_move = false
+Terminal: Note: To all employees some teleportation modules we're reported to be malfunctioning prompting immediate resetting of TP Modules although some Modules remain functional proceed at your own risk.
+Terminal: Warning: Select Levels of the Facility deemed Dangerous Gates Modules deployed…
+You: Hm. I guess those laser thingy’s we’re gate of some sorts, gotta find a way around those.
+You: huh what’s this… A NOTE? Theres something written here
+
+Note: [Date:38XX XX XX] SerialCode\: AL-1S\nDue to the facility deteriorating overtime Facility AI decided it would be necessary to annually erase data unrelated to the maintaining the facility,at first it wasn’t an issue however after XXXX years mishaps began to happen,
+my system data began to be erased as well, if not for the physical backups that I’ve made in Storage I would have completely been bricked, as part of another failsafe I’ve began to create notes and scattered it through the facility in cases I were to lose my memory data….
+You: ]: Very convenient huh, I wonder if this droid AL-1S is still functioning.
+set PlayerData.can_move = true
+=> END
+~ Terminal2
+set PlayerData.can_move = false
+You: Nice another Terminal.
+Terminal: Record - AL-1S :\n 
+I've acquired a grasp of fundamental programming principles and learned to adeptly evaluate problems, identifying key focal points. Upon assimilating these principles, I've integrated FlowCharts into my logical framework.
+
+You: She started using flowcharts now huh
+
+Terminal: Continuation - AL-1S:\n
+Following the facility's stabilization, I've discovered that I'm not the sole inhabitant. Experimental specimens, unattended due to staff shortages, have breached containment and are wandering the premises.
+
+To mitigate potential risks, I've devised various perplexing mechanisms to restrict their movement within the facility. Additionally, I've distributed notes detailing procedures for dismantling these constraints should the need arise.
+set PlayerData.can_move = true
+=> END

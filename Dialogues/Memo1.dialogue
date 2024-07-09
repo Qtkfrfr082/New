@@ -1,0 +1,13 @@
+~ Memo1
+set PlayerData.can_move = false
+You: A memo?
+[shake rate=20 level=20][speed=7]“W̷̦͚͛́̈̎͌̀̓͂̽͂̕̕ẻ̶̛̜͔̌͗̈́̕͜͝l̴̤͈̥̈́͂͐̾̏̓̓͆̓̂̉̕͝͝c̶̦̓̀̀̆͛͝ơ̶̹̜͖̜̼̼͙̠̼͈̔͑͛̒̈̋͆̅̇̌͑͌̈́͠ͅͅm̶̧̛͇̬̫̩͇̥͇̣̼̠͖̰͍͓̃́͛̄͆̅͛̑̈́̚ĕ̶͕̼͎̜̲̥̱̺̽͝ ̸̢̧͍̰̹͓͔̍̿͗̆ͅỳ̴̧̪͔̰͙̹͔̺̥̪̥̫̑̇̐͛͝͝͠͠ǭ̴̠̞̙̱̣̙̦̚ų̷̙͎̭̘͐͂͋̅͛̂̉͐̐̾̿̓̚̚’̸͙͚̫̠̠̜̦͓̜̜̮̘̖̙̅͋͌̈́͋̔͋̇͌͗͝v̴̡̲͍̜̑̈́e̶̛̛̖͙̞̔͐̔̑̈́̔͘ ̶̧̢͙̫̮͚̻̙͇͉͈̱̒͌͌̀͌͒̚ͅͅb̵̧͔͇͖̫͚͈̓͝ę̵̭̭͔̻̦͍͇̙͕̦̼͊̊ē̵̡̈́͐̂̃̀̾̾̒͊̚ņ̸͉̝̙͌́̌̇͊̆̅̐̚͝͝ͅ ̵͕̲̬̤̳̋̔̒́͘̚g̴̛̹͈̯̻̓̏̓̅͘͜i̴̛͚̗̠͗̔́̉̈́̏͗̎͋̈̅́͝v̴̛͎̦͖̤̤͔̺̤͙̼̬͎͇̯̇̊͛̃͛̾̎̐e̷͇͍͔̩͗̆n̴̟͙̿̽̔̀ ̷̨̢̗̰̩̖̮͎͙͍͔̜̀̌̇͊͗͑́̚â̸̧͔̱̭̠̗̐͝n̴̨͚̩̳͓̪̦̗̥̗̊̈́̾͐͑͌͒̋́̒͑̉͆͑o̵̡̨̼͓̬̭̹̻͈̫̹͎̹̣͌̾̈́͗̋ť̷̨̝̾͐͒͒͊̌̍̌́h̴̥͔̦͍̹̚ͅe̴̢̧̛̯̫̰̦̎̃͋͆̆̿r̷̗̼̻͖͕̟̝͚̫̤̫͎͔͔͗̐́ͅ ̷̢̧̢̝͕͚̗̻̗̟͌̄̈́͆̍̊͂͛̈͝͝ç̶̭̳̻̜̩̘̺̒̓͋̾͛̓̈́̋̓͆̔̿̃̚h̸̛̛͈̥̖̹͈̜̟̩̣̖̐̿̋́͆̃̈́̅̓̂̒͘͠ã̵̡̘̫͍̙͆͊̔ņ̶̞̩̟̗̳̊͊͝c̶̞͙̤̦̼̣̽́͊͑̿̈́̀̅̕͝ě̴̡̢͍͇̥̻̪͔̻̼̭!.”[/shake]
+You: Huh? the text’s all jumbled up.
+“Follow the what the sign says and make sure to pay attention to your surroundings. Attentiveness and Caution will get you out of this.”
+You: That’s weird this sign feels like its talking to me, this place is creeping me out. I’ll go explore around there may be clues to get out of here.”
+set PlayerData.can_move = true
+
+=> END
+~ Memo2
+You: That’s weird this sign feels like its talking to me, this place is creeping me out. I’ll go explore around there may be clues to get out of here.”
+=> END

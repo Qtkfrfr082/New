@@ -1,0 +1,181 @@
+[gd_scene load_steps=16 format=3 uid="uid://b30hcpft8hqai"]
+
+[ext_resource type="Texture2D" uid="uid://qannqcllyyuj" path="res://Tilemaps/Lever/LeverOFF.png" id="1_q3u7a"]
+[ext_resource type="Texture2D" uid="uid://boyg7lcgvd4cr" path="res://Tilemaps/Lever/LeverON.png" id="2_1tl8c"]
+[ext_resource type="Script" path="res://Scenes/Interactables/scripts/lever.gd" id="3_8fp0l"]
+[ext_resource type="Texture2D" uid="uid://hfc1r06rtrg5" path="res://Scenes/Interactables/Textures/Interact.png" id="4_kibcb"]
+[ext_resource type="Script" path="res://Scenes/Interactables/scripts/lever2.gd" id="6_f2elk"]
+[ext_resource type="Script" path="res://Scenes/Interactables/scripts/lever3.gd" id="6_g8gww"]
+[ext_resource type="Script" path="res://Scenes/Interactables/scripts/lever4.gd" id="7_4y5li"]
+[ext_resource type="AudioStream" uid="uid://cbiys4ukejq8i" path="res://Sounds/SFX/Lever.wav" id="8_xqbw6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvvt8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvp57"]
+size = Vector2(32, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vuy3b"]
+atlas = ExtResource("4_kibcb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqlw2"]
+atlas = ExtResource("4_kibcb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82ykd"]
+atlas = ExtResource("4_kibcb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwltk"]
+atlas = ExtResource("4_kibcb")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwp5q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vuy3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqlw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82ykd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwltk")
+}],
+"loop": true,
+"name": &"Interact",
+"speed": 5.0
+}]
+
+[node name="Lever" type="Node2D"]
+
+[node name="Lev1" type="Node2D" parent="."]
+script = ExtResource("3_8fp0l")
+
+[node name="On" type="Sprite2D" parent="Lev1"]
+visible = false
+texture = ExtResource("2_1tl8c")
+
+[node name="Off" type="Sprite2D" parent="Lev1"]
+texture = ExtResource("1_q3u7a")
+
+[node name="Area2D" type="Area2D" parent="Lev1/Off"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lev1/Off/Area2D"]
+shape = SubResource("RectangleShape2D_dvvt8")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Lev1/Off"]
+
+[node name="Collision" type="CollisionShape2D" parent="Lev1/Off/CharacterBody2D"]
+shape = SubResource("RectangleShape2D_hvp57")
+
+[node name="inter1" type="AnimatedSprite2D" parent="Lev1"]
+visible = false
+position = Vector2(0, -31)
+sprite_frames = SubResource("SpriteFrames_pwp5q")
+animation = &"Interact"
+autoplay = "Interact"
+frame = 3
+frame_progress = 0.227474
+
+[node name="Lev2" type="Node2D" parent="."]
+script = ExtResource("6_f2elk")
+
+[node name="On" type="Sprite2D" parent="Lev2"]
+visible = false
+texture = ExtResource("2_1tl8c")
+
+[node name="Off" type="Sprite2D" parent="Lev2"]
+texture = ExtResource("1_q3u7a")
+
+[node name="Area2D" type="Area2D" parent="Lev2/Off"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lev2/Off/Area2D"]
+shape = SubResource("RectangleShape2D_dvvt8")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Lev2/Off"]
+
+[node name="Collision" type="CollisionShape2D" parent="Lev2/Off/CharacterBody2D"]
+shape = SubResource("RectangleShape2D_hvp57")
+
+[node name="inter1" type="AnimatedSprite2D" parent="Lev2"]
+visible = false
+position = Vector2(0, -31)
+sprite_frames = SubResource("SpriteFrames_pwp5q")
+animation = &"Interact"
+autoplay = "Interact"
+frame = 3
+frame_progress = 0.227474
+
+[node name="Lev3" type="Node2D" parent="."]
+script = ExtResource("6_g8gww")
+
+[node name="On" type="Sprite2D" parent="Lev3"]
+visible = false
+texture = ExtResource("2_1tl8c")
+
+[node name="Off" type="Sprite2D" parent="Lev3"]
+texture = ExtResource("1_q3u7a")
+
+[node name="Area2D" type="Area2D" parent="Lev3/Off"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lev3/Off/Area2D"]
+shape = SubResource("RectangleShape2D_dvvt8")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Lev3/Off"]
+
+[node name="Collision" type="CollisionShape2D" parent="Lev3/Off/CharacterBody2D"]
+shape = SubResource("RectangleShape2D_hvp57")
+
+[node name="inter1" type="AnimatedSprite2D" parent="Lev3"]
+visible = false
+position = Vector2(0, -31)
+sprite_frames = SubResource("SpriteFrames_pwp5q")
+animation = &"Interact"
+autoplay = "Interact"
+frame = 3
+frame_progress = 0.227474
+
+[node name="Lev4" type="Node2D" parent="."]
+script = ExtResource("7_4y5li")
+
+[node name="On" type="Sprite2D" parent="Lev4"]
+visible = false
+texture = ExtResource("2_1tl8c")
+
+[node name="Off" type="Sprite2D" parent="Lev4"]
+texture = ExtResource("1_q3u7a")
+
+[node name="Area2D" type="Area2D" parent="Lev4/Off"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lev4/Off/Area2D"]
+shape = SubResource("RectangleShape2D_dvvt8")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Lev4/Off"]
+
+[node name="Collision" type="CollisionShape2D" parent="Lev4/Off/CharacterBody2D"]
+shape = SubResource("RectangleShape2D_hvp57")
+
+[node name="inter1" type="AnimatedSprite2D" parent="Lev4"]
+visible = false
+position = Vector2(0, -31)
+sprite_frames = SubResource("SpriteFrames_pwp5q")
+animation = &"Interact"
+autoplay = "Interact"
+frame = 3
+frame_progress = 0.227474
+
+[node name="Lever" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_xqbw6")
+
+[connection signal="body_entered" from="Lev1/Off/Area2D" to="Lev1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Lev1/Off/Area2D" to="Lev1" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Lev2/Off/Area2D" to="Lev2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Lev2/Off/Area2D" to="Lev2" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Lev3/Off/Area2D" to="Lev3" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Lev3/Off/Area2D" to="Lev3" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Lev4/Off/Area2D" to="Lev4" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Lev4/Off/Area2D" to="Lev4" method="_on_area_2d_body_exited"]

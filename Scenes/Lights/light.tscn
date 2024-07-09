@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm5olpp0pq14r"]
+
+[sub_resource type="Gradient" id="Gradient_erlcc"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4o5ey"]
+gradient = SubResource("Gradient_erlcc")
+height = 150
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.496599, 0.0102041)
+fill_to = Vector2(0.521546, 0.492877)
+
+[sub_resource type="Gradient" id="Gradient_f7btu"]
+colors = PackedColorArray(0.498039, 0.498039, 0.498039, 0.678431, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_s45bd"]
+gradient = SubResource("Gradient_f7btu")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.495726, 0.521368)
+fill_to = Vector2(0.769231, 0.150997)
+
+[node name="Light" type="Node2D"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(209, 34)
+energy = 1.45
+blend_mode = 2
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_4o5ey")
+offset = Vector2(2, 73)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(208, 78)
+amount = 100
+randomness = 1.0
+texture = SubResource("GradientTexture2D_s45bd")
+emission_shape = 1
+emission_sphere_radius = 46.26
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+scale_amount_min = 0.01
+scale_amount_max = 0.02

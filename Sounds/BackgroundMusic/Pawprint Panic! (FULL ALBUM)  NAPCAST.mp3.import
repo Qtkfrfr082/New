@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqsf38n31fatg"
+path="res://.godot/imported/Pawprint Panic! (FULL ALBUM)  NAPCAST.mp3-1d184212f88e983b987cf5503a4d0d97.mp3str"
+
+[deps]
+
+source_file="res://Sounds/BackgroundMusic/Pawprint Panic! (FULL ALBUM)  NAPCAST.mp3"
+dest_files=["res://.godot/imported/Pawprint Panic! (FULL ALBUM)  NAPCAST.mp3-1d184212f88e983b987cf5503a4d0d97.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,218 @@
+[gd_scene load_steps=16 format=3 uid="uid://wpxyti8pj2rx"]
+
+[ext_resource type="Script" path="res://Scenes/Puzzles/Puz1Slot.gd" id="1_hcgmv"]
+[ext_resource type="Texture2D" uid="uid://clw8dggemvlrr" path="res://Scenes/Puzzles/Resources/Switch offv2.png" id="1_v53c6"]
+[ext_resource type="Texture2D" uid="uid://lbwsrlia5m4b" path="res://Scenes/Puzzles/Resources/Switch onv2t.png" id="2_4ndhp"]
+[ext_resource type="Texture2D" uid="uid://dp8bh1dm86hq3" path="res://Scenes/Puzzles/Resources/FlowChartPlaceHolderNEW.png" id="3_knn6s"]
+[ext_resource type="PackedScene" uid="uid://coeo3sctf6tki" path="res://Scenes/Puzzles/slot.tscn" id="4_pguye"]
+[ext_resource type="Texture2D" uid="uid://cw053vqunriad" path="res://Scenes/Puzzles/Resources/IOChartNEW.png" id="5_mdfie"]
+[ext_resource type="Texture2D" uid="uid://csgodgn58n33o" path="res://Scenes/Puzzles/Resources/FlowChartStartNEW.png" id="6_1l7p0"]
+[ext_resource type="Texture2D" uid="uid://il5p5ywwgmjk" path="res://Scenes/Puzzles/Resources/ProcessChartNEW.png" id="7_otg7i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0sgi3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v53c6")
+}],
+"loop": true,
+"name": &"Off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4ndhp")
+}],
+"loop": true,
+"name": &"On",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_wed3r"]
+colors = PackedColorArray(0, 1, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f1foi"]
+gradient = SubResource("Gradient_wed3r")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.1)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_8gwb6"]
+colors = PackedColorArray(1, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_86l72"]
+gradient = SubResource("Gradient_8gwb6")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.1)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_5vi1a"]
+offsets = PackedFloat32Array(0, 0.518519, 1)
+colors = PackedColorArray(0, 1, 0, 1, 0, 0.733333, 0, 0.529412, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tqxqc"]
+gradient = SubResource("Gradient_5vi1a")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.48433, 0.492877)
+fill_to = Vector2(0.9, 0.1)
+metadata/_snap_enabled = true
+
+[node name="PuzzleChart" type="Node2D"]
+script = ExtResource("1_hcgmv")
+
+[node name="Lever" type="Node2D" parent="."]
+
+[node name="Switch" type="AnimatedSprite2D" parent="Lever"]
+position = Vector2(576, 328)
+scale = Vector2(1.1, 1.1)
+sprite_frames = SubResource("SpriteFrames_0sgi3")
+animation = &"Off"
+
+[node name="Puzzle" type="TextureRect" parent="Lever/Switch"]
+offset_left = -213.0
+offset_top = -215.0
+offset_right = 204.0
+offset_bottom = 216.0
+texture = ExtResource("3_knn6s")
+metadata/_edit_use_anchors_ = true
+
+[node name="LightSwitch" type="Node2D" parent="Lever"]
+
+[node name="Green" type="PointLight2D" parent="Lever/LightSwitch"]
+visible = false
+position = Vector2(492, 44)
+texture = SubResource("GradientTexture2D_f1foi")
+texture_scale = 1.5
+
+[node name="Red" type="PointLight2D" parent="Lever/LightSwitch"]
+position = Vector2(492, 71)
+texture = SubResource("GradientTexture2D_86l72")
+texture_scale = 1.5
+
+[node name="LightIndi" type="Node2D" parent="."]
+
+[node name="Arrow4" type="PointLight2D" parent="LightIndi"]
+visible = false
+position = Vector2(571, 425)
+energy = 2.0
+texture = SubResource("GradientTexture2D_tqxqc")
+
+[node name="Arrow1" type="PointLight2D" parent="LightIndi"]
+visible = false
+position = Vector2(571, 228)
+energy = 2.0
+texture = SubResource("GradientTexture2D_tqxqc")
+
+[node name="Arrow2" type="PointLight2D" parent="LightIndi"]
+visible = false
+position = Vector2(571, 296)
+energy = 2.0
+texture = SubResource("GradientTexture2D_tqxqc")
+
+[node name="Arrow3" type="PointLight2D" parent="LightIndi"]
+visible = false
+position = Vector2(571, 360)
+energy = 2.0
+texture = SubResource("GradientTexture2D_tqxqc")
+
+[node name="Objects" type="Node2D" parent="."]
+position = Vector2(576, 328)
+
+[node name="Slot1" parent="Objects" instance=ExtResource("4_pguye")]
+self_modulate = Color(1, 0, 1, 1)
+offset_left = -3.0
+offset_top = -123.0
+offset_right = -3.0
+offset_bottom = -123.0
+
+[node name="TextureRect" parent="Objects/Slot1" index="0"]
+offset_left = -64.0
+offset_top = -38.0
+offset_right = 62.0
+offset_bottom = 23.0
+Slot = 5
+
+[node name="Slot2" parent="Objects" instance=ExtResource("4_pguye")]
+offset_left = -4.0
+offset_top = -64.0
+offset_right = -4.0
+offset_bottom = -64.0
+
+[node name="TextureRect" parent="Objects/Slot2" index="0"]
+offset_left = -68.0
+offset_top = -36.0
+offset_right = 58.0
+offset_bottom = 25.0
+pivot_offset = Vector2(72.5714, 36.8571)
+texture = ExtResource("5_mdfie")
+Slot = 2
+
+[node name="Slot3" parent="Objects" instance=ExtResource("4_pguye")]
+offset_left = -6.0
+offset_top = -6.0
+offset_right = -6.0
+offset_bottom = -6.0
+
+[node name="TextureRect" parent="Objects/Slot3" index="0"]
+texture = ExtResource("6_1l7p0")
+Slot = 1
+
+[node name="Slot4" parent="Objects" instance=ExtResource("4_pguye")]
+offset_left = -6.0
+offset_top = 62.0
+offset_right = -6.0
+offset_bottom = 62.0
+
+[node name="TextureRect" parent="Objects/Slot4" index="0"]
+offset_top = -30.0
+offset_bottom = 35.0
+texture = ExtResource("7_otg7i")
+Slot = 3
+
+[node name="Slot5" parent="Objects" instance=ExtResource("4_pguye")]
+offset_left = -5.0
+offset_top = 124.0
+offset_right = -5.0
+offset_bottom = 124.0
+
+[node name="TextureRect" parent="Objects/Slot5" index="0"]
+offset_left = -63.0
+offset_top = -28.0
+offset_right = 63.0
+offset_bottom = 33.0
+texture = ExtResource("5_mdfie")
+Slot = 4
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OnLever" type="Button" parent="Buttons"]
+modulate = Color(1, 1, 1, 0.0705882)
+layout_mode = 0
+offset_left = 515.0
+offset_top = 32.0
+offset_right = 626.0
+offset_bottom = 86.0
+flat = true
+
+[node name="XButton" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="Buttons/OnLever" to="." method="_on_on_lever_pressed"]
+[connection signal="pressed" from="Buttons/XButton" to="." method="_on_x_button_pressed"]
+
+[editable path="Objects/Slot1"]
+[editable path="Objects/Slot2"]
+[editable path="Objects/Slot3"]
+[editable path="Objects/Slot4"]
+[editable path="Objects/Slot5"]

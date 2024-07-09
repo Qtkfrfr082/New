@@ -1,0 +1,90 @@
+[gd_scene load_steps=14 format=3 uid="uid://d4fdahrrfbqo8"]
+
+[ext_resource type="Texture2D" uid="uid://ba0a7ki63gfkv" path="res://Scenes/Player/HudResources/hp_bar_outer_v2 - Copy.png" id="1_2m57u"]
+[ext_resource type="Script" path="res://Scenes/Player/Scripts/Hud.gd" id="1_muv1a"]
+[ext_resource type="Texture2D" uid="uid://byxgd3v6qfvvg" path="res://Scenes/Player/HudResources/hp_bar_inner_v2-export.png" id="2_462gb"]
+[ext_resource type="Texture2D" uid="uid://bncwa1x6pbog6" path="res://Scenes/Player/HudResources/RedHealth.png" id="3_pet5r"]
+[ext_resource type="Texture2D" uid="uid://sdnrfcxxdehy" path="res://Scenes/Player/HudResources/SettingBTN.png" id="4_tg0tk"]
+[ext_resource type="Texture2D" uid="uid://btsujiglm5snw" path="res://Scenes/Player/HudResources/SettingBTNClicked.png" id="5_uvhxw"]
+[ext_resource type="Texture2D" uid="uid://qusph8u7om3l" path="res://Scenes/Player/HudResources/SettingBTNHover.png" id="6_8k2h2"]
+[ext_resource type="Texture2D" uid="uid://comi1ramqrttj" path="res://Scenes/Player/HudResources/QuestBTN.png" id="7_6msft"]
+[ext_resource type="Texture2D" uid="uid://b6ueecy87d34a" path="res://Scenes/Player/HudResources/QuestBTNCliked.png" id="8_fh0nb"]
+[ext_resource type="Texture2D" uid="uid://btrnuofl64j45" path="res://Scenes/Player/HudResources/QuestBTNHover.png" id="10_so1bq"]
+[ext_resource type="AudioStream" uid="uid://c0lsnx78ynath" path="res://Sounds/Menu/MI_SFX 30.wav" id="11_1g5ai"]
+[ext_resource type="PackedScene" uid="uid://cfr6oq85ofmbc" path="res://Scenes/Player/PauseMenu.tscn" id="11_if10c"]
+[ext_resource type="PackedScene" uid="uid://bk44od6xpbfe6" path="res://Scenes/Tutorials/movement_tuto.tscn" id="13_34jv4"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_muv1a")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 265.0
+offset_bottom = 49.0
+scale = Vector2(1.4, 1.4)
+max_value = 30.0
+value = 30.0
+texture_over = ExtResource("1_2m57u")
+texture_progress = ExtResource("2_462gb")
+
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="."]
+z_index = -1
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 265.0
+offset_bottom = 49.0
+scale = Vector2(1.4, 1.4)
+max_value = 30.0
+value = 30.0
+texture_progress = ExtResource("3_pet5r")
+
+[node name="Menu" type="TextureButton" parent="."]
+offset_left = 1090.0
+offset_top = 2.0
+offset_right = 1130.0
+offset_bottom = 42.0
+scale = Vector2(1.6, 1.6)
+texture_normal = ExtResource("4_tg0tk")
+texture_pressed = ExtResource("5_uvhxw")
+texture_hover = ExtResource("6_8k2h2")
+stretch_mode = 3
+
+[node name="Quest" type="TextureButton" parent="."]
+offset_left = 1090.0
+offset_top = 57.0
+offset_right = 1130.0
+offset_bottom = 97.0
+scale = Vector2(1.6, 1.6)
+texture_normal = ExtResource("7_6msft")
+texture_pressed = ExtResource("8_fh0nb")
+texture_hover = ExtResource("10_so1bq")
+stretch_mode = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_1g5ai")
+
+[node name="PauseMenu" parent="." instance=ExtResource("11_if10c")]
+visible = false
+
+[node name="MovementTuto" parent="." instance=ExtResource("13_34jv4")]
+
+[node name="RichTextLabel" parent="MovementTuto/NinePatchRect" index="0"]
+offset_left = 24.0
+offset_top = 42.0
+offset_right = 228.0
+offset_bottom = 65.0
+
+[node name="RichTextLabel" parent="MovementTuto/NinePatchRect2" index="0"]
+offset_left = 23.0
+offset_top = 33.0
+offset_right = 227.0
+offset_bottom = 77.0
+
+[node name="RichTextLabel" parent="MovementTuto/NinePatchRect3" index="0"]
+offset_top = 31.0
+offset_bottom = 75.0
+
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+
+[editable path="MovementTuto"]

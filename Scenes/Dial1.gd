@@ -1,0 +1,14 @@
+extends Area2D
+const Balloon = preload("res://addons/dialogue_manager/example_balloon/example_balloon.tscn")
+
+#This is dialouge script
+@export var dialogue_resource: DialogueResource
+@export var dialogue_start: String = "FIRSTSCENE"
+
+func _on_body_entered(_body):
+	var balloon: Node = Balloon.instantiate()
+	get_tree().current_scene.add_child(balloon)
+	balloon.start(dialogue_resource, dialogue_start)
+	print("Mag Dialogue")
+
+	pass # Replace with function body.

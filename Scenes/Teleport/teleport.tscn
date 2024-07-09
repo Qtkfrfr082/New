@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://dnhuapbxdf6ja"]
+
+[ext_resource type="Script" path="res://Scenes/Teleport/TpA.gd" id="1_0hnr6"]
+[ext_resource type="Script" path="res://Scenes/Teleport/TpB.gd" id="2_mdntk"]
+[ext_resource type="Script" path="res://Scenes/Teleport/TpNext.gd" id="3_8kf6w"]
+[ext_resource type="Texture2D" uid="uid://qsexwj8imycp" path="res://Scenes/Teleport/Particles/particle.png" id="3_52o3r"]
+[ext_resource type="AudioStream" uid="uid://obhw2o4q4bec" path="res://Sounds/SFX/Teleport.wav" id="5_415pi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5kb3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eytk1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82rhn"]
+
+[sub_resource type="Curve" id="Curve_wksbh"]
+min_value = -1.0
+_data = [Vector2(0.106299, 1), 0.0, 0.0, 0, 0, Vector2(0.129921, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Teleport" type="Node2D"]
+
+[node name="TpA" type="Area2D" parent="."]
+script = ExtResource("1_0hnr6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TpA"]
+shape = SubResource("RectangleShape2D_o5kb3")
+
+[node name="Area2D" type="Area2D" parent="TpA"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TpA/Area2D"]
+shape = SubResource("RectangleShape2D_eytk1")
+
+[node name="TpB" type="Area2D" parent="."]
+script = ExtResource("2_mdntk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TpB"]
+shape = SubResource("RectangleShape2D_o5kb3")
+
+[node name="Area2D" type="Area2D" parent="TpB"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TpB/Area2D"]
+shape = SubResource("RectangleShape2D_82rhn")
+
+[node name="TpNext" type="Area2D" parent="."]
+script = ExtResource("3_8kf6w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TpNext"]
+shape = SubResource("RectangleShape2D_o5kb3")
+
+[node name="Area2D" type="Area2D" parent="TpNext"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TpNext/Area2D"]
+shape = SubResource("RectangleShape2D_82rhn")
+
+[node name="Cooldown" type="Timer" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 5
+lifetime = 3.0
+speed_scale = 2.62
+randomness = 0.13
+lifetime_randomness = 0.06
+texture = ExtResource("3_52o3r")
+emission_shape = 2
+emission_sphere_radius = 10.68
+gravity = Vector2(0, -5)
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+amount = 11
+lifetime = 3.0
+speed_scale = 2.8
+randomness = 0.13
+lifetime_randomness = 0.06
+emission_shape = 2
+emission_sphere_radius = 10.68
+gravity = Vector2(0, -5)
+scale_amount_max = 5.0
+color = Color(0, 0.866667, 1, 1)
+hue_variation_min = -0.2
+hue_variation_max = 0.1
+hue_variation_curve = SubResource("Curve_wksbh")
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
+amount = 11
+lifetime = 3.0
+speed_scale = 2.8
+randomness = 0.13
+lifetime_randomness = 0.06
+emission_shape = 2
+emission_sphere_radius = 10.68
+gravity = Vector2(0, -5)
+scale_amount_max = 5.0
+color = Color(0, 0.866667, 1, 1)
+hue_variation_min = -0.2
+hue_variation_max = 0.1
+hue_variation_curve = SubResource("Curve_wksbh")
+
+[node name="Teleport" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_415pi")
+volume_db = 12.893
+
+[connection signal="body_entered" from="TpA" to="TpA" method="_on_body_entered"]
+[connection signal="body_entered" from="TpB" to="TpB" method="_on_body_entered"]
+[connection signal="body_entered" from="TpNext" to="TpNext" method="_on_body_entered"]
+[connection signal="timeout" from="Cooldown" to="TpA" method="_on_cooldown_timeout"]
+[connection signal="timeout" from="Cooldown" to="TpB" method="_on_cooldown_timeout"]

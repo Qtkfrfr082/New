@@ -1,0 +1,140 @@
+[gd_scene load_steps=10 format=3 uid="uid://cdpx3orvqrfpg"]
+
+[ext_resource type="Script" path="res://Scenes/LoadingScene/Scripts/Load.gd" id="1_cq3r2"]
+[ext_resource type="Texture2D" uid="uid://dwpwhl3r4ifvr" path="res://Scenes/LoadingScene/Textures/Load.tres" id="2_6lbdb"]
+[ext_resource type="Texture2D" uid="uid://yf1fwwa6hru3" path="res://Scenes/LoadingScene/Textures/LoadingBar.png" id="3_4gou4"]
+[ext_resource type="Texture2D" uid="uid://c71dtadhgqn4u" path="res://Scenes/LoadingScene/Textures/Cat Revamped Run Latest-Sheet.png" id="3_51l65"]
+[ext_resource type="Texture2D" uid="uid://bek2bl5wxgmhh" path="res://Scenes/LoadingScene/Textures/insidebarload.png" id="4_71fve"]
+[ext_resource type="FontFile" uid="uid://dal5hpyj3amgs" path="res://Fonts/ThaleahFat.ttf" id="7_frd1y"]
+
+[sub_resource type="Animation" id="Animation_1o1fu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_rv6bs"]
+resource_name = "loading"
+length = 0.91
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gjrn2"]
+_data = {
+"RESET": SubResource("Animation_1o1fu"),
+"loading": SubResource("Animation_rv6bs")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_cq3r2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_6lbdb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gjrn2")
+}
+autoplay = "loading"
+speed_scale = 2.0
+
+[node name="ProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 400.0
+offset_top = 290.0
+offset_right = 836.0
+offset_bottom = 330.0
+scale = Vector2(0.8, 0.8)
+nine_patch_stretch = true
+texture_over = ExtResource("3_4gou4")
+texture_progress = ExtResource("4_71fve")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(567, 237)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_51l65")
+hframes = 9
+
+[node name="Label" type="Label" parent="."]
+offset_left = 143.0
+offset_top = 539.0
+offset_right = 1026.0
+offset_bottom = 570.0
+theme_override_fonts/font = ExtResource("7_frd1y")
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+justification_flags = 169

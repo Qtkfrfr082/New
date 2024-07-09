@@ -1,0 +1,15 @@
+~ MrWhiskers
+
+if has_met_Whiskers == false
+	You: Hey you!?
+	Mr Whiskers: Ah you’re already here. and fully conscious as that.
+	You: What are you talking about? More importantly do you know this place? Can you help me get out of here?
+	Mr Whiskers: You’re 100% fully conscious at the get go huh? well this place is how you interpret it.
+	You: What do you mean?
+	Mr Whiskers: ]: Exactly what I meant. This could be limbo, heaven or hell or maybe it could all be a dream, it all depends on how you want it to be, many already asked that question, but I have no intention of answering them myself go find the reason why you’re here on your own.
+	You: This is not the time to crack jokes… he’s ignoring me, looks like I got to find a way out myself.
+	set has_met_Whiskers == true
+
+if has_met_Whiskers == true
+	You: he’s ignoring me, looks like I got to find a way out myself.
+=> END

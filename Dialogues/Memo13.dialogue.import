@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bqg378m07pxs6"
+path="res://.godot/imported/Memo13.dialogue-6ad89fb664a517f2019f461c04a5b815.tres"
+
+[deps]
+
+source_file="res://Dialogues/Memo13.dialogue"
+dest_files=["res://.godot/imported/Memo13.dialogue-6ad89fb664a517f2019f461c04a5b815.tres"]
+
+[params]
+
+defaults=true

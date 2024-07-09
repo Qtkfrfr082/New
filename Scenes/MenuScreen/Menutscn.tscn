@@ -1,0 +1,348 @@
+[gd_scene load_steps=28 format=3 uid="uid://6hkh21nnr7dy"]
+
+[ext_resource type="Texture2D" uid="uid://dm568siyxx5sr" path="res://Scenes/MenuScreen/Textures/NewTitleScreen.png" id="1_jwhrb"]
+[ext_resource type="Script" path="res://Scenes/MenuScreen/Scripts/StartMenu.gd" id="1_x1wjk"]
+[ext_resource type="Texture2D" uid="uid://ca0ln8olbf58r" path="res://Scenes/MenuScreen/Textures/StartBtn.png" id="2_uqec0"]
+[ext_resource type="Texture2D" uid="uid://bfw0jc08ytate" path="res://Scenes/MenuScreen/Textures/StartBtnClicked.png" id="3_3lpd0"]
+[ext_resource type="Texture2D" uid="uid://bmmfjs2g5r5s3" path="res://Scenes/MenuScreen/Textures/StartBtnHover.png" id="4_mjxqh"]
+[ext_resource type="Texture2D" uid="uid://dw3f6l0hbxkhl" path="res://Scenes/MenuScreen/Textures/QuitBTN.png" id="5_mv7r6"]
+[ext_resource type="Texture2D" uid="uid://b6f0lnhij42jg" path="res://Scenes/MenuScreen/Textures/QuitBTNHover.png" id="6_fnw7r"]
+[ext_resource type="Texture2D" uid="uid://bmm8twv7drulw" path="res://Scenes/MenuScreen/Textures/OptionsBtn.png" id="7_x43vd"]
+[ext_resource type="Texture2D" uid="uid://df5kcyst5jmk" path="res://Scenes/MenuScreen/Textures/OptionsBtnClicked.png" id="8_5sru5"]
+[ext_resource type="Texture2D" uid="uid://x8qjwf2m8pat" path="res://Scenes/MenuScreen/Textures/OptionsBtnHover.png" id="9_oe8jj"]
+[ext_resource type="Texture2D" uid="uid://l0qa1nuvvpnw" path="res://Scenes/MenuScreen/Textures/LevelsBtn.png" id="10_kyqsc"]
+[ext_resource type="Texture2D" uid="uid://cvq6i418ymnjv" path="res://Scenes/MenuScreen/Textures/LevelsBtnClicked.png" id="11_l76cu"]
+[ext_resource type="Texture2D" uid="uid://c268wcbqogs1j" path="res://Scenes/MenuScreen/Textures/LevelsBtnHover.png" id="12_toohm"]
+[ext_resource type="FontFile" uid="uid://dal5hpyj3amgs" path="res://Fonts/ThaleahFat.ttf" id="13_mevt5"]
+[ext_resource type="Script" path="res://Scenes/MenuScreen/PL2D.gd" id="14_ay801"]
+[ext_resource type="AudioStream" uid="uid://621mi8rc6xk4" path="res://Sounds/BackgroundMusic/Explore The World_Full.wav" id="16_6t7h3"]
+[ext_resource type="AudioStream" uid="uid://bbxqkn287r656" path="res://Sounds/SFX/shimmering-object.wav" id="17_bhln5"]
+
+[sub_resource type="Gradient" id="Gradient_vr7ix"]
+colors = PackedColorArray(0.952941, 0.584314, 0.494118, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_28eub"]
+gradient = SubResource("Gradient_vr7ix")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.506667, 0.463333)
+fill_to = Vector2(0.853333, 0.136667)
+
+[sub_resource type="SystemFont" id="SystemFont_l04tl"]
+
+[sub_resource type="Animation" id="Animation_inhgu"]
+resource_name = "Intro"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(292, -117), Vector2(292, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CPUParticles2D/CPUParticles2D2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4, 5, 5.8, 6.5, 7.3, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-69, -453), Vector2(-23, -298), Vector2(231, -388), Vector2(433, -288), Vector2(643, -398), Vector2(724, -241), Vector2(50, 272)]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D2")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_bhln5")
+}],
+"times": PackedFloat32Array(3.1)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_apa41"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(292, -117)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CPUParticles2D/CPUParticles2D2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-63, -434)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lp66b"]
+_data = {
+"Intro": SubResource("Animation_inhgu"),
+"RESET": SubResource("Animation_apa41")
+}
+
+[sub_resource type="Gradient" id="Gradient_i71yy"]
+colors = PackedColorArray(0.945098, 0.984314, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0rp5h"]
+gradient = SubResource("Gradient_i71yy")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.518519, 0.527066)
+fill_to = Vector2(0.547009, 0.435897)
+
+[sub_resource type="Gradient" id="Gradient_iwqlp"]
+colors = PackedColorArray(0.780392, 1, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d6kc8"]
+gradient = SubResource("Gradient_iwqlp")
+fill = 1
+fill_from = Vector2(0.495726, 0.481481)
+fill_to = Vector2(0.638177, 0.356125)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x1wjk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 810.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_jwhrb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 435.0
+offset_top = 425.0
+offset_right = 545.0
+offset_bottom = 489.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Start Button" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_uqec0")
+texture_pressed = ExtResource("3_3lpd0")
+texture_hover = ExtResource("4_mjxqh")
+
+[node name="Quit Button" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_mv7r6")
+texture_pressed = ExtResource("3_3lpd0")
+texture_hover = ExtResource("6_fnw7r")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 610.0
+offset_top = 427.0
+offset_right = 720.0
+offset_bottom = 491.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Options" type="TextureButton" parent="VBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("7_x43vd")
+texture_pressed = ExtResource("8_5sru5")
+texture_hover = ExtResource("9_oe8jj")
+
+[node name="Levels" type="TextureButton" parent="VBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("10_kyqsc")
+texture_pressed = ExtResource("11_l76cu")
+texture_hover = ExtResource("12_toohm")
+
+[node name="PL2D" type="PointLight2D" parent="."]
+position = Vector2(292, 485)
+energy = 2.11
+texture = SubResource("GradientTexture2D_28eub")
+texture_scale = 2.09
+script = ExtResource("14_ay801")
+
+[node name="PL2D2" type="PointLight2D" parent="."]
+position = Vector2(31, 146)
+energy = 2.11
+texture = SubResource("GradientTexture2D_28eub")
+texture_scale = 2.09
+script = ExtResource("14_ay801")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 292.0
+offset_top = -117.0
+offset_right = 952.0
+offset_bottom = -15.0
+theme_override_colors/font_color = Color(0.211765, 0.239216, 0.709804, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("13_mevt5")
+theme_override_font_sizes/font_size = 110
+text = "Pixel Puzzles"
+
+[node name="Sub" type="Label" parent="Title"]
+layout_mode = 0
+offset_left = -80.0
+offset_top = 77.0
+offset_right = 748.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0.94902, 0.592157, 0.505882, 1)
+theme_override_colors/font_outline_color = Color(0.482353, 0.27451, 0.658824, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("13_mevt5")
+theme_override_font_sizes/font_size = 50
+text = "Interactive Learning Programming Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_6t7h3")
+
+[node name="Copyright" type="Label" parent="."]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 617.0
+offset_right = 717.0
+offset_bottom = 640.0
+theme_override_fonts/font = SubResource("SystemFont_l04tl")
+text = "© 2023-2024 DevProduction.
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lp66b")
+}
+autoplay = "Intro"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(295, 419)
+amount = 100
+randomness = 1.0
+texture = SubResource("GradientTexture2D_0rp5h")
+emission_shape = 1
+emission_sphere_radius = 128.0
+particle_flag_align_y = true
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+scale_amount_min = 0.0
+scale_amount_max = 0.5
+color = Color(1, 0.984314, 0, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CPUParticles2D"]
+position = Vector2(-161, -205)
+amount = 100
+randomness = 1.0
+texture = SubResource("GradientTexture2D_0rp5h")
+emission_shape = 1
+emission_sphere_radius = 128.0
+particle_flag_align_y = true
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+scale_amount_min = 0.0
+scale_amount_max = 0.5
+color = Color(1, 0.984314, 0, 1)
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="CPUParticles2D"]
+position = Vector2(-63, -434)
+amount = 100
+randomness = 1.0
+texture = SubResource("GradientTexture2D_d6kc8")
+emission_shape = 1
+emission_sphere_radius = 21.59
+particle_flag_align_y = true
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+scale_amount_min = 0.0
+scale_amount_max = 0.5
+color = Color(1, 0.984314, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="pressed" from="VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

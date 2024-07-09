@@ -1,0 +1,13 @@
+[gd_resource type="GradientTexture2D" load_steps=2 format=3 uid="uid://d38tltkxq5gck"]
+
+[sub_resource type="Gradient" id="Gradient_1vedt"]
+offsets = PackedFloat32Array(0, 0.472393, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.716564, 0.716564, 0.716564, 0.527607, 0.4, 0.4, 0.4, 0)
+
+[resource]
+gradient = SubResource("Gradient_1vedt")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.495726, 0.470085)
+fill_to = Vector2(0.6, 0.4)
+metadata/_snap_enabled = true

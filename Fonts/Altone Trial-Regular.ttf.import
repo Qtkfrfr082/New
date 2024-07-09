@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dmo52ikynrdiw"
+path="res://.godot/imported/Altone Trial-Regular.ttf-7d256c250fa8005c36219d8d609aa8f6.fontdata"
+
+[deps]
+
+source_file="res://Fonts/Altone Trial-Regular.ttf"
+dest_files=["res://.godot/imported/Altone Trial-Regular.ttf-7d256c250fa8005c36219d8d609aa8f6.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

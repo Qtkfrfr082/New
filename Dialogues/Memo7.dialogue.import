@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://b2fialrust1dt"
+path="res://.godot/imported/Memo7.dialogue-dc39a66aac4eeb2e03d8012c2662ba75.tres"
+
+[deps]
+
+source_file="res://Dialogues/Memo7.dialogue"
+dest_files=["res://.godot/imported/Memo7.dialogue-dc39a66aac4eeb2e03d8012c2662ba75.tres"]
+
+[params]
+
+defaults=true

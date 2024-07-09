@@ -1,0 +1,251 @@
+[gd_scene load_steps=10 format=3 uid="uid://bk44od6xpbfe6"]
+
+[ext_resource type="Script" path="res://Scenes/Tutorials/movement_tuto.gd" id="1_abf78"]
+[ext_resource type="Texture2D" uid="uid://dawel4sp2c1km" path="res://Scenes/Tutorials/Textures/CustomDialog.png" id="2_k0eky"]
+[ext_resource type="FontFile" uid="uid://dal5hpyj3amgs" path="res://Fonts/ThaleahFat.ttf" id="3_h38o8"]
+
+[sub_resource type="Animation" id="Animation_7plu1"]
+resource_name = "Interact"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.374043, 2.66591, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_a8amd"]
+resource_name = "Move"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.294737, 2.71459, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_nyvmm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NinePatchRect2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NinePatchRect3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NinePatchRect4:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_hewk3"]
+resource_name = "Teleport"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect4:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.380742, 4.63325, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_e6may"]
+resource_name = "jump"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NinePatchRect3:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.35012, 2.62392, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vedvt"]
+_data = {
+"Interact": SubResource("Animation_7plu1"),
+"Move": SubResource("Animation_a8amd"),
+"RESET": SubResource("Animation_nyvmm"),
+"Teleport": SubResource("Animation_hewk3"),
+"jump": SubResource("Animation_e6may")
+}
+
+[node name="MovementTuto" type="Node2D"]
+script = ExtResource("1_abf78")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+offset_left = 479.0
+offset_top = 45.0
+offset_right = 723.0
+offset_bottom = 157.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(113, 52)
+texture = ExtResource("2_k0eky")
+patch_margin_left = 112
+patch_margin_top = 55
+patch_margin_right = 112
+patch_margin_bottom = 57
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 39.0
+offset_right = 225.0
+offset_bottom = 62.0
+theme_override_fonts/normal_font = ExtResource("3_h38o8")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Press [A] and [D] to move."
+fit_content = true
+scroll_active = false
+drag_and_drop_selection_enabled = false
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+visible = false
+offset_left = 479.0
+offset_top = 493.0
+offset_right = 723.0
+offset_bottom = 605.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(113, 52)
+texture = ExtResource("2_k0eky")
+patch_margin_left = 112
+patch_margin_top = 55
+patch_margin_right = 112
+patch_margin_bottom = 57
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect2"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 34.0
+offset_right = 192.0
+offset_bottom = 78.0
+theme_override_fonts/normal_font = ExtResource("3_h38o8")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Press [E] to interact."
+fit_content = true
+scroll_active = false
+drag_and_drop_selection_enabled = false
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="."]
+visible = false
+offset_left = 479.0
+offset_top = 492.0
+offset_right = 723.0
+offset_bottom = 604.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(113, 52)
+texture = ExtResource("2_k0eky")
+patch_margin_left = 112
+patch_margin_top = 55
+patch_margin_right = 112
+patch_margin_bottom = 57
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect3"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 39.0
+offset_right = 227.0
+offset_bottom = 62.0
+theme_override_fonts/normal_font = ExtResource("3_h38o8")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Press [Space] to jump."
+fit_content = true
+scroll_active = false
+drag_and_drop_selection_enabled = false
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="."]
+visible = false
+offset_left = 414.0
+offset_top = 493.0
+offset_right = 795.0
+offset_bottom = 605.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(194, 51)
+texture = ExtResource("2_k0eky")
+patch_margin_left = 112
+patch_margin_top = 55
+patch_margin_right = 112
+patch_margin_bottom = 57
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect4"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 22.0
+offset_right = 364.0
+offset_bottom = 132.0
+theme_override_fonts/normal_font = ExtResource("3_h38o8")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "This is teleporting device upon walking you will be teleported into another place."
+fit_content = true
+scroll_active = false
+drag_and_drop_selection_enabled = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vedvt")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
