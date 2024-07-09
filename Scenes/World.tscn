@@ -2546,10 +2546,9 @@ sprite_frames = SubResource("SpriteFrames_uc432")
 animation = &"On"
 autoplay = "On"
 
-[node name="Laser1" type="AudioStreamPlayer2D" parent="BarrierLaser/AnimatedSprite2D"]
-volume_db = -10.361
+[node name="Laser1" type="AudioStreamPlayer" parent="BarrierLaser/AnimatedSprite2D"]
+volume_db = -17.516
 autoplay = true
-max_distance = 80.0
 script = ExtResource("29_qp01x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BarrierLaser/AnimatedSprite2D"]
@@ -2564,11 +2563,10 @@ sprite_frames = SubResource("SpriteFrames_uc432")
 animation = &"On"
 autoplay = "On"
 
-[node name="Laser1" type="AudioStreamPlayer2D" parent="BarrierLaser/AnimatedSprite2D2"]
-volume_db = -11.182
+[node name="Laser1" type="AudioStreamPlayer" parent="BarrierLaser/AnimatedSprite2D2"]
+volume_db = -17.516
 pitch_scale = 0.69
 autoplay = true
-max_distance = 80.0
 script = ExtResource("29_qp01x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BarrierLaser/AnimatedSprite2D2"]
@@ -2583,11 +2581,10 @@ sprite_frames = SubResource("SpriteFrames_uc432")
 animation = &"On"
 autoplay = "On"
 
-[node name="Laser1" type="AudioStreamPlayer2D" parent="BarrierLaser/AnimatedSprite2D3"]
-volume_db = -11.182
+[node name="Laser1" type="AudioStreamPlayer" parent="BarrierLaser/AnimatedSprite2D3"]
+volume_db = -17.516
 pitch_scale = 0.69
 autoplay = true
-max_distance = 80.0
 script = ExtResource("29_qp01x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BarrierLaser/AnimatedSprite2D3"]
@@ -2602,11 +2599,10 @@ sprite_frames = SubResource("SpriteFrames_uc432")
 animation = &"On"
 autoplay = "On"
 
-[node name="Laser1" type="AudioStreamPlayer2D" parent="BarrierLaser/AnimatedSprite2D4"]
-volume_db = -11.182
+[node name="Laser1" type="AudioStreamPlayer" parent="BarrierLaser/AnimatedSprite2D4"]
+volume_db = -17.516
 pitch_scale = 0.69
 autoplay = true
-max_distance = 80.0
 script = ExtResource("29_qp01x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BarrierLaser/AnimatedSprite2D4"]
