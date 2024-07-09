@@ -2546,9 +2546,10 @@ sprite_frames = SubResource("SpriteFrames_uc432")
 animation = &"On"
 autoplay = "On"
 
-[node name="Laser1" type="AudioStreamPlayer" parent="BarrierLaser/AnimatedSprite2D"]
-volume_db = -17.516
+[node name="Laser1" type="AudioStreamPlayer2D" parent="BarrierLaser/AnimatedSprite2D"]
+volume_db = -5.0
 autoplay = true
+max_distance = 90.0
 script = ExtResource("29_qp01x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BarrierLaser/AnimatedSprite2D"]
@@ -2563,10 +2564,10 @@ sprite_frames = SubResource("SpriteFrames_uc432")
 animation = &"On"
 autoplay = "On"
 
-[node name="Laser1" type="AudioStreamPlayer" parent="BarrierLaser/AnimatedSprite2D2"]
-volume_db = -17.516
-pitch_scale = 0.69
+[node name="Laser1" type="AudioStreamPlayer2D" parent="BarrierLaser/AnimatedSprite2D2"]
+volume_db = -5.0
 autoplay = true
+max_distance = 90.0
 script = ExtResource("29_qp01x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BarrierLaser/AnimatedSprite2D2"]
@@ -2581,10 +2582,11 @@ sprite_frames = SubResource("SpriteFrames_uc432")
 animation = &"On"
 autoplay = "On"
 
-[node name="Laser1" type="AudioStreamPlayer" parent="BarrierLaser/AnimatedSprite2D3"]
-volume_db = -17.516
+[node name="Laser1" type="AudioStreamPlayer2D" parent="BarrierLaser/AnimatedSprite2D3"]
+volume_db = -5.0
 pitch_scale = 0.69
 autoplay = true
+max_distance = 80.0
 script = ExtResource("29_qp01x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BarrierLaser/AnimatedSprite2D3"]
@@ -2599,10 +2601,11 @@ sprite_frames = SubResource("SpriteFrames_uc432")
 animation = &"On"
 autoplay = "On"
 
-[node name="Laser1" type="AudioStreamPlayer" parent="BarrierLaser/AnimatedSprite2D4"]
-volume_db = -17.516
+[node name="Laser1" type="AudioStreamPlayer2D" parent="BarrierLaser/AnimatedSprite2D4"]
+volume_db = -5.0
 pitch_scale = 0.69
 autoplay = true
+max_distance = 80.0
 script = ExtResource("29_qp01x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BarrierLaser/AnimatedSprite2D4"]
@@ -3010,10 +3013,10 @@ position = Vector2(2989, 176)
 position = Vector2(80, 100)
 
 [node name="Sub" parent="PlayerNode/Player/CanvasLayer/Music" index="1"]
-offset_left = 2294.39
-offset_top = -19.6883
-offset_right = 2651.39
-offset_bottom = 300.311
+offset_bottom = 549.999
+
+[node name="CPUParticles2D" parent="PlayerNode/Player" index="13"]
+visible = false
 
 [node name="MusicTimer" type="Timer" parent="."]
 

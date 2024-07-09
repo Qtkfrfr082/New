@@ -542,3 +542,4 @@ mix_target = 1
 [editable path="Teleport8"]
 [editable path="Teleport9"]
 [editable path="Teleport10"]
+[editable path="PlayerNode"]

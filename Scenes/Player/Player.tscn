@@ -396,10 +396,10 @@ tracks/3/path = NodePath("CPUParticles2D:amount")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [20]
+"values": []
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -408,10 +408,10 @@ tracks/4/path = NodePath("CPUParticles2D:speed_scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.2),
+"times": PackedFloat32Array(0, 2.2, 4.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [1.0, 2.0, 0.5]
+"values": [1.0, 2.0, 0.7]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -420,7 +420,7 @@ tracks/5/path = NodePath("CPUParticles2D:emission_sphere_radius")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.2),
+"times": PackedFloat32Array(0, 2.2, 4.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.169998, 69.62, 128.0]
@@ -432,7 +432,7 @@ tracks/6/path = NodePath("CPUParticles2D:orbit_velocity_min")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.2),
+"times": PackedFloat32Array(0, 2.2, 4.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [1.0, 0.0, 0.0]
@@ -444,7 +444,7 @@ tracks/7/path = NodePath("CPUParticles2D:orbit_velocity_max")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.2),
+"times": PackedFloat32Array(0, 2.2, 4.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [1.0, 0.0, 2.0]
@@ -503,12 +503,12 @@ _data = {
 radius = 33.3766
 
 [sub_resource type="Gradient" id="Gradient_wkgxo"]
-colors = PackedColorArray(1, 1, 1, 1, 0.768627, 0.768627, 0.768627, 0)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.0705882)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_fds2k"]
 gradient = SubResource("Gradient_wkgxo")
 use_hdr = true
-fill = 1
+fill = 2
 fill_from = Vector2(0.490029, 0.435897)
 fill_to = Vector2(0.809117, 0.293447)
 
@@ -589,7 +589,6 @@ debug_color = Color(0.945098, 0.215686, 0.247059, 0.282353)
 visible = false
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Player"]
-visible = false
 amount = 40
 lifetime = 4.0
 speed_scale = 2.07
