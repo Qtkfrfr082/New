@@ -109,17 +109,20 @@ set PlayerData.can_move = true
 ~ Memo12
 set PlayerData.can_move = false
 Recording - AL-1S\:\n I had completely forgotten about this lever's existence or that the door from deep sector 1A had been rerouted here. My mistake, indeed. \nHowever, this situation serves as a practical application of a concept I've learned\: Structure Selection.
+set FlowC1.Show3 = true
 Structure selection involves programming constructs that enable a program to make decisions and choose different paths based on specific conditions. It's akin to what's happening now.
 For instance, when the lever in deep section 1A was activated, another lever was revealed in the room. However, without knowledge of the corresponding door, we're faced with a decision if the Laser Door Module for the deep lab wasn't triggered, then it must activate the lever in High section 1A.
 It's essentially an If-Else statement! This structure allows the program to evaluate conditions and execute different code depending on whether those conditions are true or false.
 You: Now that I think about it that's an excellent way of describing IF-ELSE's.                       
 set PlayerData.can_move = true
+set FlowC1.Show3 = false
 => END!
 ~ Memo13
+set FlowC1.Show4 = true
 set PlayerData.can_move = false
 Today’s Episode of Selection Control Structure #101\: Switch - Cases!\nThe switch-case statement is used to select one of many code blocks to be executed based on the value of a variable or expression. It's particularly useful when you have multiple conditions to check against the same variable.
 set PlayerData.can_move = true
-
+set FlowC1.Show4 = false
 
 => END
 ~ MrWhiskers

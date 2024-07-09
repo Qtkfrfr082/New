@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=19 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
@@ -9,6 +9,10 @@
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/FlowC11.gd" id="7_0y3iy"]
 [ext_resource type="Texture2D" uid="uid://creq3u3un1nox" path="res://Dialogues/Texture/Flowchartpart2.png" id="7_ybmgg"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/FlowC22.gd" id="9_q8xcp"]
+[ext_resource type="Texture2D" uid="uid://bw47f57cq2oha" path="res://Dialogues/Texture/CodeSnipmemo12.png" id="10_73pty"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/CodeSnip.gd" id="11_p0f43"]
+[ext_resource type="Texture2D" uid="uid://drfelw27ri6i8" path="res://Dialogues/Texture/CodeCaseSnip.png" id="12_l0ipe"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/CodeCaseSnip.gd" id="13_pcban"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -181,6 +185,25 @@ offset_right = 896.0
 offset_bottom = 429.0
 texture = ExtResource("7_ybmgg")
 script = ExtResource("9_q8xcp")
+
+[node name="CodeSnip" type="TextureRect" parent="."]
+visible = false
+offset_left = 272.0
+offset_top = 209.0
+offset_right = 576.0
+offset_bottom = 311.0
+scale = Vector2(2, 2)
+texture = ExtResource("10_73pty")
+script = ExtResource("11_p0f43")
+
+[node name="CodeCaseSnip" type="TextureRect" parent="."]
+visible = false
+offset_left = 336.0
+offset_top = 56.0
+offset_right = 820.0
+offset_bottom = 413.0
+texture = ExtResource("12_l0ipe")
+script = ExtResource("13_pcban")
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
