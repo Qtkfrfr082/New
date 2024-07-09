@@ -589,6 +589,7 @@ debug_color = Color(0.945098, 0.215686, 0.247059, 0.282353)
 visible = false
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Player"]
+visible = false
 amount = 40
 lifetime = 4.0
 speed_scale = 2.07
