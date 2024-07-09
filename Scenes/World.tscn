@@ -1,4 +1,4 @@
-[gd_scene load_steps=164 format=3 uid="uid://c5job10hv1p7x"]
+[gd_scene load_steps=167 format=3 uid="uid://c5job10hv1p7x"]
 
 [ext_resource type="Texture2D" uid="uid://chrq0vrj4au5n" path="res://Tilemaps/own_creation/own_tileset/decor_tileset.png" id="1_krg1h"]
 [ext_resource type="Script" path="res://Scenes/RootScripts/WorldScript.gd" id="1_nxoe5"]
@@ -38,8 +38,11 @@
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Terminal1.gd" id="39_5fhwf"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo4.gd" id="41_tkrnj"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo5.gd" id="43_eortx"]
+[ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo13.gd" id="45_j1afw"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo6.gd" id="45_ruidv"]
+[ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo14.gd" id="46_vacot"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo7.gd" id="47_72vga"]
+[ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo15.gd" id="47_f125h"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo8.gd" id="49_lyo1d"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo9.gd" id="51_0nd0b"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo10.gd" id="53_lhgq1"]
@@ -2351,7 +2354,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exnra"]
-size = Vector2(52, 27)
+size = Vector2(24, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xbfua"]
 atlas = ExtResource("33_5a7y4")
@@ -2868,6 +2871,57 @@ animation = &"interact"
 frame = 1
 frame_progress = 0.523345
 
+[node name="Memo13" type="Area2D" parent="Memo\'s"]
+position = Vector2(2543, 567)
+script = ExtResource("45_j1afw")
+dialogue_resource = ExtResource("34_uoswc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo13"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_exnra")
+
+[node name="Interact" type="AnimatedSprite2D" parent="Memo\'s/Memo13"]
+visible = false
+position = Vector2(0, -66)
+sprite_frames = SubResource("SpriteFrames_l2xqh")
+animation = &"interact"
+frame = 1
+frame_progress = 0.523345
+
+[node name="Memo14" type="Area2D" parent="Memo\'s"]
+position = Vector2(2512, 375)
+script = ExtResource("46_vacot")
+dialogue_resource = ExtResource("34_uoswc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo14"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_exnra")
+
+[node name="Interact" type="AnimatedSprite2D" parent="Memo\'s/Memo14"]
+visible = false
+position = Vector2(0, -66)
+sprite_frames = SubResource("SpriteFrames_l2xqh")
+animation = &"interact"
+frame = 1
+frame_progress = 0.523345
+
+[node name="Memo15" type="Area2D" parent="Memo\'s"]
+position = Vector2(2543, 567)
+script = ExtResource("47_f125h")
+dialogue_resource = ExtResource("34_uoswc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo15"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_exnra")
+
+[node name="Interact" type="AnimatedSprite2D" parent="Memo\'s/Memo15"]
+visible = false
+position = Vector2(0, -66)
+sprite_frames = SubResource("SpriteFrames_l2xqh")
+animation = &"interact"
+frame = 1
+frame_progress = 0.523345
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.792157, 0.815686, 0.815686, 1)
 
@@ -2932,6 +2986,12 @@ position = Vector2(2989, 176)
 [node name="PlayerNode" parent="." instance=ExtResource("16_vaoxi")]
 position = Vector2(80, 100)
 
+[node name="Sub" parent="PlayerNode/Player/CanvasLayer/Music" index="1"]
+offset_left = 2294.39
+offset_top = -19.6883
+offset_right = 2651.39
+offset_bottom = 54.312
+
 [node name="MusicTimer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="Teleport/TpA/Area2D" to="Teleport/TpA" method="_on_area_2d_body_entered"]
@@ -2979,6 +3039,12 @@ position = Vector2(80, 100)
 [connection signal="body_exited" from="Memo's/Memo11" to="Memo's/Memo11" method="_on_body_exited"]
 [connection signal="body_entered" from="Memo's/Memo12" to="Memo's/Memo12" method="_on_body_entered"]
 [connection signal="body_exited" from="Memo's/Memo12" to="Memo's/Memo12" method="_on_body_exited"]
+[connection signal="body_entered" from="Memo's/Memo13" to="Memo's/Memo13" method="_on_body_entered"]
+[connection signal="body_exited" from="Memo's/Memo13" to="Memo's/Memo13" method="_on_body_exited"]
+[connection signal="body_entered" from="Memo's/Memo14" to="Memo's/Memo14" method="_on_body_entered"]
+[connection signal="body_exited" from="Memo's/Memo14" to="Memo's/Memo14" method="_on_body_exited"]
+[connection signal="body_entered" from="Memo's/Memo15" to="Memo's/Memo15" method="_on_body_entered"]
+[connection signal="body_exited" from="Memo's/Memo15" to="Memo's/Memo15" method="_on_body_exited"]
 [connection signal="timeout" from="MusicTimer" to="." method="_on_music_timer_timeout"]
 
 [editable path="Teleport"]

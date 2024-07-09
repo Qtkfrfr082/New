@@ -168,3 +168,17 @@ Following the facility's stabilization, I've discovered that I'm not the sole in
 To mitigate potential risks, I've devised various perplexing mechanisms to restrict their movement within the facility. Additionally, I've distributed notes detailing procedures for dismantling these constraints should the need arise.
 set PlayerData.can_move = true
 => END
+~ Memo14
+You: Finally, another memo this facility is so damn huge. I wonder what this have inside?
+Recording - AL-1S\:\nNavigating this sector has proven challenging, even for an advanced AI like me. \nTo aid in navigation, I, AL-1S, have created a Flow Chart detailing the process for traversing this sector.
+This facility layout so confusing nice to know that AL-1S made some nice Flow Chart it really helps in understanding this place.
+
+=> END
+~ Memo15
+You: Wait this memo again??
+Recording - AL-1S\:\nGreetings. I will now explain another important aspect of programming\:\nFlowcharts. Flowcharts use specific shapes to represent different actions.\nThe diamond shape represents decisions or branching pathways. These branches depend on certain conditions being met.
+For example, consider the condition 'Is the Door to the Deep Lab Open?' There are two possible pathways\: 'Yes' or 'No'. This illustrates a 'Selection Control Structure'\n,a decision-making structure fundamental to programming. It allows the program to choose different paths of execution based on whether conditions are true or false.
+Understanding these concepts is crucial in both Flowcharts and real life. Always take a moment to carefully consider which decision to make.
+You: So that was what Selection Control Structure huh.
+
+=> END
