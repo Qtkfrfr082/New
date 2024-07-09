@@ -11,7 +11,7 @@ func toggle_switch():
 	$Off/CharacterBody2D/Collision.disabled = true
 	$Off.hide()
 	$On.show()
-	$"../Lever".play()
+	$"../Lever1".play()
 	var offLaser = get_node("../../BarrierLaser/AnimatedSprite2D2/AnimationPlayer")
 	offLaser.play("Off")
 	var off = get_node("../../BarrierLaser/AnimatedSprite2D2")

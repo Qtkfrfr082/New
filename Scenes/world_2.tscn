@@ -525,7 +525,6 @@ frame_progress = 0.941066
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_7okr4")
 volume_db = -29.076
-stream_paused = true
 mix_target = 1
 
 [connection signal="body_entered" from="Memo's/Memo1" to="Memo's/Memo1" method="_on_body_entered"]
