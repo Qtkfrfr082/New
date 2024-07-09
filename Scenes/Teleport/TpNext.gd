@@ -8,6 +8,7 @@ func _on_body_entered(body):
 	# Check if the body entered is the player (assuming it's a KinematicBody)
 	if body.is_in_group("Player") and not isTeleporting and AvailableTp:
 		# Get the destination node
+			LoadScene.load_screen_to_scene("res://Scenes/world_2.tscn", {"test": "f"})
 			start_cooldown_timer()
 			
 func start_cooldown_timer():

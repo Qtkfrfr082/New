@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://b7deu47qgpbjk"]
+[gd_scene load_steps=54 format=3 uid="uid://b7deu47qgpbjk"]
 
 [ext_resource type="PackedScene" uid="uid://ctq16ayy2ckhq" path="res://Scenes/tile_map.tscn" id="1_5tabc"]
 [ext_resource type="PackedScene" uid="uid://dnhuapbxdf6ja" path="res://Scenes/Teleport/teleport.tscn" id="2_mpau6"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://dj7rqvenxqbn3" path="res://Dialogues/Lvl2Diag/Lvl2Memo's.dialogue" id="7_b15r0"]
 [ext_resource type="PackedScene" uid="uid://6q7x72nvtr1d" path="res://Scenes/Player/Player.tscn" id="8_dsv02"]
 [ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo2.gd" id="9_nau8p"]
+[ext_resource type="AudioStream" uid="uid://bfehfydl5mf7r" path="res://Sounds/BackgroundMusic/Glimpses of Starlight.wav" id="10_7okr4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l4qm8"]
 atlas = ExtResource("3_p3xqf")
@@ -520,6 +521,11 @@ sprite_frames = SubResource("SpriteFrames_ju0in")
 animation = &"interact"
 frame = 2
 frame_progress = 0.941066
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_7okr4")
+volume_db = -29.076
+mix_target = 1
 
 [connection signal="body_entered" from="Memo's/Memo1" to="Memo's/Memo1" method="_on_body_entered"]
 [connection signal="body_exited" from="Memo's/Memo1" to="Memo's/Memo1" method="_on_body_exited"]

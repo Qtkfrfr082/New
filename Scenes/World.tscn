@@ -1,4 +1,4 @@
-[gd_scene load_steps=167 format=3 uid="uid://c5job10hv1p7x"]
+[gd_scene load_steps=168 format=3 uid="uid://c5job10hv1p7x"]
 
 [ext_resource type="Texture2D" uid="uid://chrq0vrj4au5n" path="res://Tilemaps/own_creation/own_tileset/decor_tileset.png" id="1_krg1h"]
 [ext_resource type="Script" path="res://Scenes/RootScripts/WorldScript.gd" id="1_nxoe5"]
@@ -43,6 +43,7 @@
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo14.gd" id="46_vacot"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo7.gd" id="47_72vga"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo15.gd" id="47_f125h"]
+[ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo16.gd" id="48_wnu0p"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo8.gd" id="49_lyo1d"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo9.gd" id="51_0nd0b"]
 [ext_resource type="Script" path="res://Scenes/Lvl1Memo'sScript/Memo10.gd" id="53_lhgq1"]
@@ -2906,7 +2907,7 @@ frame = 1
 frame_progress = 0.523345
 
 [node name="Memo15" type="Area2D" parent="Memo\'s"]
-position = Vector2(2543, 567)
+position = Vector2(2800, 215)
 script = ExtResource("47_f125h")
 dialogue_resource = ExtResource("34_uoswc")
 
@@ -2915,6 +2916,23 @@ position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_exnra")
 
 [node name="Interact" type="AnimatedSprite2D" parent="Memo\'s/Memo15"]
+visible = false
+position = Vector2(0, -66)
+sprite_frames = SubResource("SpriteFrames_l2xqh")
+animation = &"interact"
+frame = 1
+frame_progress = 0.523345
+
+[node name="Memo16" type="Area2D" parent="Memo\'s"]
+position = Vector2(3377, 215)
+script = ExtResource("48_wnu0p")
+dialogue_resource = ExtResource("34_uoswc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo16"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_exnra")
+
+[node name="Interact" type="AnimatedSprite2D" parent="Memo\'s/Memo16"]
 visible = false
 position = Vector2(0, -66)
 sprite_frames = SubResource("SpriteFrames_l2xqh")
@@ -3045,6 +3063,8 @@ offset_bottom = 54.312
 [connection signal="body_exited" from="Memo's/Memo14" to="Memo's/Memo14" method="_on_body_exited"]
 [connection signal="body_entered" from="Memo's/Memo15" to="Memo's/Memo15" method="_on_body_entered"]
 [connection signal="body_exited" from="Memo's/Memo15" to="Memo's/Memo15" method="_on_body_exited"]
+[connection signal="body_entered" from="Memo's/Memo16" to="Memo's/Memo16" method="_on_body_entered"]
+[connection signal="body_exited" from="Memo's/Memo16" to="Memo's/Memo16" method="_on_body_exited"]
 [connection signal="timeout" from="MusicTimer" to="." method="_on_music_timer_timeout"]
 
 [editable path="Teleport"]
