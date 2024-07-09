@@ -1,4 +1,4 @@
-[gd_scene load_steps=168 format=3 uid="uid://c5job10hv1p7x"]
+[gd_scene load_steps=164 format=3 uid="uid://c5job10hv1p7x"]
 
 [ext_resource type="Texture2D" uid="uid://chrq0vrj4au5n" path="res://Tilemaps/own_creation/own_tileset/decor_tileset.png" id="1_krg1h"]
 [ext_resource type="Script" path="res://Scenes/RootScripts/WorldScript.gd" id="1_nxoe5"]
@@ -23,11 +23,8 @@
 [ext_resource type="Script" path="res://Scenes/Tutor2.gd" id="20_n6ria"]
 [ext_resource type="Script" path="res://Scenes/TutorialScript/Tutor1.gd" id="20_nij13"]
 [ext_resource type="Script" path="res://Scenes/Tutor3.gd" id="21_1roo8"]
-[ext_resource type="Resource" uid="uid://bdrnn03rhhh6q" path="res://Dialogues/FirstScene.dialogue" id="21_b8yhj"]
 [ext_resource type="Texture2D" uid="uid://dv4ffml420ryo" path="res://Tilemaps/Sci-fi_Lab/barrier_deactivate.png" id="22_gcha8"]
 [ext_resource type="Texture2D" uid="uid://ky241ykvff4g" path="res://Tilemaps/Sci-fi_Lab/barrier_idle.png" id="23_16hlv"]
-[ext_resource type="Script" path="res://Scenes/Dial2.gd" id="24_2xa28"]
-[ext_resource type="Resource" uid="uid://dh1tvc160khyw" path="res://Dialogues/SecondScene.dialogue" id="25_k0ulh"]
 [ext_resource type="PackedScene" uid="uid://drg3h8t70b558" path="res://Scenes/Npc's/npc_you.tscn" id="26_jr04x"]
 [ext_resource type="AudioStream" uid="uid://bci2g4ftphpbt" path="res://Sounds/SFX/LaserGat.wav" id="29_ce1x2"]
 [ext_resource type="Script" path="res://Scenes/LaserGateScript/Laser1.gd" id="29_qp01x"]
@@ -2039,8 +2036,6 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6o2g"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uu7j"]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_l4qm8"]
 atlas = ExtResource("22_gcha8")
 region = Rect2(0, 0, 32, 64)
@@ -2524,19 +2519,10 @@ shape = SubResource("RectangleShape2D_mbmru")
 [node name="Area2D" type="Area2D" parent="AreaDialogue"]
 position = Vector2(86, 109)
 script = ExtResource("20_atcog")
-dialogue_resource = ExtResource("21_b8yhj")
+dialogue_resource = ExtResource("34_uoswc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDialogue/Area2D"]
 shape = SubResource("RectangleShape2D_x6o2g")
-
-[node name="Area2D2" type="Area2D" parent="AreaDialogue"]
-position = Vector2(806, 596)
-script = ExtResource("24_2xa28")
-dialogue_resource = ExtResource("25_k0ulh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDialogue/Area2D2"]
-position = Vector2(-74, 108)
-shape = SubResource("RectangleShape2D_3uu7j")
 
 [node name="BarrierLaser" type="Node2D" parent="."]
 position = Vector2(-67, 21)
@@ -2955,7 +2941,10 @@ scale = Vector2(0.5, 0.5)
 anchor_left = -15.2171
 anchor_right = -15.2171
 anchor_bottom = 5.1045
-offset_right = 385.286
+offset_left = 2240.42
+offset_top = -19.6883
+offset_right = 2637.42
+offset_bottom = -145.688
 text = "Ghost Trigger - 
 SHIKIMO &
 @fractalmanmusic "
@@ -2975,7 +2964,6 @@ autowrap_mode = 0
 [connection signal="body_exited" from="AreaTutor/Area2D3" to="AreaTutor/Area2D3" method="_on_body_exited"]
 [connection signal="timeout" from="AreaTutor/Area2D3/Timer" to="AreaTutor/Area2D3" method="_on_timer_timeout"]
 [connection signal="body_entered" from="AreaDialogue/Area2D" to="AreaDialogue/Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="AreaDialogue/Area2D2" to="AreaDialogue/Area2D2" method="_on_body_entered"]
 [connection signal="finished" from="BarrierLaser/AnimatedSprite2D/Laser1" to="BarrierLaser/AnimatedSprite2D/Laser1" method="_on_finished"]
 [connection signal="finished" from="BarrierLaser/AnimatedSprite2D2/Laser1" to="BarrierLaser/AnimatedSprite2D2/Laser1" method="_on_finished"]
 [connection signal="finished" from="BarrierLaser/AnimatedSprite2D3/Laser1" to="BarrierLaser/AnimatedSprite2D3/Laser1" method="_on_finished"]
