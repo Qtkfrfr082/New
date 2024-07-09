@@ -2932,23 +2932,6 @@ position = Vector2(2989, 176)
 [node name="PlayerNode" parent="." instance=ExtResource("16_vaoxi")]
 position = Vector2(80, 100)
 
-[node name="Sub" parent="PlayerNode/Title" index="0"]
-anchor_left = 0.226011
-anchor_right = 0.551768
-scale = Vector2(0.5, 0.5)
-
-[node name="Sub" parent="PlayerNode/Music" index="1"]
-anchor_left = -15.2171
-anchor_right = -15.2171
-anchor_bottom = 5.1045
-offset_left = 2240.42
-offset_right = 2637.42
-offset_bottom = -145.688
-text = "Ghost Trigger - 
-SHIKIMO &
-@fractalmanmusic "
-autowrap_mode = 0
-
 [node name="MusicTimer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="Teleport/TpA/Area2D" to="Teleport/TpA" method="_on_area_2d_body_entered"]
@@ -2996,7 +2979,6 @@ autowrap_mode = 0
 [connection signal="body_exited" from="Memo's/Memo11" to="Memo's/Memo11" method="_on_body_exited"]
 [connection signal="body_entered" from="Memo's/Memo12" to="Memo's/Memo12" method="_on_body_entered"]
 [connection signal="body_exited" from="Memo's/Memo12" to="Memo's/Memo12" method="_on_body_exited"]
-[connection signal="animation_finished" from="PlayerNode/Music/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="MusicTimer" to="." method="_on_music_timer_timeout"]
 
 [editable path="Teleport"]
@@ -3004,3 +2986,5 @@ autowrap_mode = 0
 [editable path="NpcYou"]
 [editable path="Lights/Light"]
 [editable path="PlayerNode"]
+[editable path="PlayerNode/Player/CanvasLayer"]
+[editable path="PlayerNode/Player/CanvasLayer/MovementTuto"]

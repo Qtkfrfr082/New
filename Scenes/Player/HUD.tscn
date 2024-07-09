@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d4fdahrrfbqo8"]
+[gd_scene load_steps=27 format=3 uid="uid://d4fdahrrfbqo8"]
 
 [ext_resource type="Texture2D" uid="uid://ba0a7ki63gfkv" path="res://Scenes/Player/HudResources/hp_bar_outer_v2 - Copy.png" id="1_2m57u"]
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/Hud.gd" id="1_muv1a"]
@@ -13,6 +13,161 @@
 [ext_resource type="AudioStream" uid="uid://c0lsnx78ynath" path="res://Sounds/Menu/MI_SFX 30.wav" id="11_1g5ai"]
 [ext_resource type="PackedScene" uid="uid://cfr6oq85ofmbc" path="res://Scenes/Player/PauseMenu.tscn" id="11_if10c"]
 [ext_resource type="PackedScene" uid="uid://bk44od6xpbfe6" path="res://Scenes/Tutorials/movement_tuto.tscn" id="13_34jv4"]
+[ext_resource type="Texture2D" uid="uid://camohbj8qvjp4" path="res://Tilemaps/GlobalTexture/MusicHover-Sheet.png" id="14_hr3yh"]
+[ext_resource type="FontFile" uid="uid://dal5hpyj3amgs" path="res://Fonts/ThaleahFat.ttf" id="15_vvv8m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dc54"]
+atlas = ExtResource("14_hr3yh")
+region = Rect2(0, 0, 148, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xifjt"]
+atlas = ExtResource("14_hr3yh")
+region = Rect2(148, 0, 148, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6x8bi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dc54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xifjt")
+}],
+"loop": true,
+"name": &"MusicHov",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_4274p"]
+resource_name = "Music"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(300.091, -56), Vector2(199.091, -56), Vector2(199.091, -56), Vector2(300.091, -56)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sub:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11.7142, -16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sub:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(357, 197)]
+}
+
+[sub_resource type="Animation" id="Animation_w3swu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300.091, -56)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sub:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11.7142, -16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sub:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(357, 197)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f1esg"]
+_data = {
+"Music": SubResource("Animation_4274p"),
+"RESET": SubResource("Animation_w3swu")
+}
+
+[sub_resource type="Gradient" id="Gradient_8rnkw"]
+offsets = PackedFloat32Array(0, 0.22561, 0.853659, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.372549, 0, 0, 0, 0.372549, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qp4dk"]
+gradient = SubResource("Gradient_8rnkw")
+use_hdr = true
+metadata/_snap_enabled = true
+
+[sub_resource type="Animation" id="Animation_m0mgg"]
+resource_name = "Level1"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3.01199, 3.99338),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gdljs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_72iro"]
+_data = {
+"Level1": SubResource("Animation_m0mgg"),
+"RESET": SubResource("Animation_gdljs")
+}
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_muv1a")
@@ -84,6 +239,87 @@ offset_bottom = 77.0
 [node name="RichTextLabel" parent="MovementTuto/NinePatchRect3" index="0"]
 offset_top = 31.0
 offset_bottom = 75.0
+
+[node name="Music" type="AnimatedSprite2D" parent="."]
+position = Vector2(300.091, -56)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_6x8bi")
+animation = &"MusicHov"
+autoplay = "MusicHov"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Music"]
+libraries = {
+"": SubResource("AnimationLibrary_f1esg")
+}
+
+[node name="Sub" type="Label" parent="Music"]
+anchors_preset = -1
+anchor_left = -15.5818
+anchor_top = 0.0576292
+anchor_right = -15.5818
+anchor_bottom = 1.9795
+offset_left = -11.7142
+offset_top = -16.0
+offset_right = 345.286
+offset_bottom = 181.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.85098, 0.341176, 0.388235, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("15_vvv8m")
+theme_override_font_sizes/font_size = 50
+text = "Ghost Trigger - SHIKIMO & @fractalmanmusic "
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -130.0
+offset_top = -121.0
+offset_right = 530.0
+offset_bottom = -19.0
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.211765, 0.239216, 0.709804, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("15_vvv8m")
+theme_override_font_sizes/font_size = 110
+text = "Unknown Lab"
+horizontal_alignment = 1
+
+[node name="Sub" type="Label" parent="Title"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.282829
+anchor_top = 0.0620931
+anchor_right = 0.608586
+anchor_bottom = 0.0620931
+offset_left = -80.0
+offset_top = 77.0
+offset_right = 748.0
+offset_bottom = 151.0
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.94902, 0.592157, 0.505882, 1)
+theme_override_colors/font_outline_color = Color(0.482353, 0.27451, 0.658824, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("15_vvv8m")
+theme_override_font_sizes/font_size = 50
+text = "Level 1: \"Initiating Code - Basics of Programming\""
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Title"]
+z_index = -1
+layout_mode = 0
+offset_left = -26.0
+offset_right = 670.0
+offset_bottom = 107.0
+texture = SubResource("GradientTexture2D_qp4dk")
+
+[node name="TitleAnim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_72iro")
+}
 
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
 
