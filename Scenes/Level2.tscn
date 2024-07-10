@@ -1,4 +1,4 @@
-[gd_scene load_steps=261 format=3 uid="uid://b7deu47qgpbjk"]
+[gd_scene load_steps=262 format=3 uid="uid://b7deu47qgpbjk"]
 
 [ext_resource type="PackedScene" uid="uid://ctq16ayy2ckhq" path="res://Scenes/tile_map.tscn" id="1_5tabc"]
 [ext_resource type="PackedScene" uid="uid://dnhuapbxdf6ja" path="res://Scenes/Teleport/teleport.tscn" id="2_mpau6"]
@@ -37,6 +37,7 @@
 [ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo28.gd" id="34_gmse4"]
 [ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo29.gd" id="35_ukh88"]
 [ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo30.gd" id="36_dgjpe"]
+[ext_resource type="Script" path="res://Scenes/testfilder/Lvl2Memo31.gd" id="37_ettli"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l4qm8"]
 atlas = ExtResource("3_p3xqf")
@@ -2141,6 +2142,7 @@ autoplay = "interact"
 
 [node name="Memo31" type="Area2D" parent="Memo\'s"]
 position = Vector2(3355, 271)
+script = ExtResource("37_ettli")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo31"]
 position = Vector2(-11, 37)

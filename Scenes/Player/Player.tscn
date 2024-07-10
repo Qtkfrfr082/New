@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://d4fdahrrfbqo8" path="res://Scenes/Player/HUD.tscn" id="6_qbgmn"]
 [ext_resource type="Texture2D" uid="uid://cw5w2gskqgfxq" path="res://Scenes/Player/PlayerResources/CatRunningM9-Sheet.png" id="6_v3nft"]
 [ext_resource type="AudioStream" uid="uid://beqqqeo2ihek5" path="res://Sounds/PlayerSounds/Walk_Run.wav" id="10_31176"]
-[ext_resource type="AudioStream" uid="uid://c8gwmil83bh0i" path="res://Sounds/PlayerSounds/portal_idle-34022.mp3" id="11_nl2j0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aqame"]
 radius = 38.0
@@ -195,94 +194,10 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CPUParticles2D:amount")
+tracks/3/path = NodePath("Sprite2D:vframes")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [40]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CPUParticles2D:speed_scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.07]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("CPUParticles2D:emission_sphere_radius")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [32.62]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("CPUParticles2D:orbit_velocity_min")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("CPUParticles2D:orbit_velocity_max")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.0]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("CPUParticles2D:scale_amount_max")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [10.0]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Portal:volume_db")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-80.0]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Sprite2D:vframes")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -353,141 +268,6 @@ tracks/3/use_blend = true
 resource_name = "spawn"
 length = 5.0
 step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(2.2),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [ExtResource("3_ugn78")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(2.2),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [8]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("CPUParticles2D:amount")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CPUParticles2D:speed_scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [1.0, 2.0, 0.7]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("CPUParticles2D:emission_sphere_radius")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.169998, 69.62, 128.0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("CPUParticles2D:orbit_velocity_min")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [1.0, 0.0, 0.0]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("CPUParticles2D:orbit_velocity_max")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [1.0, 0.0, 2.0]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("CPUParticles2D:scale_amount_max")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [1.0, 2.0, 1.0]
-}
-tracks/9/type = "audio"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Portal")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"clips": [{
-"end_offset": 39.3796,
-"start_offset": 0.0,
-"stream": ExtResource("11_nl2j0")
-}],
-"times": PackedFloat32Array(-0.0569837)
-}
-tracks/9/use_blend = true
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Portal:volume_db")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(-0.15, 0.901244, 3.36, 4.4, 5.04434),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [-80.0, 0.0, 0.0, -38.513, -80.0]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_08y3x"]
 _data = {
@@ -502,21 +282,6 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_ay056"]
 radius = 33.3766
 
-[sub_resource type="Gradient" id="Gradient_wkgxo"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.0705882)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_fds2k"]
-gradient = SubResource("Gradient_wkgxo")
-use_hdr = true
-fill = 2
-fill_from = Vector2(0.490029, 0.435897)
-fill_to = Vector2(0.809117, 0.293447)
-
-[sub_resource type="Curve" id="Curve_npsfg"]
-min_value = -1.0
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
 [sub_resource type="Gradient" id="Gradient_vr01i"]
 colors = PackedColorArray(1, 1, 1, 0.329412, 0, 0, 0, 1)
 
@@ -529,6 +294,25 @@ fill_to = Vector2(0.250712, 0.646724)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ppn0k"]
 polygon = PackedVector2Array(-8, 21, -8, 16, 13, 16, 13, 21)
+
+[sub_resource type="Gradient" id="Gradient_l3ku1"]
+offsets = PackedFloat32Array(0.0258065, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rn5qn"]
+gradient = SubResource("Gradient_l3ku1")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.7, 0.3)
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_aobkh"]
+_data = [Vector2(0.00277778, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_8an2k"]
+offsets = PackedFloat32Array(0, 0.434783, 0.807453)
+colors = PackedColorArray(0, 1, 1, 1, 0.278431, 0.14902, 1, 1, 1, 0, 0, 1)
 
 [node name="PlayerNode" type="Node2D"]
 
@@ -588,30 +372,9 @@ debug_color = Color(0.945098, 0.215686, 0.247059, 0.282353)
 [node name="CanvasLayer" parent="Player" instance=ExtResource("6_qbgmn")]
 visible = false
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Player"]
-visible = false
-amount = 40
-lifetime = 4.0
-speed_scale = 2.07
-randomness = 1.0
-fixed_fps = 60
-texture = SubResource("GradientTexture2D_fds2k")
-emission_shape = 1
-emission_sphere_radius = 32.62
-direction = Vector2(0, 0)
-gravity = Vector2(0, 0)
-orbit_velocity_max = 2.0
-radial_accel_max = 100.0
-scale_amount_min = 0.0
-scale_amount_max = 10.0
-color = Color(0.188235, 0.972549, 1, 1)
-hue_variation_max = 0.1
-hue_variation_curve = SubResource("Curve_npsfg")
-
 [node name="Marker2D" type="Marker2D" parent="Player"]
 
 [node name="Portal" type="AudioStreamPlayer2D" parent="Player"]
-volume_db = -80.0
 pitch_scale = 0.55
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
@@ -624,10 +387,30 @@ texture = SubResource("GradientTexture2D_1ynmq")
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
 occluder = SubResource("OccluderPolygon2D_ppn0k")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Player"]
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.3)
+emitting = false
+amount = 100
+one_shot = true
+speed_scale = 1.5
+randomness = 1.0
+fixed_fps = 60
+texture = SubResource("GradientTexture2D_rn5qn")
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, -2)
+spread = 10.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 198.88
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_aobkh")
+color_ramp = SubResource("Gradient_8an2k")
+
 [node name="Teleport" type="Node2D" parent="."]
 
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_timer_timeout"]
 [connection signal="timeout" from="Player/DeathTimer" to="Player" method="_on_death_timer_timeout"]
 [connection signal="body_entered" from="Player/Body" to="Player" method="_on_body_body_entered"]
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]
-[connection signal="finished" from="Player/CPUParticles2D" to="Player" method="_on_cpu_particles_2d_finished"]

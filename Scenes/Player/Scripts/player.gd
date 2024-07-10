@@ -170,18 +170,4 @@ func _on_cpu_particles_2d_finished():
 	
 
 
-func start_cooldown_timer():
-	# Start a timer to reset the teleporting state after the cooldown period
-	
-	$Timer.start(spawningduration)
-	$AnimationPlayer.play("spawn")
 
-func _on_timer_timeout():
-	$Sprite2D.show()
-	
-	pass # Replace with function body.
-
-func _on_animation_player_animation_finished(_spawn):
-	$CPUParticles2D.emitting = false
-	$AnimationPlayer.play("Idle")
-	pass # Replace with function body.
