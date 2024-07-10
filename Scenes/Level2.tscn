@@ -1,4 +1,4 @@
-[gd_scene load_steps=233 format=3 uid="uid://b7deu47qgpbjk"]
+[gd_scene load_steps=261 format=3 uid="uid://b7deu47qgpbjk"]
 
 [ext_resource type="PackedScene" uid="uid://ctq16ayy2ckhq" path="res://Scenes/tile_map.tscn" id="1_5tabc"]
 [ext_resource type="PackedScene" uid="uid://dnhuapbxdf6ja" path="res://Scenes/Teleport/teleport.tscn" id="2_mpau6"]
@@ -8,7 +8,35 @@
 [ext_resource type="Resource" uid="uid://biyaujs2bijrt" path="res://Dialogues/Lvl2Diag/Lvl2Memo.dialogue" id="6_qwnmy"]
 [ext_resource type="Texture2D" uid="uid://hfc1r06rtrg5" path="res://Scenes/Interactables/Textures/Interact.png" id="6_tc3vf"]
 [ext_resource type="PackedScene" uid="uid://6q7x72nvtr1d" path="res://Scenes/Player/Player.tscn" id="8_dsv02"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo3.gd" id="9_coxa8"]
 [ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo2.gd" id="9_nau8p"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo4.gd" id="10_tlyup"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo5.gd" id="11_j2qfj"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo6.gd" id="12_pratm"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo7.gd" id="13_nfedn"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo8.gd" id="14_5petx"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo9.gd" id="15_ck5tj"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo10.gd" id="16_0vt8d"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo11.gd" id="17_j8i5t"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo12.gd" id="18_bkmj0"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo13.gd" id="19_76tbx"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo14.gd" id="20_evrs6"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo15.gd" id="21_omq5v"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo16.gd" id="22_1b3lm"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo17.gd" id="23_sa3os"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo18.gd" id="24_vhr24"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo19.gd" id="25_d4qrv"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo20.gd" id="26_wnp0j"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo21.gd" id="27_g7tfc"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo22.gd" id="28_hoawi"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo23.gd" id="29_urr8n"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo24.gd" id="30_4mjfb"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo25.gd" id="31_8qbnp"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo26.gd" id="32_eyoll"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo27.gd" id="33_5742b"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo28.gd" id="34_gmse4"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo29.gd" id="35_ukh88"]
+[ext_resource type="Script" path="res://Scenes/Lvl2Memo'sScript/Lvl2Memo30.gd" id="36_dgjpe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l4qm8"]
 atlas = ExtResource("3_p3xqf")
@@ -1678,6 +1706,8 @@ autoplay = "interact"
 
 [node name="Memo3" type="Area2D" parent="Memo\'s"]
 position = Vector2(458, 77)
+script = ExtResource("9_coxa8")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo3"]
 position = Vector2(6, 8)
@@ -1692,6 +1722,8 @@ autoplay = "interact"
 
 [node name="Memo4" type="Area2D" parent="Memo\'s"]
 position = Vector2(846, 143)
+script = ExtResource("10_tlyup")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo4"]
 position = Vector2(1, 5)
@@ -1706,6 +1738,8 @@ autoplay = "interact"
 
 [node name="Memo5" type="Area2D" parent="Memo\'s"]
 position = Vector2(976, 85)
+script = ExtResource("11_j2qfj")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo5"]
 shape = SubResource("RectangleShape2D_kjg0o")
@@ -1719,6 +1753,8 @@ autoplay = "interact"
 
 [node name="Memo6" type="Area2D" parent="Memo\'s"]
 position = Vector2(1103, 84)
+script = ExtResource("12_pratm")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo6"]
 position = Vector2(0, 3)
@@ -1733,6 +1769,8 @@ autoplay = "interact"
 
 [node name="Memo7" type="Area2D" parent="Memo\'s"]
 position = Vector2(1520, 142)
+script = ExtResource("13_nfedn")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo7"]
 position = Vector2(-1, 5)
@@ -1747,6 +1785,8 @@ autoplay = "interact"
 
 [node name="Memo8" type="Area2D" parent="Memo\'s"]
 position = Vector2(1613, 107)
+script = ExtResource("14_5petx")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo8"]
 position = Vector2(3, 32)
@@ -1760,6 +1800,8 @@ animation = &"interact"
 
 [node name="Memo9" type="Area2D" parent="Memo\'s"]
 position = Vector2(1742, 109)
+script = ExtResource("15_ck5tj")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo9"]
 position = Vector2(2, 29.5)
@@ -1773,6 +1815,8 @@ animation = &"interact"
 
 [node name="Memo10" type="Area2D" parent="Memo\'s"]
 position = Vector2(1869, 105)
+script = ExtResource("16_0vt8d")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo10"]
 position = Vector2(3, 34)
@@ -1787,6 +1831,8 @@ autoplay = "interact"
 
 [node name="Memo11" type="Area2D" parent="Memo\'s"]
 position = Vector2(2026, 132)
+script = ExtResource("17_j8i5t")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo11"]
 position = Vector2(327, -19)
@@ -1801,6 +1847,8 @@ autoplay = "interact"
 
 [node name="Memo12" type="Area2D" parent="Memo\'s"]
 position = Vector2(2126, 98)
+script = ExtResource("18_bkmj0")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo12"]
 position = Vector2(2, 42.5)
@@ -1815,6 +1863,8 @@ autoplay = "interact"
 
 [node name="Memo13" type="Area2D" parent="Memo\'s"]
 position = Vector2(2353, 73)
+script = ExtResource("19_76tbx")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo13"]
 position = Vector2(-319, 67.5)
@@ -1829,6 +1879,8 @@ autoplay = "interact"
 
 [node name="Memo14" type="Area2D" parent="Memo\'s"]
 position = Vector2(2640, 76)
+script = ExtResource("20_evrs6")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo14"]
 position = Vector2(-0.5, 9)
@@ -1843,6 +1895,8 @@ autoplay = "interact"
 
 [node name="Memo15" type="Area2D" parent="Memo\'s"]
 position = Vector2(2576, 139)
+script = ExtResource("21_omq5v")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo15"]
 position = Vector2(0, 10)
@@ -1857,6 +1911,8 @@ autoplay = "interact"
 
 [node name="Memo16" type="Area2D" parent="Memo\'s"]
 position = Vector2(2930, 47)
+script = ExtResource("22_1b3lm")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo16"]
 position = Vector2(-1, 33)
@@ -1871,6 +1927,8 @@ autoplay = "interact"
 
 [node name="Memo17" type="Area2D" parent="Memo\'s"]
 position = Vector2(303, 365)
+script = ExtResource("23_sa3os")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo17"]
 position = Vector2(1, 41)
@@ -1885,6 +1943,8 @@ autoplay = "interact"
 
 [node name="Memo18" type="Area2D" parent="Memo\'s"]
 position = Vector2(529, 311)
+script = ExtResource("24_vhr24")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo18"]
 position = Vector2(-1, 31)
@@ -1899,6 +1959,8 @@ autoplay = "interact"
 
 [node name="Memo19" type="Area2D" parent="Memo\'s"]
 position = Vector2(881, 247)
+script = ExtResource("25_d4qrv")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo19"]
 position = Vector2(1, 63)
@@ -1912,6 +1974,8 @@ autoplay = "interact"
 
 [node name="Memo20" type="Area2D" parent="Memo\'s"]
 position = Vector2(880, 344)
+script = ExtResource("26_wnp0j")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo20"]
 position = Vector2(1, 62)
@@ -1923,7 +1987,24 @@ sprite_frames = SubResource("SpriteFrames_7djgf")
 animation = &"interact"
 autoplay = "interact"
 
+[node name="Memo21" type="Area2D" parent="Memo\'s"]
+position = Vector2(880, 344)
+script = ExtResource("27_g7tfc")
+dialogue_resource = ExtResource("6_qwnmy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo21"]
+position = Vector2(1, 62)
+shape = SubResource("RectangleShape2D_lxqog")
+
+[node name="Interact" type="AnimatedSprite2D" parent="Memo\'s/Memo21"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_7djgf")
+animation = &"interact"
+autoplay = "interact"
+
 [node name="Memo22" type="Area2D" parent="Memo\'s"]
+script = ExtResource("28_hoawi")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo22"]
 position = Vector2(1233, 269)
@@ -1937,6 +2018,8 @@ animation = &"interact"
 autoplay = "interact"
 
 [node name="Memo23" type="Area2D" parent="Memo\'s"]
+script = ExtResource("29_urr8n")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo23"]
 position = Vector2(1361, 303)
@@ -1950,6 +2033,8 @@ animation = &"interact"
 autoplay = "interact"
 
 [node name="Memo24" type="Area2D" parent="Memo\'s"]
+script = ExtResource("30_4mjfb")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo24"]
 position = Vector2(1200, 397)
@@ -1963,6 +2048,8 @@ animation = &"interact"
 autoplay = "interact"
 
 [node name="Memo25" type="Area2D" parent="Memo\'s"]
+script = ExtResource("31_8qbnp")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo25"]
 position = Vector2(1713, 398)
@@ -1976,6 +2063,8 @@ animation = &"interact"
 autoplay = "interact"
 
 [node name="Memo26" type="Area2D" parent="Memo\'s"]
+script = ExtResource("32_eyoll")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo26"]
 position = Vector2(1970, 269)
@@ -1989,6 +2078,8 @@ animation = &"interact"
 autoplay = "interact"
 
 [node name="Memo27" type="Area2D" parent="Memo\'s"]
+script = ExtResource("33_5742b")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo27"]
 position = Vector2(2257, 398)
@@ -2003,6 +2094,7 @@ autoplay = "interact"
 
 [node name="Memo28" type="Area2D" parent="Memo\'s"]
 position = Vector2(2577, 243)
+script = ExtResource("34_gmse4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo28"]
 position = Vector2(0, 57)
@@ -2017,6 +2109,8 @@ autoplay = "interact"
 
 [node name="Memo29" type="Area2D" parent="Memo\'s"]
 position = Vector2(3153, 400)
+script = ExtResource("35_ukh88")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo29"]
 position = Vector2(0, -2)
@@ -2031,6 +2125,8 @@ autoplay = "interact"
 
 [node name="Memo30" type="Area2D" parent="Memo\'s"]
 position = Vector2(3496, 362)
+script = ExtResource("36_dgjpe")
+dialogue_resource = ExtResource("6_qwnmy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Memo\'s/Memo30"]
 position = Vector2(40, 38)
@@ -2113,6 +2209,8 @@ position = Vector2(285, 66)
 [connection signal="body_exited" from="Memo's/Memo19" to="Memo's/Memo19" method="_on_body_exited"]
 [connection signal="body_entered" from="Memo's/Memo20" to="Memo's/Memo20" method="_on_body_entered"]
 [connection signal="body_exited" from="Memo's/Memo20" to="Memo's/Memo20" method="_on_body_exited"]
+[connection signal="body_entered" from="Memo's/Memo21" to="Memo's/Memo21" method="_on_body_entered"]
+[connection signal="body_exited" from="Memo's/Memo21" to="Memo's/Memo21" method="_on_body_exited"]
 [connection signal="body_entered" from="Memo's/Memo22" to="Memo's/Memo22" method="_on_body_entered"]
 [connection signal="body_exited" from="Memo's/Memo22" to="Memo's/Memo22" method="_on_body_exited"]
 [connection signal="body_entered" from="Memo's/Memo23" to="Memo's/Memo23" method="_on_body_entered"]

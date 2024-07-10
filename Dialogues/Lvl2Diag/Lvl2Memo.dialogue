@@ -158,7 +158,9 @@ And remember differentiating Java data types is important because it helps the c
 It also prevents errors by ensuring that only compatible data is stored in variables, making the program safer and faster. Using the right data type makes the code easier to understand and maintain. This helps in writing clear, efficient, and reliable programs.
 set PlayerData.can_move = true
 => END
-
+~ Memo21
+If you're reading this you got mauled by those bug LMAO!
+=> END
 ~ Memo22
 set PlayerData.can_move = false
 'Recording\: AL-1S' \nSTOP! Before proceeding please read! Area Ahead Is DANGEROUS! AL-1S if you're reading this, please thread this path carefully a bunch of hostile experimental bugs have occupied this sector. Use the guardrails above for safer navigation.
