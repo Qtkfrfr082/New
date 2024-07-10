@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://biyaujs2bijrt"
+path="res://.godot/imported/Lvl2Memo.dialogue-a53ca09c20813d7059ef54f4528f1bf3.tres"
+
+[deps]
+
+source_file="res://Dialogues/Lvl2Diag/Lvl2Memo.dialogue"
+dest_files=["res://.godot/imported/Lvl2Memo.dialogue-a53ca09c20813d7059ef54f4528f1bf3.tres"]
+
+[params]
+
+defaults=true
