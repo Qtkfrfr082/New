@@ -48,6 +48,8 @@ folder_colors={
 "res://Dialogues/Lvl3Diag/": "orange",
 "res://Fonts/": "blue",
 "res://Scenes/": "yellow",
+"res://Scenes/Lvl1Memo'sScript/": "orange",
+"res://Scenes/Lvl2Memo'sScript/": "orange",
 "res://Scenes/Lvl3Memo'sScript/": "orange",
 "res://Sounds/": "purple",
 "res://Tilemaps/": "pink",
