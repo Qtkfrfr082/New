@@ -3013,10 +3013,7 @@ position = Vector2(2989, 176)
 position = Vector2(80, 100)
 
 [node name="Sub" parent="PlayerNode/Player/CanvasLayer/Music" index="1"]
-offset_left = 2294.39
-offset_top = -19.6883
-offset_right = 2651.39
-offset_bottom = 669.311
+offset_bottom = 795.999
 
 [node name="MusicTimer" type="Timer" parent="."]
 

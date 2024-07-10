@@ -154,11 +154,11 @@ _data = {
 "RESET": SubResource("Animation_apa41")
 }
 
-[sub_resource type="Gradient" id="Gradient_i71yy"]
+[sub_resource type="Gradient" id="Gradient_welf7"]
 colors = PackedColorArray(0.945098, 0.984314, 0, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_0rp5h"]
-gradient = SubResource("Gradient_i71yy")
+gradient = SubResource("Gradient_welf7")
 use_hdr = true
 fill = 1
 fill_from = Vector2(0.518519, 0.527066)

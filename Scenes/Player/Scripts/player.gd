@@ -23,10 +23,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var playerhits = get_node("CanvasLayer")
 func _ready():
 	playerhits.show()
-	$Sprite2D.hide()
-	start_cooldown_timer()
+	
+	
 	$CPUParticles2D.show()
-	#CPUParticles2D.emitting = true
+	$CPUParticles2D.emitting = true
 	#Intear.add_to_group("interactable")
 pass
 
