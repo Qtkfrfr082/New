@@ -3012,6 +3012,9 @@ position = Vector2(2989, 176)
 [node name="PlayerNode" parent="." instance=ExtResource("51_xruk1")]
 position = Vector2(80, 100)
 
+[node name="Sub" parent="PlayerNode/Player/CanvasLayer/Music" index="1"]
+offset_bottom = 1042.0
+
 [node name="MusicTimer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="Teleport/TpA/Area2D" to="Teleport/TpA" method="_on_area_2d_body_entered"]

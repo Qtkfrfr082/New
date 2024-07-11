@@ -296,8 +296,8 @@ fill_to = Vector2(0.250712, 0.646724)
 polygon = PackedVector2Array(-8, 21, -8, 16, 13, 16, 13, 21)
 
 [sub_resource type="Gradient" id="Gradient_l3ku1"]
-offsets = PackedFloat32Array(0.0258065, 1)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0.0258065, 0.677419, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.953642, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_rn5qn"]
 gradient = SubResource("Gradient_l3ku1")
@@ -391,7 +391,8 @@ occluder = SubResource("OccluderPolygon2D_ppn0k")
 position = Vector2(0, -2)
 scale = Vector2(0.3, 0.3)
 emitting = false
-amount = 100
+amount = 200
+lifetime = 2.0
 one_shot = true
 speed_scale = 1.5
 randomness = 1.0
