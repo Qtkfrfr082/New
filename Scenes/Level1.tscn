@@ -1,4 +1,4 @@
-[gd_scene load_steps=168 format=3 uid="uid://c5job10hv1p7x"]
+[gd_scene load_steps=168 format=3 uid="uid://bqtvy4iaftilk"]
 
 [ext_resource type="Script" path="res://Scenes/RootScripts/Level1Script.gd" id="1_iefos"]
 [ext_resource type="Texture2D" uid="uid://chrq0vrj4au5n" path="res://Tilemaps/own_creation/own_tileset/decor_tileset.png" id="2_bkxgm"]
@@ -3011,9 +3011,6 @@ position = Vector2(2989, 176)
 
 [node name="PlayerNode" parent="." instance=ExtResource("51_xruk1")]
 position = Vector2(80, 100)
-
-[node name="Sub" parent="PlayerNode/Player/CanvasLayer/Music" index="1"]
-offset_bottom = 795.999
 
 [node name="MusicTimer" type="Timer" parent="."]
 
