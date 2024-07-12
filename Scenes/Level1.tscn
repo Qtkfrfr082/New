@@ -3013,7 +3013,11 @@ position = Vector2(2989, 176)
 position = Vector2(80, 100)
 
 [node name="Sub" parent="PlayerNode/Player/CanvasLayer/Music" index="1"]
+<<<<<<< Updated upstream
 offset_bottom = 1165.0
+=======
+offset_bottom = 1161.31
+>>>>>>> Stashed changes
 
 [node name="MusicTimer" type="Timer" parent="."]
 
