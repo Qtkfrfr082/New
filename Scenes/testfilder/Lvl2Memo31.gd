@@ -14,13 +14,13 @@ func MemoShow():
 	var balloon: Node = Balloon.instantiate()
 	get_tree().current_scene.add_child(balloon)
 	balloon.start(dialogue_resource, dialogue_start)
-	print("Mag Dialogue")
+	
 func _on_body_entered(body):
 	if body.name == "Player":
 		$Interact.show()
 		$Interact.play("interact")
 		player_inside = true
-		print("inside2")
+		
 
 	pass # Replace with function body.
 
