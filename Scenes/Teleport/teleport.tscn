@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dnhuapbxdf6ja"]
+[gd_scene load_steps=9 format=3 uid="uid://dnhuapbxdf6ja"]
 
 [ext_resource type="Script" path="res://Scenes/Teleport/TpA.gd" id="1_0hnr6"]
 [ext_resource type="Script" path="res://Scenes/Teleport/TpB.gd" id="2_mdntk"]
 [ext_resource type="Script" path="res://Scenes/Teleport/TpNext.gd" id="3_8kf6w"]
-[ext_resource type="Texture2D" uid="uid://qsexwj8imycp" path="res://Scenes/Teleport/Particles/particle.png" id="3_52o3r"]
 [ext_resource type="AudioStream" uid="uid://obhw2o4q4bec" path="res://Sounds/SFX/Teleport.wav" id="5_415pi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5kb3"]
@@ -54,18 +53,6 @@ shape = SubResource("RectangleShape2D_82rhn")
 
 [node name="Cooldown" type="Timer" parent="."]
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-emitting = false
-amount = 5
-lifetime = 3.0
-speed_scale = 2.62
-randomness = 0.13
-lifetime_randomness = 0.06
-texture = ExtResource("3_52o3r")
-emission_shape = 2
-emission_sphere_radius = 10.68
-gravity = Vector2(0, -5)
-
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
 amount = 11
 lifetime = 3.0
@@ -82,6 +69,21 @@ hue_variation_max = 0.1
 hue_variation_curve = SubResource("Curve_wksbh")
 
 [node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
+amount = 11
+lifetime = 3.0
+speed_scale = 2.8
+randomness = 0.13
+lifetime_randomness = 0.06
+emission_shape = 2
+emission_sphere_radius = 10.68
+gravity = Vector2(0, -5)
+scale_amount_max = 5.0
+color = Color(0, 0.866667, 1, 1)
+hue_variation_min = -0.2
+hue_variation_max = 0.1
+hue_variation_curve = SubResource("Curve_wksbh")
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="."]
 amount = 11
 lifetime = 3.0
 speed_scale = 2.8

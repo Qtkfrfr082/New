@@ -54,30 +54,34 @@ set PlayerData.can_move = false
 'Recording - AL-1S\:' \nHello AL-1S speaking! Have you noticed a pattern? This whole place is implemented to have a Repetition/Iteration Structure. Repeating through the Teleportation Modules whenever a condition is not met and iterating through multiple rooms to find the right condition to escape is a fine example!!
 You: Wait do I have to go through another section like this??
 But now that's done I'll be testing you knowledge, as you know we are a facility of JAVA lovers we have to know if you have the necessary knowledge for the things we love so we'll test you!
-(PICTURE)
+set FlowC1.Lvl2Show = true
 Here is a picture of a basic code snippet! Do what you can with that information.
 You: ??
+set FlowC1.Lvl2Show = false
 set PlayerData.can_move = true
 => END
 
 ~ Memo8
 set PlayerData.can_move = false
-(PICTURE)
+set FlowC1.Lvl2Show1 = true
 Here is a code snippet
+set FlowC1.Lvl2Show1 = false
 set PlayerData.can_move = true
 => END 
 
 ~ Memo9
 set PlayerData.can_move = false
-(PICTURE)
+set FlowC1.Lvl2Show2 = false
 Here is a code snippet
+set FlowC1.Lvl2Show2 = false
 set PlayerData.can_move = true
 => END
 
 ~ Memo10
 set PlayerData.can_move = false
-(PICTURE)
+set FlowC1.Lvl2Show3 = false
 Here is a code snippet
+set FlowC1.Lvl2Show3 = false
 set PlayerData.can_move = true
 => END
 
@@ -107,25 +111,28 @@ set PlayerData.can_move = true
 ~ Memo14
 set PlayerData.can_move = false
 You: An actual lab? Huh. let's see what we can find here.
-(PICTURE)
+set FlowC1.Lvl2Show4 = false
 Proper naming conventions, variable initialization, and appropriate variable types in Java programming enhance code readability, maintainability, collaboration, and error prevention, ensuring the program behaves as expected and is easy for others to understand and maintain. Here is a good naming and variable initialization example!
+set FlowC1.Lvl2Show4 = false
 set PlayerData.can_move = true
 => END
 
 ~ Memo15
 set PlayerData.can_move = false
-(PICTURE)
+set FlowC1.Lvl2Show5 = true
 'Recordind\: AL-1S' \nI always find myself wondering why my coding skills suck even though my entire consciousness is an intricate code altogether, I wonder why that is? 
 Anyways Facility AI always told me that my variable initialization and naming conventions are already fine however I always miss setting variable types. So, I'll start noting variable types whenever I can!!
 Here is an example of Local Variable in summary they're Local Variable\: Defined inside a method; Only usable within that method; Other methods don't know it exists; Cannot be declared as 'static'. Basically, they only exist in their method!
+set FlowC1.Lvl2Show5 = false
 set PlayerData.can_move = true
 => END
 
 ~ Memo16
 set PlayerData.can_move = false
-(PICTURE)
+set FlowC1.Lvl2Show6 = true
 'Recordind\: AL-1S' \nAnother tip from the great programmer AL-1S!  I remember talking about Local Variable now we're talking about Instance Variable!!
 You see, Instance Variable is defined inside a class, but outside any methods; Each instance (object) of the class has its own copy and it's not shared among different instances. In Summary! Instance Variables are unique to each object of a class!
+set FlowC1.Lvl2Show6 = false
 set PlayerData.can_move = true
 => END
 
@@ -145,17 +152,19 @@ set PlayerData.can_move = true
 
 ~ Memo19
 set PlayerData.can_move = false
-(PICTURE)
+set FlowC1.Lvl2Show7 = true
 'Recording\: AL-1S' \nAnother tip from the great programmer AL-1S!  A static variable is a variable that is shared among all instances of a class. It is declared with the static keyword and is allocated memory only once when the class is loaded. You can use this whenever you have a variable that is accessed by every part of your code!!
+set FlowC1.Lvl2Show7 = false
 set PlayerData.can_move = true
 => END
 
 ~ Memo20
 set PlayerData.can_move = false
-(PICTURE)
+set FlowC1.Lvl2Show8 = false
 'Recording\: AL-1S' \nHi! AL-1S The great programmer here! I'm a bit shy to admit here but I've had a bunch of trouble with data type hahahahahaha :> so here's a chart of them. 
 And remember differentiating Java data types is important because it helps the computer know how much memory to use and how to handle data efficiently. 
 It also prevents errors by ensuring that only compatible data is stored in variables, making the program safer and faster. Using the right data type makes the code easier to understand and maintain. This helps in writing clear, efficient, and reliable programs.
+set FlowC1.Lvl2Show8 = false
 set PlayerData.can_move = true
 => END
 ~ Memo21
@@ -221,28 +230,31 @@ set PlayerData.can_move = true
 
 ~ Memo30
 set PlayerData.can_move = false
-(Picture)
+set FlowC1.Lvl2Show9 = true
 'Recording\: AL-1S' \nThere is three way we input data to a code there is the Scanner, InputStreamReader, and BufferedReader. They're all similar in functionalities but different execution, overall, their difference doesn't really matter much but you need to see how they're executed. 
 Above is InputStreamReader and BufferedReader example, since they kind of need each other to work. Personally, I just use Scanner Hehe.
 You: What a cheeky android.
+set FlowC1.Lvl2Show9 = true
 set PlayerData.can_move = true
 => END
 
 ~ Memo31
 set PlayerData.can_move = false
-(Picture)
+set FlowC1.Lvl2Show10 = true
 You: "Here is an example of Scanner Class usage!". Looks like Scanner is simpler than BufferedReader, no wonder AL-1S displayed such noticeable bias when mentioning it.
+set FlowC1.Lvl2Show10 = true
 set PlayerData.can_move = true
 => END
 
 ~ Memo32
 set PlayerData.can_move = false
-(Picture)
+set FlowC1.Lvl2Show11 = true
 'Recording\: AL-1S' \nAs a part of my programming career I've made a bunch of code snippets that helped me practice with coding with java! Can you guess how it works?
 You: Hmm. Judging by how it works it's a random number guessing game.
 It's a random number guessing game!!
 I used a class called "Random" for the random unit to be chosen! Overall, it's a fun way to use basic input and output in java! And I also used iteration, noticed the "while" function it reads how many attempts you have and if it goes zero its game over! Looks like I can really call myself a programmer now!
 You: I'm surprised myself I actually understood it! Maybe reading all those notes did add to my knowledge, looks like even I am learning.
 You: Looks like this is the last note, if my calculations are right that TP Module on the right is my way out of this floor, welp only one way to find out.
+set FlowC1.Lvl2Show11 = true
 set PlayerData.can_move = true
 => END

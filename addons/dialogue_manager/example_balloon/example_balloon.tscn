@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=41 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
@@ -11,6 +11,30 @@
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/FlowC22.gd" id="9_q8xcp"]
 [ext_resource type="Texture2D" uid="uid://bw47f57cq2oha" path="res://Dialogues/Texture/CodeSnipmemo12.png" id="10_73pty"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/CodeSnip.gd" id="11_p0f43"]
+[ext_resource type="Texture2D" uid="uid://c003mjpx0axu7" path="res://Dialogues/Texture/Lvl2Show.png" id="12_diyl8"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show.gd" id="13_5j8db"]
+[ext_resource type="Texture2D" uid="uid://dkosicyjxlkai" path="res://Dialogues/Texture/Lvl2Show1.png" id="14_1dve1"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show1.gd" id="14_8b5wx"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show2.gd" id="16_jqdkg"]
+[ext_resource type="Texture2D" uid="uid://deldx0hk5nlac" path="res://Dialogues/Texture/Lvl2Show2.png" id="16_n6by7"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show3.gd" id="18_enmfa"]
+[ext_resource type="Texture2D" uid="uid://bh3jltlrdydt8" path="res://Dialogues/Texture/Lvl2Show3.png" id="18_ic748"]
+[ext_resource type="Texture2D" uid="uid://bii8d3vs8wp0t" path="res://Dialogues/Texture/Lvl2Show4.png" id="20_0jega"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show4.gd" id="20_cokm2"]
+[ext_resource type="Texture2D" uid="uid://bjwwicxojkfbs" path="res://Dialogues/Texture/Lvl2Show5.png" id="22_moga8"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show5.gd" id="22_vvsuq"]
+[ext_resource type="Texture2D" uid="uid://bpenw23jci3h3" path="res://Dialogues/Texture/Lvl2Show6.png" id="24_478o8"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show6.gd" id="24_crebm"]
+[ext_resource type="Texture2D" uid="uid://p8ey2cohxxbf" path="res://Dialogues/Texture/Lvl2Show7.png" id="26_5qc73"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show7.gd" id="27_c35pw"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show8.gd" id="28_8fyx8"]
+[ext_resource type="Texture2D" uid="uid://cecutvsu5cu0y" path="res://Dialogues/Texture/Lvl2Show8.png" id="28_vh65e"]
+[ext_resource type="Texture2D" uid="uid://ddld58vxynqq7" path="res://Dialogues/Texture/Lvl2Show9.png" id="30_abeio"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show9.gd" id="31_cysyf"]
+[ext_resource type="Texture2D" uid="uid://dmq8xc2vciilb" path="res://Dialogues/Texture/Lvl2Show10.png" id="32_17xh0"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show10.gd" id="33_7imva"]
+[ext_resource type="Texture2D" uid="uid://twdtxqflo27h" path="res://Dialogues/Texture/Lvl2Show11.png" id="34_7guik"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show11.gd" id="35_t6o6c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -195,6 +219,137 @@ offset_bottom = 311.0
 scale = Vector2(2, 2)
 texture = ExtResource("10_73pty")
 script = ExtResource("11_p0f43")
+
+[node name="Lvl2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lvl2Show" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 292.0
+offset_top = 178.0
+offset_right = 896.0
+offset_bottom = 398.0
+texture = ExtResource("12_diyl8")
+script = ExtResource("13_5j8db")
+
+[node name="Lvl2Show1" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 344.0
+offset_top = 189.0
+offset_right = 755.0
+offset_bottom = 354.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("14_1dve1")
+script = ExtResource("14_8b5wx")
+
+[node name="Lvl2Show2" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 346.0
+offset_top = 204.0
+offset_right = 754.0
+offset_bottom = 343.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("16_n6by7")
+script = ExtResource("16_jqdkg")
+
+[node name="Lvl2Show3" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 339.0
+offset_top = 205.0
+offset_right = 766.0
+offset_bottom = 344.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("18_ic748")
+script = ExtResource("18_enmfa")
+
+[node name="Lvl2Show4" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 329.0
+offset_top = 42.0
+offset_right = 866.0
+offset_bottom = 418.0
+texture = ExtResource("20_0jega")
+script = ExtResource("20_cokm2")
+
+[node name="Lvl2Show5" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 369.0
+offset_top = 211.0
+offset_right = 746.0
+offset_bottom = 338.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("22_moga8")
+script = ExtResource("22_vvsuq")
+
+[node name="Lvl2Show6" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 363.0
+offset_top = 189.0
+offset_right = 829.0
+offset_bottom = 384.0
+texture = ExtResource("24_478o8")
+script = ExtResource("24_crebm")
+
+[node name="Lvl2Show7" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 356.0
+offset_top = 79.0
+offset_right = 756.0
+offset_bottom = 372.0
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("26_5qc73")
+script = ExtResource("27_c35pw")
+
+[node name="Lvl2Show8" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 287.0
+offset_top = 114.0
+offset_right = 927.0
+offset_bottom = 397.0
+texture = ExtResource("28_vh65e")
+script = ExtResource("28_8fyx8")
+
+[node name="Lvl2Show9" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 286.0
+offset_top = 144.0
+offset_right = 928.0
+offset_bottom = 369.0
+texture = ExtResource("30_abeio")
+script = ExtResource("31_cysyf")
+
+[node name="Lvl2Show10" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 294.0
+offset_top = 24.0
+offset_right = 922.0
+offset_bottom = 427.0
+texture = ExtResource("32_17xh0")
+script = ExtResource("33_7imva")
+
+[node name="Lvl2Show11" type="TextureRect" parent="Lvl2"]
+visible = false
+layout_mode = 0
+offset_left = 378.0
+offset_top = 11.0
+offset_right = 837.0
+offset_bottom = 427.0
+texture = ExtResource("34_7guik")
+script = ExtResource("35_t6o6c")
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

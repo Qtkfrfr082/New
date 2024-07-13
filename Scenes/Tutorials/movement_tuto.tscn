@@ -154,7 +154,6 @@ _data = {
 script = ExtResource("1_abf78")
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="."]
-visible = false
 offset_left = 479.0
 offset_top = 493.0
 offset_right = 723.0
@@ -182,7 +181,6 @@ scroll_active = false
 drag_and_drop_selection_enabled = false
 
 [node name="NinePatchRect3" type="NinePatchRect" parent="."]
-visible = false
 offset_left = 479.0
 offset_top = 492.0
 offset_right = 723.0
@@ -210,7 +208,6 @@ scroll_active = false
 drag_and_drop_selection_enabled = false
 
 [node name="NinePatchRect4" type="NinePatchRect" parent="."]
-visible = false
 offset_left = 414.0
 offset_top = 493.0
 offset_right = 795.0

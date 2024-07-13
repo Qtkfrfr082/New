@@ -13,18 +13,22 @@ var run1 = true
 var run2 = true
 const KNOCKBACK_DISTANCE = 50
 const KNOCKBACK_FORCE = 500
+const KNOCKBACK_DURATION = 0.2
+var is_being_knocked_back = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 #@onready var Intear = get_node("../../NPC/Actionable")
 #@onready var Intear = PlayerData.NpcInteract
-@onready var actionable_finder: Area2D = $InteractDetection
+
 @onready var AP = $AnimationPlayer
 @onready var playerhits = get_node("CanvasLayer")
 func _ready():
 	playerhits.show()
 	
-	
+	PlayerData.can_move = false
+	$SpawnTime.start()
+	$Spawn.play()
 	$CPUParticles2D.show()
 	$CPUParticles2D.emitting = true
 	#Intear.add_to_group("interactable")
@@ -40,7 +44,7 @@ func _physics_process(delta):
 		#From here would be the hp for the player( this doesnt work well too sometimes progress bar health not accurate updating)
 	if PlayerData.Health == 20:
 		if run0:
-			$"../Hurt".play()
+			$Hurt.play()
 			var tween = get_tree().create_tween()
 			tween.tween_property(HEALTH, "value", 20,0 ).set_trans(Tween.TRANS_LINEAR)
 			playerhits.PlayerHit()
@@ -48,7 +52,7 @@ func _physics_process(delta):
 		
 	elif PlayerData.Health == 10:
 		if run1:
-			$"../Hurt".play()
+			$Hurt.play()
 			var tween = get_tree().create_tween()
 			tween.tween_property(HEALTH, "value", 10,0 ).set_trans(Tween.TRANS_LINEAR)
 		
@@ -57,10 +61,10 @@ func _physics_process(delta):
 			
 	elif PlayerData.Health == 0:
 		if run2:
-			$"../Hurt".play()
+			$Hurt.play()
 			var tween = get_tree().create_tween()
 			tween.tween_property(HEALTH, "value", 0,0 ).set_trans(Tween.TRANS_LINEAR)
-			$"../Died".play()
+			$Hurt.play()
 			playerhits.PlayerHit()
 			run2 = false
 		#Death will call when gets to zero 
@@ -70,42 +74,44 @@ func _physics_process(delta):
 			deathh()
 
 	
-		
-	if PlayerData.can_move:
-		if not is_on_floor():
-			velocity.y += gravity * delta
-
-	# Handle Jump.
-		if Input.is_action_just_pressed("Jump")and is_on_floor():
-		
-			velocity.y = JUMP_VELOCITY
-			AP.play("Jump")
-			$Jumping.play()
-				
-		var direction = Input.get_axis("Run_Left", "Run_Right")
-	
-		if direction == -1:
-			get_node("Sprite2D").flip_h = true
-		elif direction == 1:
-			get_node("Sprite2D").flip_h = false
-		if direction:
-		
-			velocity.x = direction * SPEED
-			if velocity.y == 0:
-				AP.play("Run")
-			#This is for running sounds change according to yours if the sound doesnt match to your player
-			if $Timer.time_left <= 0:
-					@warning_ignore("narrowing_conversion")
-					$Running.pitch_scale = randi_range(8.8,1.2)
-					$Running.play()
-					$Timer.start(0.48)#here you will change it to match the footsteps
-					print("sound")
-		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-			if velocity.y == 0:
-					AP.play("Idle")
+	if is_being_knocked_back:
 		move_and_slide()
-	return
+	else:
+		if PlayerData.can_move:
+			if not is_on_floor():
+				velocity.y += gravity * delta
+
+		# Handle Jump.
+			if Input.is_action_just_pressed("Jump")and is_on_floor():
+			
+				velocity.y = JUMP_VELOCITY
+				AP.play("Jump")
+				$Jumping.play()
+					
+			var direction = Input.get_axis("Run_Left", "Run_Right")
+		
+			if direction == -1:
+				get_node("Sprite2D").flip_h = true
+			elif direction == 1:
+				get_node("Sprite2D").flip_h = false
+			if direction:
+			
+				velocity.x = direction * SPEED
+				if velocity.y == 0:
+					AP.play("Run")
+				#This is for running sounds change according to yours if the sound doesnt match to your player
+				if $Timer.time_left <= 0:
+						@warning_ignore("narrowing_conversion")
+						$Running.pitch_scale = randi_range(8.8,1.2)
+						$Running.play()
+						$Timer.start(0.48)#here you will change it to match the footsteps
+						print("sound")
+			else:
+				velocity.x = move_toward(velocity.x, 0, SPEED)
+				if velocity.y == 0:
+						AP.play("Idle")
+			move_and_slide()
+		return
 
 #func _unhandled_input(_event: InputEvent) -> void:
 	#this is for the dialgue checking if player near to npc before Q dialgue key to be available to press ( this help for not getting error when not near)
@@ -134,7 +140,7 @@ func deathh():
 	get_node("AnimationPlayer").play("Death")
 	print("play")
 	
-	$Control.show()
+	$DiedScreen.show()
 func _on_death_timer_timeout():
 	print("diee")
 	get_tree().reload_current_scene()
@@ -148,20 +154,39 @@ func _on_death_timer_timeout():
 
 func _on_body_body_entered(body):
 	if PlayerData.Health > 10 and body.is_in_group("Enemies"):
-		knockback(body)
+		if body.is_in_group("Enemies"):
+			var direction = (global_position - body.global_position).normalized()
+			global_position += direction * 10
+			knockback(body)
 		
 	return
 	
 
 func knockback(body):
-		var direction = Vector2.RIGHT
-		if global_position.x < body.global_position.x:
-			direction = Vector2.LEFT
-			
-		global_position += direction * KNOCKBACK_DISTANCE
+	if is_being_knocked_back:
+		return
+
+	is_being_knocked_back = true
+	PlayerData.can_move = false
+	var direction = (global_position - body.global_position).normalized()
+	direction.y = -1
 	
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_QUAD)
+	
+	tween.tween_method(apply_knockback_force, KNOCKBACK_FORCE, 0, KNOCKBACK_DURATION)
+	tween.tween_callback(end_knockback)
 
+	velocity = direction * KNOCKBACK_FORCE
+	
+func apply_knockback_force(force):
+	velocity = velocity.normalized() * force
 
+func end_knockback():
+	is_being_knocked_back = false
+	PlayerData.can_move = true
+	velocity = Vector2.ZERO
 
 
 func _on_cpu_particles_2d_finished():
@@ -171,3 +196,8 @@ func _on_cpu_particles_2d_finished():
 
 
 
+
+
+func _on_spawn_time_timeout():
+	PlayerData.can_move = true
+	pass # Replace with function body.

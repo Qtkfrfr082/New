@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d4fdahrrfbqo8"]
+[gd_scene load_steps=29 format=3 uid="uid://d4fdahrrfbqo8"]
 
 [ext_resource type="Texture2D" uid="uid://ba0a7ki63gfkv" path="res://Scenes/Player/HudResources/hp_bar_outer_v2 - Copy.png" id="1_2m57u"]
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/Hud.gd" id="1_muv1a"]
@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="Animation" id="Animation_4274p"]
-resource_name = "Music"
+resource_name = "MusicLv1"
 length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -64,6 +64,62 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-11.7141, -16), Vector2(-11.7141, -16), Vector2(-11.7141, -16), Vector2(-11.7141, -16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Ghost Trigger 
+- Shikimo & Fractalman", "Ghost Trigger 
+- Shikimo & Fractalman"]
+}
+
+[sub_resource type="Animation" id="Animation_qcf14"]
+resource_name = "MusicLv2"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1286, 168), Vector2(1019, 168), Vector2(1019, 168), Vector2(1286, 168)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sub:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11.7141, -16), Vector2(-11.7141, -16), Vector2(-11.7141, -16), Vector2(-11.7141, -16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Glimpse Of STARLIGHT
+-fRACTALmAN", "Glimpse Of STARLIGHT
+-fRACTALmAN"]
 }
 
 [sub_resource type="Animation" id="Animation_w3swu"]
@@ -92,10 +148,24 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(-11.7141, -16)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Ghost Trigger 
+- Shikimo & Fractalman"]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f1esg"]
 _data = {
-"Music": SubResource("Animation_4274p"),
+"MusicLv1": SubResource("Animation_4274p"),
+"MusicLv2": SubResource("Animation_qcf14"),
 "RESET": SubResource("Animation_w3swu")
 }
 
@@ -123,6 +193,70 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Unknown Lab"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title/Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Level 1: \"Initiating Code - Basics of Programming\""]
+}
+
+[sub_resource type="Animation" id="Animation_natqx"]
+resource_name = "Level2"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1, 3.1, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Deep Lab Descent"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title/Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Level 2: Unraveling Java's Secrets"]
+}
 
 [sub_resource type="Animation" id="Animation_gdljs"]
 length = 0.001
@@ -138,10 +272,35 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Unknown Lab"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title/Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Level 1: \"Initiating Code - Basics of Programming\""]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_72iro"]
 _data = {
 "Level1": SubResource("Animation_m0mgg"),
+"Level2": SubResource("Animation_natqx"),
 "RESET": SubResource("Animation_gdljs")
 }
 
@@ -224,20 +383,21 @@ libraries = {
 
 [node name="Sub" type="Label" parent="Music"]
 anchors_preset = -1
-anchor_left = -15.5818
-anchor_top = 0.0576292
-anchor_right = -15.5818
-anchor_bottom = 1.9795
+anchor_left = -17.1762
+anchor_top = -36.892
+anchor_right = -17.1762
+anchor_bottom = -36.892
 offset_left = -11.7141
 offset_top = -16.0
-offset_right = 345.286
-offset_bottom = 1780.0
+offset_right = 110.286
+offset_bottom = 35.0
+scale = Vector2(0.7, 0.7)
 theme_override_colors/font_color = Color(0.85098, 0.341176, 0.388235, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 7
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("15_vvv8m")
-theme_override_font_sizes/font_size = 50
-text = "Ghost Trigger - SHIKIMO & @fractalmanmusic "
+text = "Ghost Trigger 
+- Shikimo & Fractalman"
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
@@ -288,6 +448,8 @@ texture = SubResource("GradientTexture2D_qp4dk")
 libraries = {
 "": SubResource("AnimationLibrary_72iro")
 }
+
+[node name="MusicTimer" type="Timer" parent="."]
 
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
 

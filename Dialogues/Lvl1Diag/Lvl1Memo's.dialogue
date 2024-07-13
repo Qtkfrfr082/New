@@ -13,8 +13,8 @@ set PlayerData.can_move = false
 You: A memo?
 [shake rate=20 level=20][speed=7]“W̷̦͚͛́̈̎͌̀̓͂̽͂̕̕ẻ̶̛̜͔̌͗̈́̕͜͝l̴̤͈̥̈́͂͐̾̏̓̓͆̓̂̉̕͝͝c̶̦̓̀̀̆͛͝ơ̶̹̜͖̜̼̼͙̠̼͈̔͑͛̒̈̋͆̅̇̌͑͌̈́͠ͅͅm̶̧̛͇̬̫̩͇̥͇̣̼̠͖̰͍͓̃́͛̄͆̅͛̑̈́̚ĕ̶͕̼͎̜̲̥̱̺̽͝ ̸̢̧͍̰̹͓͔̍̿͗̆ͅỳ̴̧̪͔̰͙̹͔̺̥̪̥̫̑̇̐͛͝͝͠͠ǭ̴̠̞̙̱̣̙̦̚ų̷̙͎̭̘͐͂͋̅͛̂̉͐̐̾̿̓̚̚’̸͙͚̫̠̠̜̦͓̜̜̮̘̖̙̅͋͌̈́͋̔͋̇͌͗͝v̴̡̲͍̜̑̈́e̶̛̛̖͙̞̔͐̔̑̈́̔͘ ̶̧̢͙̫̮͚̻̙͇͉͈̱̒͌͌̀͌͒̚ͅͅb̵̧͔͇͖̫͚͈̓͝ę̵̭̭͔̻̦͍͇̙͕̦̼͊̊ē̵̡̈́͐̂̃̀̾̾̒͊̚ņ̸͉̝̙͌́̌̇͊̆̅̐̚͝͝ͅ ̵͕̲̬̤̳̋̔̒́͘̚g̴̛̹͈̯̻̓̏̓̅͘͜i̴̛͚̗̠͗̔́̉̈́̏͗̎͋̈̅́͝v̴̛͎̦͖̤̤͔̺̤͙̼̬͎͇̯̇̊͛̃͛̾̎̐e̷͇͍͔̩͗̆n̴̟͙̿̽̔̀ ̷̨̢̗̰̩̖̮͎͙͍͔̜̀̌̇͊͗͑́̚â̸̧͔̱̭̠̗̐͝n̴̨͚̩̳͓̪̦̗̥̗̊̈́̾͐͑͌͒̋́̒͑̉͆͑o̵̡̨̼͓̬̭̹̻͈̫̹͎̹̣͌̾̈́͗̋ť̷̨̝̾͐͒͒͊̌̍̌́h̴̥͔̦͍̹̚ͅe̴̢̧̛̯̫̰̦̎̃͋͆̆̿r̷̗̼̻͖͕̟̝͚̫̤̫͎͔͔͗̐́ͅ ̷̢̧̢̝͕͚̗̻̗̟͌̄̈́͆̍̊͂͛̈͝͝ç̶̭̳̻̜̩̘̺̒̓͋̾͛̓̈́̋̓͆̔̿̃̚h̸̛̛͈̥̖̹͈̜̟̩̣̖̐̿̋́͆̃̈́̅̓̂̒͘͠ã̵̡̘̫͍̙͆͊̔ņ̶̞̩̟̗̳̊͊͝c̶̞͙̤̦̼̣̽́͊͑̿̈́̀̅̕͝ě̴̡̢͍͇̥̻̪͔̻̼̭!.”[/shake]
 You: Huh? the text’s all jumbled up.
-“Follow the what the sign says and make sure to pay attention to your surroundings. Attentiveness and Caution will get you out of this.”
-You: That’s weird this sign feels like its talking to me, this place is creeping me out. I’ll go explore around there may be clues to get out of here.”
+Follow the what the sign says and make sure to pay attention to your surroundings. Attentiveness and Caution will get you out of this.
+You: That's weird this sign feels like its talking to me, this place is creeping me out. I'll go explore around there may be clues to get out of here.
 set PlayerData.can_move = true
 => END
 
@@ -23,7 +23,7 @@ set PlayerData.can_move = false
 You: Another memo?
 [Day/s since last core meltdown; 5,844]
 You: Meltdown? Wait there’s previous logs here.
-"Attention all personnel. This is an emergency alert from the lab's AI system. There is a critical core meltdown in progress. Immediate evacuation is required.”
+Attention all personnel. This is an emergency alert from the lab's AI system. There is a critical core meltdown in progress. Immediate evacuation is required.
 You: Oh crap this building won’t explode right? Got to find a way out of here. Wait this message was sent 5,844 days ago, what even happened here.
 set PlayerData.can_move = true
 => END!
@@ -50,7 +50,7 @@ You: A bunch of notes again, looks like AL-1S made this. Lemme see
 System note initiated. To streamline operations, I will now document notes autonomously to avoid frequent requests for memory data access from the Main Facility AI.
 
 Following my memory wipe, my capability to develop and resolve facility-related solutions has been compromised. It is necessary to rebuild my knowledge base from the ground up.
-The professor’s manual advises that foundational learning is the most effective approach. Therefore, I will commence with the basics and progress accordingly."
+The professor’s manual advises that foundational learning is the most effective approach. Therefore, I will commence with the basics and progress accordingly.
 
 You: looks like this is the end did AL-1S scatter memos in this whole facility?
 set PlayerData.can_move = true
@@ -69,31 +69,31 @@ IPO stands for Input-Process-Output. Think of it like a calculator:
 The [wave amp=25 freq=5][Input][/wave] phase involves the user entering numbers into the calculator.\nThe [wave amp=25 freq=5][Process] [/wave]phase encompasses the operations performed on these numbers, such as addition or multiplication. \nThe [wave amp=25 freq=5][Output][/wave] phase delivers the result of these calculations.
 
 Understanding IPO models is like understanding the basic framework of programming—it's all about handling input, processing it, and producing an output.
-You: “Wow. She phrased it better than from when we learned it from school”
+You: Wow. She phrased it better than from when we learned it from school.
 set PlayerData.can_move = true
 => END!
 ~ Memo7
 set PlayerData.can_move = false
-“About Algorithms\: Think of algorithms like a set of instructions for completing a task. Imagine you're following a recipe to bake cookies. The recipe tells you what ingredients you need, what steps to take, and in what order. Algorithms are similar—they're like recipes for solving problems or completing tasks in a computer program. 
+About Algorithms\: Think of algorithms like a set of instructions for completing a task. Imagine you're following a recipe to bake cookies. The recipe tells you what ingredients you need, what steps to take, and in what order. Algorithms are similar—they're like recipes for solving problems or completing tasks in a computer program. 
 They help us break down complex tasks into smaller, manageable steps. So, just like following a recipe to bake cookies, algorithms guide computers (and us!) through the process of solving problems.
 set PlayerData.can_move = true
 => END
 ~ Memo8
 set PlayerData.can_move = false
-"Programming Tip 101\: Employ Pseudocode! \nAvoid hastiness in tackling challenges! As a wise individual once remarked, defining the problem constitutes half the solution! Pseudo coding entails the simplification of the problem, fostering the creation of a straightforward problem-solving blueprint.
+Programming Tip 101\: Employ Pseudocode! \nAvoid hastiness in tackling challenges! As a wise individual once remarked, defining the problem constitutes half the solution! Pseudo coding entails the simplification of the problem, fostering the creation of a straightforward problem-solving blueprint.
 set PlayerData.can_move = true
 => END
 ~ Memo9
 set PlayerData.can_move = false
 set FlowC1.Show = true
-“FlowCharts #101\: Shapes and their uses!\nFlowChart employ different shapes to indicate how a function flows properly here are some shapes that is frequently used in such FlowCharts:
+FlowCharts #101\: Shapes and their uses!\nFlowChart employ different shapes to indicate how a function flows properly here are some shapes that is frequently used in such FlowCharts:
 set FlowC1.Show = false
 set PlayerData.can_move = true
 => END
 ~ Memo10
 set PlayerData.can_move = false
 set FlowC1.Show2 = true
-“Today’s Episode of FlowCharts #101\: Shapes and their uses (Part 2)!\nFlowChart employ different shapes to indicate how a function flows properly here are some shapes that is frequently used in such FlowCharts:
+Today’s Episode of FlowCharts #101\: Shapes and their uses (Part 2)!\nFlowChart employ different shapes to indicate how a function flows properly here are some shapes that is frequently used in such FlowCharts:
 set FlowC1.Show2 = false
 set PlayerData.can_move = true
 
@@ -108,7 +108,7 @@ set PlayerData.can_move = true
 => END
 ~ Memo12
 set PlayerData.can_move = false
-Recording - AL-1S\:\n I had completely forgotten about this lever's existence or that the door from deep sector 1A had been rerouted here. My mistake, indeed. \nHowever, this situation serves as a practical application of a concept I've learned\: Structure Selection.
+Recording - AL-1S\:\nI had completely forgotten about this lever's existence or that the door from deep sector 1A had been rerouted here. My mistake, indeed. \nHowever, this situation serves as a practical application of a concept I've learned\: Structure Selection.
 set FlowC1.Show3 = true
 Structure selection involves programming constructs that enable a program to make decisions and choose different paths based on specific conditions. It's akin to what's happening now.
 For instance, when the lever in deep section 1A was activated, another lever was revealed in the room. However, without knowledge of the corresponding door, we're faced with a decision if the Laser Door Module for the deep lab wasn't triggered, then it must activate the lever in High section 1A.
@@ -150,21 +150,18 @@ You: Hm. I guess those laser thingy’s we’re gate of some sorts, gotta find a
 You: huh what’s this… A NOTE? Theres something written here
 
 Note: [Date:38XX XX XX] SerialCode\: AL-1S\nDue to the facility deteriorating overtime Facility AI decided it would be necessary to annually erase data unrelated to the maintaining the facility,at first it wasn’t an issue however after XXXX years mishaps began to happen,
-my system data began to be erased as well, if not for the physical backups that I’ve made in Storage I would have completely been bricked, as part of another failsafe I’ve began to create notes and scattered it through the facility in cases I were to lose my memory data….
-You: ]: Very convenient huh, I wonder if this droid AL-1S is still functioning.
+my system data began to be erased as well, if not for the physical backups that I've made in Storage I would have completely been bricked, as part of another failsafe I've began to create notes and scattered it through the facility in cases I were to lose my memory data….
+You: Very convenient huh, I wonder if this droid AL-1S is still functioning.
 set PlayerData.can_move = true
 => END
 ~ Terminal2
 set PlayerData.can_move = false
 You: Nice another Terminal.
-Terminal: Record - AL-1S :\n 
-I've acquired a grasp of fundamental programming principles and learned to adeptly evaluate problems, identifying key focal points. Upon assimilating these principles, I've integrated FlowCharts into my logical framework.
+Terminal: Record - AL-1S :\nI've acquired a grasp of fundamental programming principles and learned to adeptly evaluate problems, identifying key focal points. Upon assimilating these principles, I've integrated FlowCharts into my logical framework.
 
 You: She started using flowcharts now huh
 
-Terminal: Continuation - AL-1S:\n
-Following the facility's stabilization, I've discovered that I'm not the sole inhabitant. Experimental specimens, unattended due to staff shortages, have breached containment and are wandering the premises.
-
+Terminal: Continuation - AL-1S:\nFollowing the facility's stabilization, I've discovered that I'm not the sole inhabitant. Experimental specimens, unattended due to staff shortages, have breached containment and are wandering the premises.
 To mitigate potential risks, I've devised various perplexing mechanisms to restrict their movement within the facility. Additionally, I've distributed notes detailing procedures for dismantling these constraints should the need arise.
 set PlayerData.can_move = true
 => END

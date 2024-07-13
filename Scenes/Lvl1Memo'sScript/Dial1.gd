@@ -12,3 +12,5 @@ func _on_body_entered(_body):
 	print("Mag Dialogue")
 
 	pass # Replace with function body.
+
+

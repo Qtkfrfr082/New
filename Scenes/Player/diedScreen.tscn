@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2klrbwx37se0"]
+
+[ext_resource type="FontFile" uid="uid://dal5hpyj3amgs" path="res://Fonts/ThaleahFat.ttf" id="1_m3nli"]
+
+[sub_resource type="Gradient" id="Gradient_cyh3p"]
+colors = PackedColorArray(0, 0, 0, 0.360784, 1, 1, 1, 0.0470588)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_psrtb"]
+gradient = SubResource("Gradient_cyh3p")
+use_hdr = true
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[node name="Died" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = -4.0
+offset_right = 1147.0
+offset_bottom = 648.0
+texture = SubResource("GradientTexture2D_psrtb")
+
+[node name="Title" type="Label" parent="TextureRect"]
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 385.0
+offset_top = 180.0
+offset_right = 1045.0
+offset_bottom = 282.0
+theme_override_colors/font_color = Color(0.211765, 0.239216, 0.709804, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("1_m3nli")
+theme_override_font_sizes/font_size = 110
+text = "You Died."
+
+[node name="Sub" type="Label" parent="TextureRect/Title"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.204545
+anchor_top = -0.0294118
+anchor_right = -0.204545
+anchor_bottom = -0.0294118
+offset_left = -80.0
+offset_top = 77.0
+offset_right = 748.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0.94902, 0.592157, 0.505882, 1)
+theme_override_colors/font_outline_color = Color(0.482353, 0.27451, 0.658824, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_m3nli")
+theme_override_font_sizes/font_size = 50
+text = "Going back to start"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

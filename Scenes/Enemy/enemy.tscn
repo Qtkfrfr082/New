@@ -1,0 +1,352 @@
+[gd_scene load_steps=33 format=3 uid="uid://c55mey1plqhgj"]
+
+[ext_resource type="Script" path="res://Scenes/Enemy/Scripts/wolfenemy.gd" id="1_1fepx"]
+[ext_resource type="Texture2D" uid="uid://yb0ou81k6gte" path="res://Scenes/Enemy/Texture/HostileBug-Sheet.png" id="2_hvecy"]
+[ext_resource type="Texture2D" uid="uid://oh2ey06awpjy" path="res://Scenes/Enemy/Texture/HostileBugDeath-Sheet.png" id="3_srpmw"]
+[ext_resource type="Texture2D" uid="uid://byk8qwuq56h8k" path="res://Scenes/Enemy/Texture/HostileBugIdle-Sheet.png" id="4_so48q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frsl4"]
+atlas = ExtResource("2_hvecy")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8qfw"]
+atlas = ExtResource("2_hvecy")
+region = Rect2(112, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f0hj"]
+atlas = ExtResource("2_hvecy")
+region = Rect2(224, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnalv"]
+atlas = ExtResource("2_hvecy")
+region = Rect2(336, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx4xd"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1ysf"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(112, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h77yy"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(224, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_un0yl"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(336, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ly4e5"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(448, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obafg"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(560, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp1jx"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk2uq"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(784, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b1op"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(896, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psufa"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(1008, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2aah"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(1120, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rju1e"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(1232, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy2us"]
+atlas = ExtResource("3_srpmw")
+region = Rect2(1344, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6nf4"]
+atlas = ExtResource("4_so48q")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct18f"]
+atlas = ExtResource("4_so48q")
+region = Rect2(112, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_066q3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frsl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8qfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f0hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnalv")
+}],
+"loop": true,
+"name": &"chase",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vx4xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1ysf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h77yy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_un0yl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ly4e5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obafg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pp1jx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wk2uq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b1op")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psufa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2aah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rju1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy2us")
+}],
+"loop": false,
+"name": &"death",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6nf4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ct18f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ates"]
+radius = 183.141
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v0kel"]
+radius = 15.7032
+
+[sub_resource type="Gradient" id="Gradient_0u3qh"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.990566)
+colors = PackedColorArray(0.988235, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e1f6o"]
+gradient = SubResource("Gradient_0u3qh")
+width = 97
+height = 58
+fill = 1
+fill_from = Vector2(0.346405, 0.53988)
+fill_to = Vector2(0.542484, 0.584798)
+
+[sub_resource type="Gradient" id="Gradient_l3ku1"]
+offsets = PackedFloat32Array(0.00645161, 0.677419, 1)
+colors = PackedColorArray(1, 1, 1, 0.953642, 1, 1, 1, 0.953642, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2gool"]
+gradient = SubResource("Gradient_l3ku1")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.6, 0.4)
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_1khnn"]
+_data = [Vector2(0.00277778, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_0drgn"]
+offsets = PackedFloat32Array(0.192547, 0.751553)
+colors = PackedColorArray(1, 0, 0, 1, 0.94902, 0, 0.560784, 1)
+
+[node name="enemy" type="Node2D"]
+
+[node name="enemy1" type="Node2D" parent="." groups=["Enemies"]]
+
+[node name="enemy" type="CharacterBody2D" parent="enemy1" groups=["Enemies"]]
+script = ExtResource("1_1fepx")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="enemy1/enemy"]
+z_index = 1
+position = Vector2(-1, 18)
+polygon = PackedVector2Array(-22, -12, -10.9037, -11.6898, -0.134594, -12.158, 10.2599, -11.5025, 21.2845, -10.6358, 21, 10, -23, 10, -23, -1, -23, -4, -22, -10)
+
+[node name="enemy" type="AnimatedSprite2D" parent="enemy1/enemy"]
+sprite_frames = SubResource("SpriteFrames_066q3")
+animation = &"death"
+autoplay = "idle"
+flip_h = true
+
+[node name="detection" type="Area2D" parent="enemy1/enemy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy1/enemy/detection"]
+position = Vector2(0, 14)
+shape = SubResource("CircleShape2D_4ates")
+
+[node name="playerdeath" type="Area2D" parent="enemy1/enemy"]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="enemy1/enemy/playerdeath"]
+position = Vector2(-5, 19)
+polygon = PackedVector2Array(-7, -13, -18, -13, -18, -11, -21, -5.875, -33, -3, -21, 9, 25, 9, 36.6742, 8.7585, 46, -1, 36.1123, -8.37839, 25, -11, 23, -12, 16, -5, -7, -5)
+
+[node name="playercollision" type="Area2D" parent="enemy1/enemy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy1/enemy/playercollision"]
+position = Vector2(-1.78814e-07, 7)
+scale = Vector2(1.06181, 0.452596)
+shape = SubResource("CircleShape2D_v0kel")
+debug_color = Color(0.921569, 0.25098, 0.305882, 0.419608)
+
+[node name="PointLight2Dleft" type="PointLight2D" parent="enemy1/enemy"]
+visible = false
+position = Vector2(-18.1429, 9.84223)
+rotation = -0.607623
+energy = 2.97
+texture = SubResource("GradientTexture2D_e1f6o")
+texture_scale = 0.3
+
+[node name="PointLight2Dright" type="PointLight2D" parent="enemy1/enemy"]
+position = Vector2(17.889, 10.2721)
+rotation = -2.33553
+energy = 2.97
+texture = SubResource("GradientTexture2D_e1f6o")
+texture_scale = 0.3
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="enemy1/enemy"]
+z_index = 2
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.3)
+emitting = false
+amount = 200
+one_shot = true
+speed_scale = 1.5
+randomness = 1.0
+fixed_fps = 60
+texture = SubResource("GradientTexture2D_2gool")
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, -2)
+spread = 10.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 198.88
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_1khnn")
+color_ramp = SubResource("Gradient_0drgn")
+
+[node name="enemy2" type="Node2D" parent="." groups=["Enemies"]]
+
+[node name="enemy2" type="CharacterBody2D" parent="enemy2" groups=["Enemies"]]
+script = ExtResource("1_1fepx")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="enemy2/enemy2"]
+z_index = 1
+position = Vector2(-1, 18)
+polygon = PackedVector2Array(-22, -12, -11.9338, -12.158, 0.0526962, -12.0644, 10.3536, -11.7834, 20.9021, -11.0962, 21, 10, -23, 10, -23, -1, -23, -4, -22, -10)
+
+[node name="enemy" type="AnimatedSprite2D" parent="enemy2/enemy2"]
+sprite_frames = SubResource("SpriteFrames_066q3")
+animation = &"death"
+autoplay = "idle"
+flip_h = true
+
+[node name="detection" type="Area2D" parent="enemy2/enemy2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy2/enemy2/detection"]
+position = Vector2(0, 14)
+shape = SubResource("CircleShape2D_4ates")
+
+[node name="playerdeath" type="Area2D" parent="enemy2/enemy2"]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="enemy2/enemy2/playerdeath"]
+position = Vector2(-5, 19)
+polygon = PackedVector2Array(-7, -13, -18, -13, -18, -11, -20.9303, -5.94102, -20.8469, -2.60391, -21, 9, 25, 9, 36.6742, 8.7585, 36.2996, -1.35507, 36.1123, -8.37839, 25, -11, 23, -12, 16, -5, -7, -5)
+
+[node name="playercollision" type="Area2D" parent="enemy2/enemy2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy2/enemy2/playercollision"]
+position = Vector2(5.96046e-08, 7)
+scale = Vector2(1.06181, 0.452596)
+shape = SubResource("CircleShape2D_v0kel")
+debug_color = Color(0.921569, 0.25098, 0.305882, 0.419608)
+
+[node name="PointLight2Dleft" type="PointLight2D" parent="enemy2/enemy2"]
+visible = false
+position = Vector2(-18.1429, 9.84223)
+rotation = -0.607623
+energy = 2.97
+texture = SubResource("GradientTexture2D_e1f6o")
+texture_scale = 0.3
+
+[node name="PointLight2Dright" type="PointLight2D" parent="enemy2/enemy2"]
+position = Vector2(17.889, 10.2721)
+rotation = -2.33553
+energy = 2.97
+texture = SubResource("GradientTexture2D_e1f6o")
+texture_scale = 0.3
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="enemy2/enemy2"]
+z_index = 2
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.3)
+emitting = false
+amount = 200
+one_shot = true
+speed_scale = 1.5
+randomness = 1.0
+fixed_fps = 60
+texture = SubResource("GradientTexture2D_2gool")
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, -2)
+spread = 10.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 198.88
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_1khnn")
+color_ramp = SubResource("Gradient_0drgn")
+
+[connection signal="body_entered" from="enemy1/enemy/detection" to="enemy1/enemy" method="_on_detection_body_entered"]
+[connection signal="body_exited" from="enemy1/enemy/detection" to="enemy1/enemy" method="_on_detection_body_exited"]
+[connection signal="body_entered" from="enemy1/enemy/playerdeath" to="enemy1/enemy" method="_on_playerdeath_body_entered"]
+[connection signal="body_entered" from="enemy1/enemy/playercollision" to="enemy1/enemy" method="_on_playercollision_body_entered"]
+[connection signal="body_entered" from="enemy2/enemy2/detection" to="enemy2/enemy2" method="_on_detection_body_entered"]
+[connection signal="body_exited" from="enemy2/enemy2/detection" to="enemy2/enemy2" method="_on_detection_body_exited"]
+[connection signal="body_entered" from="enemy2/enemy2/playerdeath" to="enemy2/enemy2" method="_on_playerdeath_body_entered"]
+[connection signal="body_entered" from="enemy2/enemy2/playercollision" to="enemy2/enemy2" method="_on_playercollision_body_entered"]
