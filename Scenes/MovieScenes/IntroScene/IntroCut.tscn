@@ -63,6 +63,7 @@ animations = [{
 }]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+layer = 0
 script = ExtResource("1_jvn2m")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
@@ -71,25 +72,30 @@ offset_bottom = 720.0
 scale = Vector2(0.9, 0.9)
 stream = ExtResource("1_gkiy5")
 autoplay = true
+bus = &"MUSIC"
 script = ExtResource("2_s7mn5")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = 1
 position = Vector2(1081, 34)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4rqsu")
 animation = &"skip"
 autoplay = "skip"
-frame = 6
-frame_progress = 0.441209
+frame = 5
+frame_progress = 0.526953
 
 [node name="Button" type="TextureButton" parent="AnimatedSprite2D"]
-offset_left = -29.0
+z_index = 2
+offset_left = -30.0
 offset_top = -8.0
-offset_right = 31.0
-offset_bottom = 6.0
+offset_right = 34.0
+offset_bottom = 56.0
 
 [connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="AnimatedSprite2D/Button" to="." method="_on_button_pressed"]

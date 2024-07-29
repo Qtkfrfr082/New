@@ -12,9 +12,9 @@ func toggle_switch():
 	$Off.hide()
 	$On.show()
 	$"../Lever2".play()
-	var offLaser = get_node("../../BarrierLaser/AnimatedSprite2D2/AnimationPlayer")
+	var offLaser = get_node("../../BarrierLaser/AnimatedSprite2D4/AnimationPlayer")
 	offLaser.play("Off")
-	var off = get_node("../../BarrierLaser/AnimatedSprite2D2")
+	var off = get_node("../../BarrierLaser/AnimatedSprite2D4")
 	off.play("Off")
 	switch_on = false
 

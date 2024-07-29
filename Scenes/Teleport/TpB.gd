@@ -13,6 +13,7 @@ func _on_body_entered(body):
 		# Check if the destination node exists
 		if teleportDestinationNode:
 			# Teleport the player to the destination node's position
+			$"../Teleport".play()
 			body.global_transform.origin = teleportDestinationNode.global_transform.origin
 			isTeleporting = true
 			start_cooldown_timer()

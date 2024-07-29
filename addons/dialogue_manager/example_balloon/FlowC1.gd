@@ -17,5 +17,7 @@ var Lvl2Show8
 var Lvl2Show9
 var Lvl2Show10
 var Lvl2Show11
+var PlayerTalk
+var dialogue_active
 
 

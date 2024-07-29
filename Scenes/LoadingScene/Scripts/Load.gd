@@ -2,7 +2,8 @@ extends CanvasLayer
 @export_file("*.tscn") var next_scene_path: String # Determines which scene to load
 @export var parameters: Dictionary # Temporarily stores parameters to be passed to target scene
 
-var texts = ["Java is a versatile, object-oriented programming language known for its platform independence, robustness, and extensive standard library.",
+var texts = [
+"Java is a versatile, object-oriented programming language known for its platform independence, robustness, and extensive standard library.",
 "A flowchart in the context of Java typically refers to a visual representation of the logical flow of a Java program. It's a diagrammatic representation that illustrates the steps or sequence of operations involved in executing a Java program.", 
 "Flowcharts serve as a helpful tool for planning, understanding, and communicating the structure and flow of a Java program."];
 

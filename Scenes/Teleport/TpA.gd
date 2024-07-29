@@ -9,7 +9,7 @@ func _on_body_entered(body):
 	if body.is_in_group("Player") and not isTeleporting and AvailableTp:
 		# Get the destination node
 		var teleportDestinationNode = TpB #this is area2d node 
-		
+		print("insideee")
 		# Check if the destination node exists
 		if teleportDestinationNode:
 			# Teleport the player to the destination node's position
@@ -34,4 +34,5 @@ func _on_cooldown_timeout():
 func _on_area_2d_body_entered(_body):
 	#check player to be able to teleport before entering 
 	AvailableTp = true
+	print("true")
 	pass # Replace with function body.

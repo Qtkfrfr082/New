@@ -1,5 +1,5 @@
 extends Node
-var can_move
+var can_move = true
 var Health 
 var Coins
 var showtutor
@@ -8,7 +8,7 @@ var NpcInteract
 func _ready():
 	#NpcInteract = get_node("NPC/Actionable/Actionable")
 	showtutor = false
-	can_move = true
+	
 	Health = 30
 	Coins = 0
 	

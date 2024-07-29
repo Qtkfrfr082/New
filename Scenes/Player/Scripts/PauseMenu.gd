@@ -27,10 +27,16 @@ func _on_quit_pressed():
 	
 	Engine.time_scale = 1
 	#get_tree().change_scene_to_file("res://Menu/Menu.tscn")
-	#LoadScene.load_screen_to_scene("res://Menu/Menu.tscn", {"test": "f"})
+	LoadScene.load_screen_to_scene("res://Scenes/MenuScreen/Menutscn.tscn", {"test": "f"})
 	
 
+func _on_options_pressed():
+	$MarginContainer.hide()
+	$OptionMenu.show()
+	pass # Replace with function body.
 
 
-
-
+func _on_texture_button_pressed():
+	$OptionMenu.hide()
+	$MarginContainer.show()
+	pass # Replace with function body.

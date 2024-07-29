@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=49 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
@@ -35,6 +35,8 @@
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show10.gd" id="33_7imva"]
 [ext_resource type="Texture2D" uid="uid://twdtxqflo27h" path="res://Dialogues/Texture/Lvl2Show11.png" id="34_7guik"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/Lvl2Pics/Lvl2Show11.gd" id="35_t6o6c"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/PlayerTalk.gd" id="36_mqbtt"]
+[ext_resource type="Texture2D" uid="uid://b2hua2t0uxujn" path="res://Scenes/Player/PlayerResources/Talking-Sheet.png" id="37_tu88x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -94,6 +96,49 @@ MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ps40"]
+atlas = ExtResource("37_tu88x")
+region = Rect2(0, 0, 192, 152)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0n41"]
+atlas = ExtResource("37_tu88x")
+region = Rect2(192, 0, 192, 152)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oafuf"]
+atlas = ExtResource("37_tu88x")
+region = Rect2(384, 0, 192, 152)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tduey"]
+atlas = ExtResource("37_tu88x")
+region = Rect2(576, 0, 192, 152)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2xn1"]
+atlas = ExtResource("37_tu88x")
+region = Rect2(768, 0, 192, 152)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bqekh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ps40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0n41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oafuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tduey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2xn1")
+}],
+"loop": true,
+"name": &"Talking",
+"speed": 12.0
+}]
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
@@ -350,6 +395,22 @@ offset_right = 837.0
 offset_bottom = 427.0
 texture = ExtResource("34_7guik")
 script = ExtResource("35_t6o6c")
+
+[node name="PlayerTalk" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("36_mqbtt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerTalk"]
+z_index = -1
+position = Vector2(196, 391)
+sprite_frames = SubResource("SpriteFrames_bqekh")
+animation = &"Talking"
+frame = 1
+frame_progress = 0.25382
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

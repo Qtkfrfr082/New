@@ -1,20 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxgc5sxbaxo6w"]
 
-[sub_resource type="Gradient" id="Gradient_5i336"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_lg80l"]
-gradient = SubResource("Gradient_5i336")
-height = 90
-use_hdr = true
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.8, 0.2)
-metadata/_snap_enabled = true
+[ext_resource type="Texture2D" uid="uid://c25yeic405d4d" path="res://Scenes/Lights/wall_light.tres" id="1_sncs4"]
+[ext_resource type="Texture2D" uid="uid://d03ux0710r48n" path="res://Scenes/Lights/White.tres" id="2_brcq5"]
 
 [node name="WallLight" type="Node2D"]
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 shadow_enabled = true
 shadow_item_cull_mask = 15
-texture = SubResource("GradientTexture2D_lg80l")
+texture = ExtResource("1_sncs4")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+shadow_enabled = true
+texture = ExtResource("2_brcq5")

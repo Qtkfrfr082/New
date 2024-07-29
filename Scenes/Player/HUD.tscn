@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://btsujiglm5snw" path="res://Scenes/Player/HudResources/SettingBTNClicked.png" id="5_uvhxw"]
 [ext_resource type="Texture2D" uid="uid://qusph8u7om3l" path="res://Scenes/Player/HudResources/SettingBTNHover.png" id="6_8k2h2"]
 [ext_resource type="Texture2D" uid="uid://comi1ramqrttj" path="res://Scenes/Player/HudResources/QuestBTN.png" id="7_6msft"]
-[ext_resource type="Texture2D" uid="uid://b6ueecy87d34a" path="res://Scenes/Player/HudResources/QuestBTNCliked.png" id="8_fh0nb"]
-[ext_resource type="Texture2D" uid="uid://btrnuofl64j45" path="res://Scenes/Player/HudResources/QuestBTNHover.png" id="10_so1bq"]
+[ext_resource type="Texture2D" uid="uid://ckdabyex7d1v8" path="res://Scenes/Player/HudResources/QuestBTNCliked.png" id="8_fh0nb"]
+[ext_resource type="Texture2D" uid="uid://cdrl8d0w2i7vb" path="res://Scenes/Player/HudResources/QuestBTNHover.png" id="10_so1bq"]
 [ext_resource type="AudioStream" uid="uid://c0lsnx78ynath" path="res://Sounds/Menu/MI_SFX 30.wav" id="11_1g5ai"]
 [ext_resource type="PackedScene" uid="uid://cfr6oq85ofmbc" path="res://Scenes/Player/PauseMenu.tscn" id="11_if10c"]
 [ext_resource type="PackedScene" uid="uid://bk44od6xpbfe6" path="res://Scenes/Tutorials/movement_tuto.tscn" id="13_34jv4"]
@@ -403,9 +403,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="Label" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 216.0
+offset_left = 168.0
 offset_top = 72.0
-offset_right = 876.0
+offset_right = 999.0
 offset_bottom = 174.0
 theme_override_colors/font_color = Color(0.211765, 0.239216, 0.709804, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -418,9 +418,9 @@ horizontal_alignment = 1
 [node name="Sub" type="Label" parent="Title"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.282829
+anchor_left = 0.207788
 anchor_top = 0.0620931
-anchor_right = 0.608586
+anchor_right = 1.16233
 anchor_bottom = 0.0620931
 offset_left = -80.0
 offset_top = 77.0
@@ -431,7 +431,7 @@ theme_override_colors/font_color = Color(0.94902, 0.592157, 0.505882, 1)
 theme_override_colors/font_outline_color = Color(0.482353, 0.27451, 0.658824, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("15_vvv8m")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 70
 text = "Level 1: \"Initiating Code - Basics of Programming\""
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -439,8 +439,8 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect" type="TextureRect" parent="Title"]
 z_index = -1
 layout_mode = 0
-offset_left = -26.0
-offset_right = 670.0
+offset_left = 49.0
+offset_right = 745.0
 offset_bottom = 107.0
 texture = SubResource("GradientTexture2D_qp4dk")
 

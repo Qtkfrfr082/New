@@ -1,16 +1,16 @@
 ~ Memo1
-set PlayerData.can_move = false
+set PlayerData.can_move = true
 You: Ughhh this no matter how many times I experience it I just can't get used to these teleporting shenanigans.
 Welcome to Deep Lab. By stepping inside, you've seamlessly integrated into our collective. To sustain our dominance, it's essential that our minds remain exceptionally sharp. Our facility is subtly crafted to continuously engage and challenge your cognitive abilities, ensuring your brain is always in peak condition. After all, a perpetually active mind stays free from rust.
 You: huh? man I'm feeling bad omen because of this.
-set PlayerData.can_move = true
+set PlayerData.can_move = false
 => END 
 
 ~ Memo2
 set PlayerData.can_move = false
 'Recording - AL-1S\:'\nHello AL-1S, this is AL-1S in case of memory deletion I've made a guide on how to navigate the facility.
 Now you might have noticed there is a bunch of teleport modules on this part of the facility; based on what the Facility AI told me it's based on Selection Structure. There is more information on the computer if you're having a hard time navigating.
-You: hmm. I should probably check the logs before going inside a TP module.
+You: hmm. [color=green]I should probably check the logs before going inside a TP module.[/color]
 set PlayerData.can_move = true
 => END
 
@@ -55,7 +55,7 @@ set PlayerData.can_move = false
 You: Wait do I have to go through another section like this??
 But now that's done I'll be testing you knowledge, as you know we are a facility of JAVA lovers we have to know if you have the necessary knowledge for the things we love so we'll test you!
 set FlowC1.Lvl2Show = true
-Here is a picture of a basic code snippet! Do what you can with that information.
+[color=green]Here is a picture of a basic code snippet! Do what you can with that information.[/color]
 You: ??
 set FlowC1.Lvl2Show = false
 set PlayerData.can_move = true

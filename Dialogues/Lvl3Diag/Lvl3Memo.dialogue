@@ -1,0 +1,240 @@
+~ Memo1
+set PlayerData.can_move = false
+You: Ugh, seriously all these teleporting going mess something inside my body jeez. But at least I'm out of that place.
+You: Welcome to Deep Section: Navigation Central? Wait navigation central? If it's a navigation hub means, there must be a way out!
+set PlayerData.can_move = true
+=> END
+
+~ Memo2
+set PlayerData.can_move = false
+'Recording\: AL-1S' \nThis place is crawling with critters I'll have to proceed with caution, I'm starting \nto get annoyed with the amount of evading I must do while cleaning up the place, seriously why would they not give me defensive capabilities if this place is dangerous.
+So, I put a counter measure in place! I manually rigged the signage where the elevators go but I left hints to safely navigate this place! There're three pathways that lead to the control room, one is the truth and the other two is false! Try to solve the answer to get out of the place!
+You: Typical.
+And remember these elevators might lead you to uncertain doom. Be careful.
+set PlayerData.can_move = true
+=> END
+
+~ Memo3
+set PlayerData.can_move = false
+(PICTURE)
+Here is a program flow control statement problem:
+If you think that the answer is Adult, go here!
+set PlayerData.can_move = true
+=> END
+
+~ Memo4
+set PlayerData.can_move = false
+What does the == operator do in Java?
+If you think the answer is 'Compares two values for inequality', go here!
+set PlayerData.can_move = true
+=> END
+
+~ Memo5
+set PlayerData.can_move = false
+(PICTURE)
+Here is an Example of Switch Case Statement!
+If you think the answer is 'Wednesday', go here!
+set PlayerData.can_move = true
+=> END
+
+~ Memo6
+set PlayerData.can_move = false
+You: Sheesh, that was a real mind exercise!
+You: AL-1S said that this navigation hub route goes to control room, in that case she must be there!
+set PlayerData.can_move = true
+=> END
+
+~ Memo7
+set PlayerData.can_move = false
+'Recording\: AL-1S' \nI might have gone overboard with the rigged signage, but I had to do it Hehe.\nAnyways it's been a while since I've left my programming notes so here it is!
+(PICTURE)
+Programming 101\: Lets go back again with Iteration Statements! \nIn this example, the for loop runs five times, printing "Java is fun" each time. Loops are crucial because they enable repetitive tasks to be performed efficiently without redundant code.
+Whether iterating through elements in a collection, performing repeated calculations, or handling multiple user inputs, loops streamline these processes and make code more readable and maintainable.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo8
+set PlayerData.can_move = false
+Due to the evacuation, access to the control room is strictly prohibited. Only personnel with higher-level clearance are permitted to enter.
+You: Ah, God dang it, looks like the control room won't be opened through normal means I have to find an alternative way of going in.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo9
+set PlayerData.can_move = false
+You: This looks like that's the lever for the gate of the Control Room!
+set PlayerData.can_move = true
+=> END
+
+~ Memo10
+set PlayerData.can_move = false
+You: Finally inside after all that venture, really tired my paws out!
+Bzzzzt. Bzzzt. Bzzzzt. Bzzzzt
+You: The computer sending some type of message?
+Hello? Is there anyone here? A human presence detected. Hmm? I was notified of unusual activity in this sector. Could it be another bug nest? Sigh, I suppose I'll need to clean up that area once more.
+You: Hello? is this AL-1S?
+AHHH? Hello? Hello? Is there a human presence detected? But how? There shouldn't be humans in this sector. Ahhh, please excuse my surprise. It's been a long time since anyone responded to the intercoms. According to my records, it must have been centuries since the last. Anyway, please disregard my ramblings. It's been quite some time since I've used my voice modules.
+You: Never mind that AL-1S I need help right now! Where are you right now? Can you help me?
+Yes, my programming dictates that humans are my highest priority. I am on the floor directly below the Control Room. Just use the teleportation module, and you'll be here in a few moments!
+You: Great! I'll be there in a moment!
+set PlayerData.can_move = true
+=> END
+
+~ Memo11
+set PlayerData.can_move = false
+'Recording\: AL-1S' \nNote to me, this is an intertwining room created as emergency route for guards and officer and as such this place is intentionally confusing, make sure to thread the path carefully.
+You: Nice another tunnel path, seriously? I get that it has to be confusing intentionally, but... nevermind
+set PlayerData.can_move = true
+=> END
+
+~ Memo12
+set PlayerData.can_move = false
+(PICTURE)
+The snippet above is an example of an 'Array'.
+If this is correct the code will display '10'.
+set PlayerData.can_move = true
+=> END
+
+~ Memo13
+set PlayerData.can_move = false
+(PICTURE)
+The problem above is incomplete!
+Would these work if we put 'new int[]{25, 30, 22, 28, 35}' into the missing code snippet?
+set PlayerData.can_move = true
+=> END
+
+~ Memo14
+set PlayerData.can_move = false
+The first element in an Array index starts with?
+If you think it starts with '1', go here
+set PlayerData.can_move = true
+=> END
+
+~ Memo15
+set PlayerData.can_move = false
+(PICTURE)
+Do you think this code snippet will run without error?
+If you think so, go here
+You: it didn't specify what's wrong with this code snippet, I have to carefully analyze this! And find if there is any suspicious misplace variable or wrong operators before proceeding.
+set PlayerData.can_move = true
+=> END
+
+~ Memo16
+set PlayerData.can_move = false
+(PICTURE)
+Do you think this code snippet will run without error?
+If you think so, go here
+You: it didn't specify what's wrong with this code snippet, I must carefully analyze this! And find if there is any suspicious misplace variable or wrong operators before proceeding.
+set PlayerData.can_move = true
+=> END
+
+~ Memo17
+set PlayerData.can_move = false
+The switch statement can handle multiple cases, each represented by a 'case' label.
+set PlayerData.can_move = true
+=> END
+
+~ Memo18
+set PlayerData.can_move = false
+The size of an array in Java can be changed after it is declared.
+set PlayerData.can_move = true
+=> END
+
+~ Memo19
+set PlayerData.can_move = false
+A while loop in Java executes 'at least once', regardless of the condition.
+set PlayerData.can_move = true
+=> END
+
+~ Memo20
+set PlayerData.can_move = false
+An array in Java can hold objects of different classes.
+set PlayerData.can_move = true
+=> END
+
+~ Memo21
+set PlayerData.can_move = false
+The 'BufferedReader' class reads input from the console by using the 'readLine' method and converts it directly to 'int'.
+set PlayerData.can_move = true
+=> END
+
+~ Memo22
+set PlayerData.can_move = false
+The 'continue' statement in a loop skips the current iteration and proceeds to the next iteration.
+set PlayerData.can_move = true
+=> END
+
+~ Memo23
+set PlayerData.can_move = false
+Encapsulation in Java refers to the ability to inherit fields and methods from a superclass.
+set PlayerData.can_move = true
+=> END
+
+~ Memo24
+set PlayerData.can_move = false
+Arrays are zero-indexed in Java, meaning the first element is accessed with index 0.
+set PlayerData.can_move = true
+=> END
+
+~ Memo25
+set PlayerData.can_move = false
+Local variables in Java are automatically initialized to 'null' if no explicit initialization is provided.
+set PlayerData.can_move = true
+=> END
+
+~ Memo26
+set PlayerData.can_move = false
+The 'Scanner' class in Java can read integers from the console. For example
+Scanner scanner = new Scanner(System.in); \nint number = scanner.nextInt();
+set PlayerData.can_move = true
+=> END
+
+~ Memo27
+set PlayerData.can_move = false
+The 'BufferedReader' class in Java can directly read integers from the console. For example
+BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); \nint number = reader.readLine();
+set PlayerData.can_move = true
+=> END
+
+~ Memo28
+set PlayerData.can_move = false
+Java arrays can dynamically resize themselves after initialization. For example
+int[] numbers = new int[5]; \nnumbers[5] = 10;
+set PlayerData.can_move = true
+=> END
+
+~ Memo29
+set PlayerData.can_move = false
+Methods in Java can be declared with a void return type to indicate they do not return any value. For example
+public void greet() { \nSystem.out.println("Hello!");}
+set PlayerData.can_move = true
+=> END
+
+~ Memo30
+set PlayerData.can_move = false
+The 'switch' statement in Java requires a break statement after each case to prevent fall-through.
+set PlayerData.can_move = true
+=> END
+
+~ Memo31
+set PlayerData.can_move = false
+You can change the data type of a variable after it has been declared.
+set PlayerData.can_move = true
+=> END
+
+~ Memo32
+set PlayerData.can_move = false
+You: Finally. After all those trial and errors! I made it! Haaghhhh... I'm so damn exhausted!
+You: This must be the Guard Office, they must have an alternative way of navigating the facility, in that case there must be an alternative way to get in the control room!
+set PlayerData.can_move = true
+=> END
+
+~ Memo33
+set PlayerData.can_move = false
+'Recording\: AL-1S' \nI've ensured the Guard Office remains fully functional, possibly securing a secret passage that could prove beneficial should a memory wipe occur. Who can predict what lies ahead? Just a jest! 
+My programming suggests that humor can alleviate negative moods, though I lack the ability to comprehend such emotions. I am, after all, merely an android, designed as a substitute for humans.
+You: I don't know what to feel, lately his notes began to feel like there's emotion deep inside it, either way
+You: Thanks AL-1S and don't be too harsh on yourself the notes you've made helped me get through here!
+You: Now time to get to that control room!
+set PlayerData.can_move = true
+=> END

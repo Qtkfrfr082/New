@@ -3,19 +3,27 @@
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/PauseMenu.gd" id="1_6w1dj"]
 [ext_resource type="Texture2D" uid="uid://blyd44uyum4nu" path="res://Scenes/Player/HudResources/MenuSettingHolder.png" id="2_d4nov"]
 [ext_resource type="Texture2D" uid="uid://c7n2xf1bf867w" path="res://Scenes/Player/HudResources/PauseMenu.tres" id="2_t3r5k"]
-[ext_resource type="Texture2D" uid="uid://c1cr1wwtm2scw" path="res://Scenes/Player/HudResources/ContinueBTN.png" id="3_7kwjd"]
-[ext_resource type="Texture2D" uid="uid://6j5fvu42uavu" path="res://Scenes/Player/HudResources/ContinueBTNClicked.png" id="4_xucvx"]
-[ext_resource type="Texture2D" uid="uid://bb4q8bn8d7ppi" path="res://Scenes/Player/HudResources/ContinueBTNHover.png" id="5_h4gm8"]
-[ext_resource type="Texture2D" uid="uid://dto4kuqhu46ss" path="res://Scenes/Player/HudResources/OptionsBtn.png" id="6_r210s"]
-[ext_resource type="Texture2D" uid="uid://c6a176fjwmjcp" path="res://Scenes/Player/HudResources/OptionsBtnClicked.png" id="7_5uytm"]
-[ext_resource type="Texture2D" uid="uid://bxbx3fi2p6a6i" path="res://Scenes/Player/HudResources/OptionsBtnHover.png" id="8_7bfd7"]
-[ext_resource type="Texture2D" uid="uid://bh51haa5418jw" path="res://Scenes/Player/HudResources/RestartBtn.png" id="9_7mqma"]
-[ext_resource type="Texture2D" uid="uid://3k2ch2d6lsmi" path="res://Scenes/Player/HudResources/RestartBtnClicked.png" id="10_vwj2d"]
-[ext_resource type="Texture2D" uid="uid://4g25sb30vdti" path="res://Scenes/Player/HudResources/RestartBtnHover.png" id="11_nu2yy"]
-[ext_resource type="Texture2D" uid="uid://c10ya3udnyymu" path="res://Scenes/Player/HudResources/QuitBTN.png" id="12_lqsvm"]
-[ext_resource type="Texture2D" uid="uid://pvwybimwbpe2" path="res://Scenes/Player/HudResources/QuitBTNClicked.png" id="13_moetx"]
-[ext_resource type="Texture2D" uid="uid://cp5d3jxdqfebf" path="res://Scenes/Player/HudResources/QuitBTNHover.png" id="14_dyk12"]
+[ext_resource type="Texture2D" uid="uid://dwaxh32kd4dms" path="res://Scenes/Player/HudResources/ContinueBut.png" id="4_cpwyt"]
+[ext_resource type="Texture2D" uid="uid://dyuyaiu52ertv" path="res://Scenes/Player/HudResources/ContinueButPres.png" id="5_7ajok"]
+[ext_resource type="Texture2D" uid="uid://crkreip4ib2tt" path="res://Scenes/Player/HudResources/OptionsBut.png" id="6_hrrwh"]
+[ext_resource type="Texture2D" uid="uid://oyjoaohvp35u" path="res://Scenes/Player/HudResources/OptionButPres.png" id="7_vtwru"]
+[ext_resource type="Texture2D" uid="uid://csm7hh4bojbrx" path="res://Scenes/Player/HudResources/RestartBut.png" id="8_iydbw"]
+[ext_resource type="Texture2D" uid="uid://blswp1bfbq2y7" path="res://Scenes/Player/HudResources/RestartButPres.png" id="9_0g72e"]
+[ext_resource type="Texture2D" uid="uid://co3vr6ytwv5vl" path="res://Scenes/Player/HudResources/QuitBut.png" id="10_gi72q"]
+[ext_resource type="Texture2D" uid="uid://cohnsfa4xluqy" path="res://Scenes/Player/HudResources/QuitButPres.png" id="11_2w01m"]
 [ext_resource type="AudioStream" uid="uid://dggqahmieeqhu" path="res://Sounds/Menu/MI_SFX 32.wav" id="15_ldeoe"]
+[ext_resource type="PackedScene" uid="uid://dd1slpm2k6iaj" path="res://Scenes/Player/option_menu.tscn" id="17_cuja8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohhpb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmoxv"]
+texture_margin_left = 1.0
+texture_margin_bottom = 11.0
+region_rect = Rect2(-0.0431709, -0.786495, 88.9269, 30.4148)
+
+[sub_resource type="Theme" id="Theme_3b3k3"]
+Button/styles/hover = SubResource("StyleBoxFlat_ohhpb")
+Button/styles/normal = SubResource("StyleBoxTexture_cmoxv")
 
 [node name="Control" type="CanvasLayer"]
 script = ExtResource("1_6w1dj")
@@ -47,31 +55,49 @@ alignment = 1
 
 [node name="Continue" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_7kwjd")
-texture_pressed = ExtResource("4_xucvx")
-texture_hover = ExtResource("5_h4gm8")
+theme = SubResource("Theme_3b3k3")
+texture_normal = ExtResource("4_cpwyt")
+texture_pressed = ExtResource("5_7ajok")
 
 [node name="Options" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("6_r210s")
-texture_pressed = ExtResource("7_5uytm")
-texture_hover = ExtResource("8_7bfd7")
+texture_normal = ExtResource("6_hrrwh")
+texture_pressed = ExtResource("7_vtwru")
 
 [node name="Restart" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("9_7mqma")
-texture_pressed = ExtResource("10_vwj2d")
-texture_hover = ExtResource("11_nu2yy")
+texture_normal = ExtResource("8_iydbw")
+texture_pressed = ExtResource("9_0g72e")
 
 [node name="Quit" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("12_lqsvm")
-texture_pressed = ExtResource("13_moetx")
-texture_hover = ExtResource("14_dyk12")
+texture_normal = ExtResource("10_gi72q")
+texture_pressed = ExtResource("11_2w01m")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_ldeoe")
+bus = &"SFX"
+
+[node name="OptionMenu" parent="." instance=ExtResource("17_cuja8")]
+visible = false
+
+[node name="TextureRect2" parent="OptionMenu" index="0"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 113.0
+offset_right = 822.0
+offset_bottom = 523.0
+
+[node name="VBoxContainer" parent="OptionMenu" index="1"]
+offset_left = 385.0
+offset_top = 201.0
+offset_right = 573.0
+offset_bottom = 361.0
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="OptionMenu/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+
+[editable path="OptionMenu"]

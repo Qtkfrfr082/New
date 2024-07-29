@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://6q7x72nvtr1d"]
+[gd_scene load_steps=33 format=3 uid="uid://6q7x72nvtr1d"]
 
 [ext_resource type="Texture2D" uid="uid://btn7qgqgxf6u0" path="res://Scenes/Player/PlayerResources/Cat Revamped Run Latest-Sheet.png" id="1_ud1qu"]
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/player.gd" id="1_xiil8"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://beqqqeo2ihek5" path="res://Sounds/PlayerSounds/Walk_Run.wav" id="10_31176"]
 [ext_resource type="PackedScene" uid="uid://b2klrbwx37se0" path="res://Scenes/Player/diedScreen.tscn" id="12_kdwmr"]
 [ext_resource type="AudioStream" uid="uid://cbxsvpppul1ce" path="res://Sounds/SFX/teleporter-102110.ogg" id="13_oytrg"]
+[ext_resource type="Texture2D" uid="uid://b3818bdbjh78d" path="res://Scenes/Player/TrailRun.tres" id="14_6lehy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aqame"]
 radius = 29.0172
@@ -60,6 +61,21 @@ tracks/2/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 }
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Died")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_yysmc")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/3/use_blend = true
 
 [sub_resource type="Animation" id="Animation_86bxy"]
 resource_name = "Idle"
@@ -313,6 +329,14 @@ point_count = 2
 offsets = PackedFloat32Array(0, 0.434783, 0.807453)
 colors = PackedColorArray(0, 1, 1, 1, 0.278431, 0.14902, 1, 1, 1, 0, 0, 1)
 
+[sub_resource type="Curve" id="Curve_yvcir"]
+_data = [Vector2(0, 0.501887), 0.0, 0.0, 0, 0, Vector2(1, 0.0943396), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_p1yhb"]
+_data = [Vector2(0.0191257, 0.501887), 0.0, 0.0, 0, 0, Vector2(1, 0.109434), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="PlayerNode" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
@@ -328,20 +352,23 @@ position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
 [node name="Running" type="AudioStreamPlayer2D" parent="Player"]
-volume_db = -17.198
+volume_db = -20.348
+bus = &"SFX"
 
 [node name="Jumping" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("3_hwcvs")
 volume_db = -13.867
 pitch_scale = 2.06
+bus = &"SFX"
 
 [node name="Hurt" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("4_iog7v")
 volume_db = -6.923
+bus = &"SFX"
 
 [node name="Died" type="AudioStreamPlayer2D" parent="Player"]
-stream = ExtResource("5_yysmc")
 volume_db = 0.045
+bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="Player"]
 wait_time = 5.0
@@ -383,6 +410,7 @@ position = Vector2(0, -2)
 scale = Vector2(0.3, 0.3)
 emitting = false
 amount = 200
+lifetime = 3.0
 one_shot = true
 speed_scale = 1.5
 randomness = 1.0
@@ -404,9 +432,42 @@ visible = false
 
 [node name="Spawn" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("13_oytrg")
+bus = &"SFX"
 
 [node name="SpawnTime" type="Timer" parent="Player"]
 wait_time = 4.0
+
+[node name="TrailsLeft" type="CPUParticles2D" parent="Player"]
+position = Vector2(-12, 19)
+emitting = false
+amount = 5
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.5
+fixed_fps = 60
+texture = ExtResource("14_6lehy")
+direction = Vector2(-10, 0)
+spread = 10.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 18.0
+initial_velocity_max = 40.0
+scale_amount_curve = SubResource("Curve_yvcir")
+
+[node name="TrailsRight" type="CPUParticles2D" parent="Player"]
+position = Vector2(9, 20)
+emitting = false
+amount = 5
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.5
+fixed_fps = 60
+texture = ExtResource("14_6lehy")
+direction = Vector2(10, 0)
+spread = 10.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 18.0
+initial_velocity_max = 40.0
+scale_amount_curve = SubResource("Curve_p1yhb")
 
 [node name="Teleport" type="Node2D" parent="."]
 

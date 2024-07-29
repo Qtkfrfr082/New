@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://wfmumvqosofn"]
+
+[ext_resource type="Texture2D" uid="uid://j80pvhalkejv" path="res://Tilemaps/industrial/Animated objects/Screen1.png" id="1_aeoqa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vwmv"]
+atlas = ExtResource("1_aeoqa")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbg02"]
+atlas = ExtResource("1_aeoqa")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksstr"]
+atlas = ExtResource("1_aeoqa")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxmea"]
+atlas = ExtResource("1_aeoqa")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8he6y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vwmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbg02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksstr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxmea")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_8he6y")
+frame = 2
+frame_progress = 0.2111

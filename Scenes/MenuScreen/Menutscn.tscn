@@ -1,22 +1,21 @@
-[gd_scene load_steps=29 format=3 uid="uid://6hkh21nnr7dy"]
+[gd_scene load_steps=28 format=3 uid="uid://6hkh21nnr7dy"]
 
 [ext_resource type="Texture2D" uid="uid://dm568siyxx5sr" path="res://Scenes/MenuScreen/Textures/NewTitleScreen.png" id="1_jwhrb"]
 [ext_resource type="Script" path="res://Scenes/MenuScreen/Scripts/StartMenu.gd" id="1_x1wjk"]
-[ext_resource type="Texture2D" uid="uid://ca0ln8olbf58r" path="res://Scenes/MenuScreen/Textures/StartBtn.png" id="2_uqec0"]
-[ext_resource type="Texture2D" uid="uid://bfw0jc08ytate" path="res://Scenes/MenuScreen/Textures/StartBtnClicked.png" id="3_3lpd0"]
-[ext_resource type="Texture2D" uid="uid://bmmfjs2g5r5s3" path="res://Scenes/MenuScreen/Textures/StartBtnHover.png" id="4_mjxqh"]
-[ext_resource type="Texture2D" uid="uid://dw3f6l0hbxkhl" path="res://Scenes/MenuScreen/Textures/QuitBTN.png" id="5_mv7r6"]
-[ext_resource type="Texture2D" uid="uid://b6f0lnhij42jg" path="res://Scenes/MenuScreen/Textures/QuitBTNHover.png" id="6_fnw7r"]
-[ext_resource type="Texture2D" uid="uid://bmm8twv7drulw" path="res://Scenes/MenuScreen/Textures/OptionsBtn.png" id="7_x43vd"]
-[ext_resource type="Texture2D" uid="uid://df5kcyst5jmk" path="res://Scenes/MenuScreen/Textures/OptionsBtnClicked.png" id="8_5sru5"]
-[ext_resource type="Texture2D" uid="uid://x8qjwf2m8pat" path="res://Scenes/MenuScreen/Textures/OptionsBtnHover.png" id="9_oe8jj"]
-[ext_resource type="Texture2D" uid="uid://l0qa1nuvvpnw" path="res://Scenes/MenuScreen/Textures/LevelsBtn.png" id="10_kyqsc"]
-[ext_resource type="Texture2D" uid="uid://cvq6i418ymnjv" path="res://Scenes/MenuScreen/Textures/LevelsBtnClicked.png" id="11_l76cu"]
-[ext_resource type="Texture2D" uid="uid://c268wcbqogs1j" path="res://Scenes/MenuScreen/Textures/LevelsBtnHover.png" id="12_toohm"]
+[ext_resource type="Texture2D" uid="uid://cmc1wwi02e3nr" path="res://Scenes/MenuScreen/Textures/StartBut.png" id="3_gbrbs"]
+[ext_resource type="Texture2D" uid="uid://fxina4ktlyjy" path="res://Scenes/MenuScreen/Textures/StartButPres.png" id="4_yqblv"]
+[ext_resource type="Texture2D" uid="uid://d351sp20oftrp" path="res://Scenes/MenuScreen/Textures/QuitBut.png" id="5_631js"]
+[ext_resource type="Texture2D" uid="uid://bda2sovituqcx" path="res://Scenes/MenuScreen/Textures/QuitButPres.png" id="6_xm2ns"]
+[ext_resource type="Texture2D" uid="uid://cdl10hwnvvrm4" path="res://Scenes/MenuScreen/Textures/OptionsBut.png" id="7_6xd4y"]
+[ext_resource type="Texture2D" uid="uid://rwjhn84twb6o" path="res://Scenes/MenuScreen/Textures/OptionsButPres.png" id="8_wk1do"]
+[ext_resource type="Texture2D" uid="uid://rfp3ikhgmec0" path="res://Scenes/MenuScreen/Textures/LevelsBut.png" id="9_du5qe"]
+[ext_resource type="Texture2D" uid="uid://odr5osnhw6qp" path="res://Scenes/MenuScreen/Textures/LevelsButPres.png" id="10_u76nf"]
 [ext_resource type="FontFile" uid="uid://dal5hpyj3amgs" path="res://Fonts/ThaleahFat.ttf" id="13_mevt5"]
 [ext_resource type="Script" path="res://Scenes/MenuScreen/PL2D.gd" id="14_ay801"]
 [ext_resource type="AudioStream" uid="uid://621mi8rc6xk4" path="res://Sounds/BackgroundMusic/Explore The World_Full.wav" id="16_6t7h3"]
 [ext_resource type="AudioStream" uid="uid://bbxqkn287r656" path="res://Sounds/SFX/shimmering-object.wav" id="17_bhln5"]
+[ext_resource type="PackedScene" uid="uid://dd1slpm2k6iaj" path="res://Scenes/Player/option_menu.tscn" id="18_qvi2w"]
+[ext_resource type="AudioStream" uid="uid://dggqahmieeqhu" path="res://Sounds/Menu/MI_SFX 32.wav" id="19_2bbce"]
 
 [sub_resource type="Gradient" id="Gradient_vr7ix"]
 colors = PackedColorArray(0.952941, 0.584314, 0.494118, 1, 1, 1, 1, 0)
@@ -43,7 +42,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(292, -117), Vector2(292, 5)]
+"values": [Vector2(254, -117), Vector2(254, 5)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -204,44 +203,40 @@ texture = ExtResource("1_jwhrb")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 435.0
+offset_left = 369.0
 offset_top = 425.0
-offset_right = 545.0
+offset_right = 479.0
 offset_bottom = 489.0
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.8, 1.8)
 
 [node name="Start Button" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_uqec0")
-texture_pressed = ExtResource("3_3lpd0")
-texture_hover = ExtResource("4_mjxqh")
+texture_normal = ExtResource("3_gbrbs")
+texture_pressed = ExtResource("4_yqblv")
 
 [node name="Quit Button" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("5_mv7r6")
-texture_pressed = ExtResource("3_3lpd0")
-texture_hover = ExtResource("6_fnw7r")
+texture_normal = ExtResource("5_631js")
+texture_pressed = ExtResource("6_xm2ns")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 610.0
-offset_top = 427.0
-offset_right = 720.0
-offset_bottom = 491.0
-scale = Vector2(1.5, 1.5)
+offset_left = 574.0
+offset_top = 425.0
+offset_right = 684.0
+offset_bottom = 489.0
+scale = Vector2(1.8, 1.8)
 
 [node name="Options" type="TextureButton" parent="VBoxContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("7_x43vd")
-texture_pressed = ExtResource("8_5sru5")
-texture_hover = ExtResource("9_oe8jj")
+texture_normal = ExtResource("7_6xd4y")
+texture_pressed = ExtResource("8_wk1do")
 
 [node name="Levels" type="TextureButton" parent="VBoxContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("10_kyqsc")
-texture_pressed = ExtResource("11_l76cu")
-texture_hover = ExtResource("12_toohm")
+texture_normal = ExtResource("9_du5qe")
+texture_pressed = ExtResource("10_u76nf")
 
 [node name="PL2D" type="PointLight2D" parent="."]
 position = Vector2(292, 485)
@@ -288,6 +283,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("16_6t7h3")
+bus = &"MUSIC"
 
 [node name="Copyright" type="Label" parent="."]
 layout_mode = 0
@@ -356,6 +352,7 @@ one_shot = true
 autostart = true
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_l1c8g")
@@ -363,6 +360,32 @@ environment = SubResource("Environment_l1c8g")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.792157, 0.815686, 0.815686, 1)
 
+[node name="OptionMenu" parent="." instance=ExtResource("18_qvi2w")]
+visible = false
+layout_mode = 1
+
+[node name="TextureRect2" parent="OptionMenu" index="0"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 113.0
+offset_right = 822.0
+offset_bottom = 523.0
+
+[node name="VBoxContainer" parent="OptionMenu" index="1"]
+offset_left = 385.0
+offset_top = 197.0
+offset_right = 573.0
+offset_bottom = 357.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_2bbce")
+bus = &"SFX"
+
 [connection signal="pressed" from="VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Levels" to="." method="_on_levels_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="OptionMenu/VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+
+[editable path="OptionMenu"]

@@ -1,10 +1,12 @@
 ~ FIRSTSCENE
 set PlayerData.can_move = false
+set FlowC1.PlayerTalk = true
 You: Uuhhhhh… my head feels dizzy….
 You: [shake rate=20 level=10]??.. my hands? what’s this?... their paws!? Why do I look like a cat?! [/shake]
 You: WHY am I pixelated?
 You: Where am I?? what even is this place?
 You: Whatever looks fun dream huh? maybe i go walk and find's interesting here.
+set FlowC1.PlayerTalk = false
 Press [A] and [D] to move.
 set PlayerData.can_move = true
 => END!
@@ -13,7 +15,7 @@ set PlayerData.can_move = false
 You: A memo?
 [shake rate=20 level=20][speed=7]“W̷̦͚͛́̈̎͌̀̓͂̽͂̕̕ẻ̶̛̜͔̌͗̈́̕͜͝l̴̤͈̥̈́͂͐̾̏̓̓͆̓̂̉̕͝͝c̶̦̓̀̀̆͛͝ơ̶̹̜͖̜̼̼͙̠̼͈̔͑͛̒̈̋͆̅̇̌͑͌̈́͠ͅͅm̶̧̛͇̬̫̩͇̥͇̣̼̠͖̰͍͓̃́͛̄͆̅͛̑̈́̚ĕ̶͕̼͎̜̲̥̱̺̽͝ ̸̢̧͍̰̹͓͔̍̿͗̆ͅỳ̴̧̪͔̰͙̹͔̺̥̪̥̫̑̇̐͛͝͝͠͠ǭ̴̠̞̙̱̣̙̦̚ų̷̙͎̭̘͐͂͋̅͛̂̉͐̐̾̿̓̚̚’̸͙͚̫̠̠̜̦͓̜̜̮̘̖̙̅͋͌̈́͋̔͋̇͌͗͝v̴̡̲͍̜̑̈́e̶̛̛̖͙̞̔͐̔̑̈́̔͘ ̶̧̢͙̫̮͚̻̙͇͉͈̱̒͌͌̀͌͒̚ͅͅb̵̧͔͇͖̫͚͈̓͝ę̵̭̭͔̻̦͍͇̙͕̦̼͊̊ē̵̡̈́͐̂̃̀̾̾̒͊̚ņ̸͉̝̙͌́̌̇͊̆̅̐̚͝͝ͅ ̵͕̲̬̤̳̋̔̒́͘̚g̴̛̹͈̯̻̓̏̓̅͘͜i̴̛͚̗̠͗̔́̉̈́̏͗̎͋̈̅́͝v̴̛͎̦͖̤̤͔̺̤͙̼̬͎͇̯̇̊͛̃͛̾̎̐e̷͇͍͔̩͗̆n̴̟͙̿̽̔̀ ̷̨̢̗̰̩̖̮͎͙͍͔̜̀̌̇͊͗͑́̚â̸̧͔̱̭̠̗̐͝n̴̨͚̩̳͓̪̦̗̥̗̊̈́̾͐͑͌͒̋́̒͑̉͆͑o̵̡̨̼͓̬̭̹̻͈̫̹͎̹̣͌̾̈́͗̋ť̷̨̝̾͐͒͒͊̌̍̌́h̴̥͔̦͍̹̚ͅe̴̢̧̛̯̫̰̦̎̃͋͆̆̿r̷̗̼̻͖͕̟̝͚̫̤̫͎͔͔͗̐́ͅ ̷̢̧̢̝͕͚̗̻̗̟͌̄̈́͆̍̊͂͛̈͝͝ç̶̭̳̻̜̩̘̺̒̓͋̾͛̓̈́̋̓͆̔̿̃̚h̸̛̛͈̥̖̹͈̜̟̩̣̖̐̿̋́͆̃̈́̅̓̂̒͘͠ã̵̡̘̫͍̙͆͊̔ņ̶̞̩̟̗̳̊͊͝c̶̞͙̤̦̼̣̽́͊͑̿̈́̀̅̕͝ě̴̡̢͍͇̥̻̪͔̻̼̭!.”[/shake]
 You: Huh? the text’s all jumbled up.
-Follow the what the sign says and make sure to pay attention to your surroundings. Attentiveness and Caution will get you out of this.
+[color=green]Follow the what the sign says and make sure to pay attention to your surroundings. Attentiveness and Caution will get you out of this.[/color]
 You: That's weird this sign feels like its talking to me, this place is creeping me out. I'll go explore around there may be clues to get out of here.
 set PlayerData.can_move = true
 => END
@@ -146,11 +148,11 @@ if has_met_Whiskers == true
 set PlayerData.can_move = false
 Terminal: Note: To all employees some teleportation modules we're reported to be malfunctioning prompting immediate resetting of TP Modules although some Modules remain functional proceed at your own risk.
 Terminal: Warning: Select Levels of the Facility deemed Dangerous Gates Modules deployed…
-You: Hm. I guess those laser thingy’s we’re gate of some sorts, gotta find a way around those.
-You: huh what’s this… A NOTE? Theres something written here
+You: Hm. I guess those [color=green]laser thingy's we're gate of some sorts, gotta find a way around those.[/color]
+You: huh what's this… A NOTE? Theres something written here.
 
-Note: [Date:38XX XX XX] SerialCode\: AL-1S\nDue to the facility deteriorating overtime Facility AI decided it would be necessary to annually erase data unrelated to the maintaining the facility,at first it wasn’t an issue however after XXXX years mishaps began to happen,
-my system data began to be erased as well, if not for the physical backups that I've made in Storage I would have completely been bricked, as part of another failsafe I've began to create notes and scattered it through the facility in cases I were to lose my memory data….
+Note: [Date:38XX XX XX] SerialCode\: AL-1S\nDue to the facility deteriorating overtime Facility AI decided it would be necessary to annually erase data unrelated to the maintaining the facility,at first it wasn't an issue however after XXXX years mishaps began to happen,
+my system data began to be erased as well, if not for the physical backups that I've made in Storage I would have completely been bricked, as part of another failsafe I've began to create notes and scattered it through the facility in cases, I were to lose my memory data...
 You: Very convenient huh, I wonder if this droid AL-1S is still functioning.
 set PlayerData.can_move = true
 => END
@@ -175,7 +177,7 @@ This facility layout so confusing nice to know that AL-1S made some nice Flow Ch
 You: Wait this memo again??
 Recording - AL-1S\:\nGreetings. I will now explain another important aspect of programming\:\nFlowcharts. Flowcharts use specific shapes to represent different actions.\nThe diamond shape represents decisions or branching pathways. These branches depend on certain conditions being met.
 For example, consider the condition 'Is the Door to the Deep Lab Open?' There are two possible pathways\: 'Yes' or 'No'. This illustrates a 'Selection Control Structure'\n,a decision-making structure fundamental to programming. It allows the program to choose different paths of execution based on whether conditions are true or false.
-Understanding these concepts is crucial in both Flowcharts and real life. Always take a moment to carefully consider which decision to make.
+[color=green]Understanding these concepts is crucial in both Flowcharts and real life. Always take a moment to carefully consider which decision to make.[/color]
 You: So that was what Selection Control Structure huh.
 
 => END

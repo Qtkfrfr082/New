@@ -6,10 +6,13 @@
 [ext_resource type="AudioStream" uid="uid://obhw2o4q4bec" path="res://Sounds/SFX/Teleport.wav" id="5_415pi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5kb3"]
+size = Vector2(6, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eytk1"]
+size = Vector2(7, 7.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82rhn"]
+size = Vector2(6, 6)
 
 [sub_resource type="Curve" id="Curve_wksbh"]
 min_value = -1.0
@@ -101,6 +104,7 @@ hue_variation_curve = SubResource("Curve_wksbh")
 [node name="Teleport" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_415pi")
 volume_db = 12.893
+bus = &"SFX"
 
 [connection signal="body_entered" from="TpA" to="TpA" method="_on_body_entered"]
 [connection signal="body_entered" from="TpB" to="TpB" method="_on_body_entered"]

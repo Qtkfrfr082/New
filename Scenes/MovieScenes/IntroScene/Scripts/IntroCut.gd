@@ -11,5 +11,5 @@ extends VideoStreamPlayer
 
 
 func _on_finished():
-	get_tree().change_scene_to_file("res://Level1/level_1.tscn")
+	LoadScene.load_screen_to_scene("res://Scenes/Level1.tscn", {"test": "f"})
 	pass # Replace with function body.

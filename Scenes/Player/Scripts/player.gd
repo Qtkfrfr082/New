@@ -1,7 +1,7 @@
 extends CharacterBody2D
 var npc1 = false
 var update_health
-const SPEED = 160.0
+const SPEED = 155.0
 const JUMP_VELOCITY = -350.0
 var input_vector: Vector2 = Vector2.ZERO
 var start_position : Vector2 = Vector2(0, 0)
@@ -15,6 +15,7 @@ const KNOCKBACK_DISTANCE = 50
 const KNOCKBACK_FORCE = 500
 const KNOCKBACK_DURATION = 0.2
 var is_being_knocked_back = false
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -26,7 +27,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	playerhits.show()
 	
-	PlayerData.can_move = false
+	
 	$SpawnTime.start()
 	$Spawn.play()
 	$CPUParticles2D.show()
@@ -35,9 +36,12 @@ func _ready():
 pass
 
 func _physics_process(delta):
+	
 	var HEALTH = get_node("CanvasLayer/TextureProgressBar")
 	#print(PlayerData.Health)
+	
 
+	# Move and slide
 	if is_dying:
 		#THis is for when dies and why is it here because it needs to be check first 
 		return
@@ -79,26 +83,31 @@ func _physics_process(delta):
 	else:
 		if PlayerData.can_move:
 			if not is_on_floor():
+				
 				velocity.y += gravity * delta
-
+				
 		# Handle Jump.
 			if Input.is_action_just_pressed("Jump")and is_on_floor():
+				
 			
 				velocity.y = JUMP_VELOCITY
 				AP.play("Jump")
 				$Jumping.play()
-					
+			
 			var direction = Input.get_axis("Run_Left", "Run_Right")
 		
 			if direction == -1:
 				get_node("Sprite2D").flip_h = true
+				$TrailsRight.emitting = true
 			elif direction == 1:
 				get_node("Sprite2D").flip_h = false
+				$TrailsLeft.emitting = true
 			if direction:
 			
 				velocity.x = direction * SPEED
 				if velocity.y == 0:
 					AP.play("Run")
+					
 				#This is for running sounds change according to yours if the sound doesnt match to your player
 				if $Timer.time_left <= 0:
 						@warning_ignore("narrowing_conversion")
@@ -111,8 +120,9 @@ func _physics_process(delta):
 				if velocity.y == 0:
 						AP.play("Idle")
 			move_and_slide()
+			
 		return
-
+		
 #func _unhandled_input(_event: InputEvent) -> void:
 	#this is for the dialgue checking if player near to npc before Q dialgue key to be available to press ( this help for not getting error when not near)
 	#if Input.is_action_just_pressed("Dialogue"):
@@ -189,15 +199,5 @@ func end_knockback():
 	velocity = Vector2.ZERO
 
 
-func _on_cpu_particles_2d_finished():
-	
-	pass # Replace with function body.
-	
 
 
-
-
-
-func _on_spawn_time_timeout():
-	PlayerData.can_move = true
-	pass # Replace with function body.
