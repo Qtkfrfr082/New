@@ -6,7 +6,7 @@ extends TextureRect
 	set(value):
 		Slot = value
 		%Slot1.text = str(Slot)
-
+		
 @onready var property: Dictionary = {"TEXTURE" : texture,"SLOT" : Slot, "SLOT_TYPE" : slot_type}:
 	set(value):
 		property = value

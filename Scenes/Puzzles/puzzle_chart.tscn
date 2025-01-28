@@ -1,6 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://wpxyti8pj2rx"]
+[gd_scene load_steps=36 format=3 uid="uid://wpxyti8pj2rx"]
 
-[ext_resource type="Script" path="res://Scenes/Puzzles/Puz1Slot.gd" id="1_hcgmv"]
+[ext_resource type="Script" path="res://Scenes/Puzzles/lvl3Puz1Slot.gd" id="1_j1f2s"]
 [ext_resource type="Texture2D" uid="uid://clw8dggemvlrr" path="res://Scenes/Puzzles/Resources/Switch offv2.png" id="1_v53c6"]
 [ext_resource type="Texture2D" uid="uid://lbwsrlia5m4b" path="res://Scenes/Puzzles/Resources/Switch onv2t.png" id="2_4ndhp"]
 [ext_resource type="Texture2D" uid="uid://dp8bh1dm86hq3" path="res://Scenes/Puzzles/Resources/FlowChartPlaceHolderNEW.png" id="3_knn6s"]
@@ -8,6 +8,25 @@
 [ext_resource type="Texture2D" uid="uid://cw053vqunriad" path="res://Scenes/Puzzles/Resources/IOChartNEW.png" id="5_mdfie"]
 [ext_resource type="Texture2D" uid="uid://csgodgn58n33o" path="res://Scenes/Puzzles/Resources/FlowChartStartNEW.png" id="6_1l7p0"]
 [ext_resource type="Texture2D" uid="uid://il5p5ywwgmjk" path="res://Scenes/Puzzles/Resources/ProcessChartNEW.png" id="7_otg7i"]
+[ext_resource type="Texture2D" uid="uid://dwb2xrxcihqg7" path="res://Scenes/Puzzles/Resources/ButtonX.png" id="9_s0wkw"]
+[ext_resource type="Texture2D" uid="uid://cmgn6xucrqgln" path="res://Scenes/Puzzles/Resources/IOChartNEW-export.png" id="9_s42od"]
+[ext_resource type="Texture2D" uid="uid://bujhxs7aooqja" path="res://Dialogues/Texture/CustomDialog.png" id="10_qycjm"]
+[ext_resource type="FontFile" uid="uid://dal5hpyj3amgs" path="res://Fonts/ThaleahFat.ttf" id="11_61e1y"]
+[ext_resource type="Script" path="res://Scenes/Puzzles/GuideLvl3_1.gd" id="11_d4vav"]
+[ext_resource type="Texture2D" uid="uid://b3gaebmrsyxfk" path="res://Scenes/Puzzles/Resources/helpButton1.png" id="13_8jqkh"]
+[ext_resource type="Texture2D" uid="uid://hnvdocll2oqp" path="res://Scenes/Puzzles/Resources/helpButton2.png" id="14_y0wdi"]
+[ext_resource type="AudioStream" uid="uid://dggqahmieeqhu" path="res://Sounds/Menu/MI_SFX 32.wav" id="16_cjif1"]
+[ext_resource type="AudioStream" uid="uid://cvfhkmpsy56t6" path="res://Sounds/SFX/snap7.mp3" id="17_fukk2"]
+[ext_resource type="AudioStream" uid="uid://def5bhd2brdty" path="res://Sounds/SFX/mixkit-completion-of-a-level-2063.wav" id="18_nvt6e"]
+[ext_resource type="AudioStream" uid="uid://cbiys4ukejq8i" path="res://Sounds/SFX/Lever.wav" id="19_h2la7"]
+[ext_resource type="AudioStream" uid="uid://f6vbj0oixegf" path="res://Sounds/SFX/incorrect-buzzer-sound-147336.mp3" id="20_jxij5"]
+
+[sub_resource type="Gradient" id="Gradient_omcqq"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.427451)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bqq3v"]
+gradient = SubResource("Gradient_omcqq")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0sgi3"]
 animations = [{
@@ -50,22 +69,57 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.9, 0.1)
 metadata/_snap_enabled = true
 
-[sub_resource type="Gradient" id="Gradient_5vi1a"]
+[sub_resource type="Gradient" id="Gradient_c3vs0"]
 offsets = PackedFloat32Array(0, 0.518519, 1)
 colors = PackedColorArray(0, 1, 0, 1, 0, 0.733333, 0, 0.529412, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_tqxqc"]
-gradient = SubResource("Gradient_5vi1a")
+gradient = SubResource("Gradient_c3vs0")
 use_hdr = true
 fill = 1
 fill_from = Vector2(0.48433, 0.492877)
 fill_to = Vector2(0.9, 0.1)
 metadata/_snap_enabled = true
 
+[sub_resource type="Gradient" id="Gradient_tmmcx"]
+offsets = PackedFloat32Array(0, 0.219697, 0.80303, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.00784314, 0.00784314, 0.00784314, 1, 0.00784314, 0.00784314, 0.00784314, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cebem"]
+gradient = SubResource("Gradient_tmmcx")
+use_hdr = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nqfv2"]
+texture = SubResource("GradientTexture2D_cebem")
+
+[sub_resource type="Theme" id="Theme_xhpfk"]
+default_font = ExtResource("11_61e1y")
+default_font_size = 36
+RichTextLabel/styles/normal = SubResource("StyleBoxTexture_nqfv2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j2qlk"]
+texture = ExtResource("10_qycjm")
+texture_margin_left = 24.0421
+texture_margin_top = 23.2908
+texture_margin_right = 22.5394
+texture_margin_bottom = 22.5394
+region_rect = Rect2(0, 0, 173, 164)
+
+[sub_resource type="Theme" id="Theme_v4mb0"]
+default_font = ExtResource("11_61e1y")
+default_font_size = 24
+RichTextLabel/styles/normal = SubResource("StyleBoxTexture_j2qlk")
+
 [node name="PuzzleChart" type="Node2D"]
-script = ExtResource("1_hcgmv")
+script = ExtResource("1_j1f2s")
 
 [node name="Lever" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Lever"]
+z_index = -1
+offset_right = 1153.0
+offset_bottom = 643.0
+texture = SubResource("GradientTexture2D_bqq3v")
 
 [node name="Switch" type="AnimatedSprite2D" parent="Lever"]
 position = Vector2(576, 328)
@@ -74,10 +128,12 @@ sprite_frames = SubResource("SpriteFrames_0sgi3")
 animation = &"Off"
 
 [node name="Puzzle" type="TextureRect" parent="Lever/Switch"]
-offset_left = -213.0
-offset_top = -215.0
-offset_right = 204.0
-offset_bottom = 216.0
+z_index = -1
+offset_left = -252.727
+offset_top = -255.455
+offset_right = 164.273
+offset_bottom = 175.545
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("3_knn6s")
 metadata/_edit_use_anchors_ = true
 
@@ -98,44 +154,47 @@ texture_scale = 1.5
 
 [node name="Arrow4" type="PointLight2D" parent="LightIndi"]
 visible = false
-position = Vector2(571, 425)
+position = Vector2(573, 451)
 energy = 2.0
 texture = SubResource("GradientTexture2D_tqxqc")
 
 [node name="Arrow1" type="PointLight2D" parent="LightIndi"]
 visible = false
-position = Vector2(571, 228)
+position = Vector2(574, 216)
 energy = 2.0
 texture = SubResource("GradientTexture2D_tqxqc")
 
 [node name="Arrow2" type="PointLight2D" parent="LightIndi"]
 visible = false
-position = Vector2(571, 296)
+position = Vector2(573, 293)
 energy = 2.0
 texture = SubResource("GradientTexture2D_tqxqc")
 
 [node name="Arrow3" type="PointLight2D" parent="LightIndi"]
 visible = false
-position = Vector2(571, 360)
+position = Vector2(573, 372)
 energy = 2.0
 texture = SubResource("GradientTexture2D_tqxqc")
 
 [node name="Objects" type="Node2D" parent="."]
-position = Vector2(576, 328)
+position = Vector2(576, 308)
 
 [node name="Slot1" parent="Objects" instance=ExtResource("4_pguye")]
 self_modulate = Color(1, 0, 1, 1)
 offset_left = -3.0
-offset_top = -123.0
+offset_top = -124.0
 offset_right = -3.0
-offset_bottom = -123.0
+offset_bottom = -124.0
 
 [node name="TextureRect" parent="Objects/Slot1" index="0"]
-offset_left = -64.0
-offset_top = -38.0
-offset_right = 62.0
-offset_bottom = 23.0
+offset_left = -63.0
+offset_top = -47.0
+offset_right = 63.0
+offset_bottom = 14.0
 Slot = 5
+
+[node name="Slot1" parent="Objects/Slot1/TextureRect" index="0"]
+visible = false
 
 [node name="Slot2" parent="Objects" instance=ExtResource("4_pguye")]
 offset_left = -4.0
@@ -145,12 +204,15 @@ offset_bottom = -64.0
 
 [node name="TextureRect" parent="Objects/Slot2" index="0"]
 offset_left = -68.0
-offset_top = -36.0
+offset_top = -25.0
 offset_right = 58.0
-offset_bottom = 25.0
+offset_bottom = 36.0
 pivot_offset = Vector2(72.5714, 36.8571)
 texture = ExtResource("5_mdfie")
 Slot = 2
+
+[node name="Slot1" parent="Objects/Slot2/TextureRect" index="0"]
+visible = false
 
 [node name="Slot3" parent="Objects" instance=ExtResource("4_pguye")]
 offset_left = -6.0
@@ -159,8 +221,13 @@ offset_right = -6.0
 offset_bottom = -6.0
 
 [node name="TextureRect" parent="Objects/Slot3" index="0"]
+offset_top = -5.0
+offset_bottom = 56.0
 texture = ExtResource("6_1l7p0")
 Slot = 1
+
+[node name="Slot1" parent="Objects/Slot3/TextureRect" index="0"]
+visible = false
 
 [node name="Slot4" parent="Objects" instance=ExtResource("4_pguye")]
 offset_left = -6.0
@@ -169,10 +236,15 @@ offset_right = -6.0
 offset_bottom = 62.0
 
 [node name="TextureRect" parent="Objects/Slot4" index="0"]
-offset_top = -30.0
-offset_bottom = 35.0
+offset_left = -60.0
+offset_top = 5.0
+offset_right = 66.0
+offset_bottom = 70.0
 texture = ExtResource("7_otg7i")
 Slot = 3
+
+[node name="Slot1" parent="Objects/Slot4/TextureRect" index="0"]
+visible = false
 
 [node name="Slot5" parent="Objects" instance=ExtResource("4_pguye")]
 offset_left = -5.0
@@ -181,12 +253,15 @@ offset_right = -5.0
 offset_bottom = 124.0
 
 [node name="TextureRect" parent="Objects/Slot5" index="0"]
-offset_left = -63.0
-offset_top = -28.0
-offset_right = 63.0
-offset_bottom = 33.0
-texture = ExtResource("5_mdfie")
+offset_left = -64.0
+offset_top = 26.0
+offset_right = 62.0
+offset_bottom = 87.0
+texture = ExtResource("9_s42od")
 Slot = 4
+
+[node name="Slot1" parent="Objects/Slot5/TextureRect" index="0"]
+visible = false
 
 [node name="Buttons" type="Control" parent="."]
 layout_mode = 3
@@ -203,13 +278,147 @@ offset_right = 626.0
 offset_bottom = 86.0
 flat = true
 
-[node name="XButton" type="Button" parent="Buttons"]
+[node name="XButton" type="TextureButton" parent="Buttons"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 1096.0
+offset_top = 3.0
+offset_right = 1126.0
+offset_bottom = 33.0
+scale = Vector2(1.6, 1.6)
+texture_normal = ExtResource("9_s0wkw")
+texture_pressed = ExtResource("9_s0wkw")
+
+[node name="Guide" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_d4vav")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Guide"]
+layout_mode = 0
+offset_left = 863.0
+offset_top = 61.0
+offset_right = 1263.0
+offset_bottom = 211.0
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_xhpfk")
+bbcode_enabled = true
+text = "Arrange the charts to create a correct loop structure that demonstrates repetition control using loops."
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Guide"]
+visible = false
+layout_mode = 0
+offset_left = 204.0
+offset_top = 552.0
+offset_right = 1248.0
+offset_bottom = 642.0
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_xhpfk")
+bbcode_enabled = true
+text = "You are presented with five charts and a pseudocode display on the left side. Your task is to drag and drop these charts into the correct order to form a proper loop structure."
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Guide"]
+visible = false
+layout_mode = 0
+offset_left = 243.0
+offset_top = 190.0
+offset_right = 1173.0
+offset_bottom = 289.0
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_xhpfk")
+bbcode_enabled = true
+text = "The pseudocode helps you understand how the loop should be structured. Refer to this pseudocode to guide your arrangement of the charts."
+fit_content = true
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="Guide"]
+
+[node name="HelpButton" type="TextureButton" parent="Guide"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 3.0
+offset_right = 1070.0
+offset_bottom = 33.0
+scale = Vector2(1.6, 1.6)
+texture_normal = ExtResource("13_8jqkh")
+texture_pressed = ExtResource("14_y0wdi")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_cjif1")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_fukk2")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_nvt6e")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_h2la7")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_jxij5")
+bus = &"SFX"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Puz" type="VBoxContainer" parent="."]
+offset_left = 8.0
+offset_top = 113.0
+offset_right = 287.0
+offset_bottom = 508.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Puz"]
+layout_mode = 2
+theme = SubResource("Theme_v4mb0")
+bbcode_enabled = true
+text = "Start"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Puz"]
+layout_mode = 2
+theme = SubResource("Theme_v4mb0")
+bbcode_enabled = true
+text = "Input: [color=red]number[/color] = 1"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Puz"]
+layout_mode = 2
+theme = SubResource("Theme_v4mb0")
+bbcode_enabled = true
+text = "[color=maroon]While[/color] ([color=red]number[/color] < 10)"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Puz"]
+layout_mode = 2
+theme = SubResource("Theme_v4mb0")
+bbcode_enabled = true
+text = "Output: [color=green]PRint number[/color]
+[color=red]number[/color] = [color=red]number[/color] + 1"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="Puz"]
+layout_mode = 2
+theme = SubResource("Theme_v4mb0")
+bbcode_enabled = true
+text = "end while
+end"
+fit_content = true
+scroll_active = false
 
 [connection signal="pressed" from="Buttons/OnLever" to="." method="_on_on_lever_pressed"]
 [connection signal="pressed" from="Buttons/XButton" to="." method="_on_x_button_pressed"]
+[connection signal="timeout" from="Guide/Timer" to="Guide" method="_on_timer_timeout"]
+[connection signal="pressed" from="Guide/HelpButton" to="Guide" method="_on_help_button_pressed"]
 
 [editable path="Objects/Slot1"]
 [editable path="Objects/Slot2"]

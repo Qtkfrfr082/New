@@ -8,7 +8,7 @@ var Slot_Data = "0"
 func _get_drag_data(at_position):
 	var preview_texture = get_preview()
 	preview_texture.modulate = Color(1, 1, 1, 0.5)  # Set transparency while dragging
-	
+	$"../../AudioStreamPlayer".play()
 	set_drag_preview(preview_texture)
 	return texture_rect
 
@@ -21,6 +21,7 @@ func _drop_data(_pos, data):
 	var temp = texture_rect.property
 	texture_rect.property = data.property
 	data.property = temp
+	$"../../AudioStreamPlayer2".play()
 
 func get_preview():
 	# To get view the current object while dragging 

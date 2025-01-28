@@ -27,4 +27,5 @@ func _on_area_2d_body_entered(body):
 		print("inside2")
 func _on_area_2d_body_exited(body):
 	if body.name == "Player":
+		player_inside = false
 		$"inter1".hide()

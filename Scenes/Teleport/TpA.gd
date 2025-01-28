@@ -1,38 +1,43 @@
 extends Area2D
 
-@onready var TpB = get_node("../TpB")
-var isTeleporting = false
-var cooldownDuration = 2.0
-var AvailableTp = false
+@onready var teleport_destination = get_node("../TpB")  # Adjust to TpA for the other node
+@onready var collision_shape = $CollisionShape2D  # Reference to the collision shape
+var is_teleporting = false
+var cooldown_duration = 3.0
+var available_tp = false
+
+# Define an offset to move the player slightly away from the teleport area
+ # Adjust this value as needed
+
 func _on_body_entered(body):
-	# Check if the body entered is the player 
-	if body.is_in_group("Player") and not isTeleporting and AvailableTp:
-		# Get the destination node
-		var teleportDestinationNode = TpB #this is area2d node 
-		print("insideee")
-		# Check if the destination node exists
-		if teleportDestinationNode:
-			# Teleport the player to the destination node's position
-			$"../Teleport".play()
-			body.global_transform.origin = teleportDestinationNode.global_transform.origin
-			isTeleporting = true
-			
-			start_cooldown_timer()
+	if body.is_in_group("Player") and not is_teleporting and available_tp:
+		teleport_player(body)
+
+func teleport_player(body):
+	if teleport_destination:
+		$"../Teleport".play()
+		
+		# Get the global position of the destination and add an offset
+		var destination_position = teleport_destination.global_position 
+		
+		# Move the player to the destination position
+		body.global_position = destination_position
+		
+		# Disable the collision shape to prevent immediate re-triggering
+		collision_shape.disabled = true
+		
+		is_teleporting = true
+		start_cooldown_timer()
 
 func start_cooldown_timer():
-	# Start a timer to reset the teleporting state after the cooldown period
-	$"../Cooldown".start(cooldownDuration)
+	$"../Cooldown".start(cooldown_duration)
 
 func _on_cooldown_timeout():
-	AvailableTp = false
-	isTeleporting = false
+	is_teleporting = false
+	available_tp = false  # Reset availability after cooldown to avoid instant re-teleportation
 	
-	#reset to false
-	pass # Replace with function body.
-
+	# Re-enable the collision shape after the cooldown
+	collision_shape.disabled = false
 
 func _on_area_2d_body_entered(_body):
-	#check player to be able to teleport before entering 
-	AvailableTp = true
-	print("true")
-	pass # Replace with function body.
+	available_tp = true

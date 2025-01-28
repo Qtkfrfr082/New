@@ -17,11 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://dd1slpm2k6iaj" path="res://Scenes/Player/option_menu.tscn" id="18_qvi2w"]
 [ext_resource type="AudioStream" uid="uid://dggqahmieeqhu" path="res://Sounds/Menu/MI_SFX 32.wav" id="19_2bbce"]
 
-[sub_resource type="Gradient" id="Gradient_vr7ix"]
+[sub_resource type="Gradient" id="Gradient_gtd8d"]
 colors = PackedColorArray(0.952941, 0.584314, 0.494118, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_28eub"]
-gradient = SubResource("Gradient_vr7ix")
+gradient = SubResource("Gradient_gtd8d")
 use_hdr = true
 fill = 1
 fill_from = Vector2(0.506667, 0.463333)

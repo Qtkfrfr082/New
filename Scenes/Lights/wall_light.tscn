@@ -4,12 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://d03ux0710r48n" path="res://Scenes/Lights/White.tres" id="2_brcq5"]
 
 [node name="WallLight" type="Node2D"]
+self_modulate = Color(2, 2, 2, 1)
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="Red" type="PointLight2D" parent="."]
+color = Color(2, 1, 1, 1)
 shadow_enabled = true
 shadow_item_cull_mask = 15
 texture = ExtResource("1_sncs4")
 
-[node name="PointLight2D2" type="PointLight2D" parent="."]
+[node name="White" type="PointLight2D" parent="."]
 shadow_enabled = true
 texture = ExtResource("2_brcq5")

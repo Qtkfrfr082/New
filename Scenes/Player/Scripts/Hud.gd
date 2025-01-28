@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var Pause = get_node("PauseMenu")
-
+var is_paused = false
 #@onready var Quest = get_node("QuestTab")
 var Paus = false
 var player
@@ -33,11 +33,24 @@ func PlayerHit():
 func PauseMenu():
 		#This will pause and stop time 
 		
+	is_paused = !is_paused
+	
+	if is_paused:
+		# Show the pause menu
 		Pause.show()
 		$AudioStreamPlayer.play()
 		Engine.time_scale = 0
-		Paus = !Paus
 		
+		# Pause specific elements rather than everything
+		get_tree().paused = true
+	else:
+		# Hide the pause menu
+		Pause.hide()
+		$AudioStreamPlayer.stop()
+		Engine.time_scale = 1
+		
+		# Resume specific elements
+		get_tree().paused = false
 	
 func QuestTab():
 	#THis will show the quest tab

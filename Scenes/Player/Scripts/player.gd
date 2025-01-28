@@ -13,15 +13,17 @@ var run1 = true
 var run2 = true
 const KNOCKBACK_DISTANCE = 50
 const KNOCKBACK_FORCE = 500
-const KNOCKBACK_DURATION = 0.2
+const KNOCKBACK_DURATION = 0.3
 var is_being_knocked_back = false
+var has_double_jump = false
+var can_double_jump = true 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 #@onready var Intear = get_node("../../NPC/Actionable")
 #@onready var Intear = PlayerData.NpcInteract
-
+@onready var camera = $Camera2D  # Adjust the path to your camera node
 @onready var AP = $AnimationPlayer
 @onready var playerhits = get_node("CanvasLayer")
 func _ready():
@@ -39,8 +41,12 @@ func _physics_process(delta):
 	
 	var HEALTH = get_node("CanvasLayer/TextureProgressBar")
 	#print(PlayerData.Health)
-	
-
+	if FlowC1.Tutorial:
+		$TutorialText/Move.show()
+	elif not FlowC1.Tutorial:
+		$TutorialText/Move.hide()
+		pass
+		
 	# Move and slide
 	if is_dying:
 		#THis is for when dies and why is it here because it needs to be check first 
@@ -87,21 +93,28 @@ func _physics_process(delta):
 				velocity.y += gravity * delta
 				
 		# Handle Jump.
-			if Input.is_action_just_pressed("Jump")and is_on_floor():
-				
-			
-				velocity.y = JUMP_VELOCITY
-				AP.play("Jump")
-				$Jumping.play()
-			
+			if is_on_floor():
+				can_double_jump = true
+			if Input.is_action_just_pressed("Jump"):
+				if is_on_floor():
+					velocity.y = JUMP_VELOCITY
+					AP.play("Jump")
+					$Jumping.play()
+				elif has_double_jump and can_double_jump:
+					velocity.y = JUMP_VELOCITY
+					AP.play("Jump")
+					$Jumping.play()
+					can_double_jump = false
 			var direction = Input.get_axis("Run_Left", "Run_Right")
 		
 			if direction == -1:
 				get_node("Sprite2D").flip_h = true
-				$TrailsRight.emitting = true
+				if is_on_floor():
+					$TrailsRight.emitting = true
 			elif direction == 1:
 				get_node("Sprite2D").flip_h = false
-				$TrailsLeft.emitting = true
+				if is_on_floor():
+					$TrailsLeft.emitting = true
 			if direction:
 			
 				velocity.x = direction * SPEED
@@ -154,12 +167,9 @@ func deathh():
 func _on_death_timer_timeout():
 	print("diee")
 	get_tree().reload_current_scene()
-	
+	FlowC1.activated = true
 	PlayerData.Health = 30
 	#Go back to starting point but reloads the whole game
-
-
-
 
 
 func _on_body_body_entered(body):
@@ -168,10 +178,17 @@ func _on_body_body_entered(body):
 			var direction = (global_position - body.global_position).normalized()
 			global_position += direction * 10
 			knockback(body)
+			camera.start_shake(1, 8)
 		
 	return
 	
-
+func collect_double_jump_coin():
+	has_double_jump = true
+	print("Double jump ability acquired!")
+	$AnimationPlayer2.play("DoubleJumpAcquired")
+	$RichTextLabel.show()
+	$CPUParticles2D2.emitting = true
+	$CPUParticles2D2/AudioStreamPlayer.play()
 func knockback(body):
 	if is_being_knocked_back:
 		return
@@ -197,7 +214,6 @@ func end_knockback():
 	is_being_knocked_back = false
 	PlayerData.can_move = true
 	velocity = Vector2.ZERO
-
-
+	
 
 

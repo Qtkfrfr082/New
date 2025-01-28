@@ -16,3 +16,8 @@ func _on_body_entered(_body):
 	pass # Replace with function body.
 
 
+
+
+func _on_body_exited(body):
+	FlowC1.Tutorial = false
+	pass # Replace with function body.

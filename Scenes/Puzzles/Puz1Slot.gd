@@ -28,10 +28,12 @@ var flicker_speed = 10.0
 var flicker_enabled = false
 var time_accumulator = 1.0
 
+
 func _on_x_button_pressed():
 	#button for exiting 
-	
-	queue_free()
+	PlayerData.can_move = true
+	$".".hide()
+	reset_puzzle_state()
 	pass
 	
 func _physics_process(delta):
@@ -39,8 +41,14 @@ func _physics_process(delta):
 	var SlotData1 = get_node("Objects/Slot1/TextureRect/Slot1")
 	var SlotDataA = SlotData1.text
 	
+	var SlotData6 = get_node("Objects/Slot1/TextureRect/Sign")
+	var SlotDataF = SlotData6.text
+	
 	var SlotData2 = get_node("Objects/Slot2/TextureRect/Slot1")
 	var SlotDataB = SlotData2.text
+	
+	var SlotData7 = get_node("Objects/Slot1/TextureRect/Sign")
+	var SlotDataG = SlotData7.text
 	
 	var SlotData3 = get_node("Objects/Slot3/TextureRect/Slot1")
 	var SlotDataC = SlotData3.text
@@ -74,6 +82,7 @@ func _physics_process(delta):
 		
 						slot5 = true
 						HasBeenArranged()
+						
 						
 					else:
 						slot5 = false
@@ -113,12 +122,35 @@ func stop_flicker():
 
 func _on_on_lever_pressed():
 	if Arranged:
-		
+		$AudioStreamPlayer4.play()
+		$AudioStreamPlayer3.play()
 		point_light.hide()
 		point_light2.show()
+		$Lever/Switch.play("On")
+		FlowC1.activated = true
+		FlowC1.Puz1 = true
 		
 	else:
+		$AudioStreamPlayer5.play()
+		$AudioStreamPlayer4.play()
 		$Lever/Switch.play("Off")
 		print("off")
 		start_flicker()
 	pass # Replace with function body.
+func reset_puzzle_state():
+	# Reset any state variables to their initial values
+	Arranged = false
+	slot1 = false
+	slot2 = false
+	slot3 = false
+	slot4 = false
+	slot5 = false
+	flicker_enabled = false
+	point_light.energy = max_intensity  # Reset light intensity
+	point_light2.hide()
+	point_light.show()
+	# Hide all arrows
+	$LightIndi/Arrow1.hide()
+	$LightIndi/Arrow2.hide()
+	$LightIndi/Arrow3.hide()
+	$LightIndi/Arrow4.hide()

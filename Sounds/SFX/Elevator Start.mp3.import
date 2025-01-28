@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c301q27owpm1k"
+path="res://.godot/imported/Elevator Start.mp3-ad2a2f9b7e181e775d0b63560f1f2606.mp3str"
+
+[deps]
+
+source_file="res://Sounds/SFX/Elevator Start.mp3"
+dest_files=["res://.godot/imported/Elevator Start.mp3-ad2a2f9b7e181e775d0b63560f1f2606.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

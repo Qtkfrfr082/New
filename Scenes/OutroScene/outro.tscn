@@ -1,0 +1,142 @@
+[gd_scene load_steps=16 format=3 uid="uid://cx5du880ry8dh"]
+
+[ext_resource type="Script" path="res://Scenes/OutroScene/outro.gd" id="1_vbbom"]
+[ext_resource type="VideoStream" path="res://Scenes/OutroScene/OutroFinal (1).ogv" id="2_auqeo"]
+[ext_resource type="Script" path="res://Scenes/OutroScene/OutroScene.gd" id="3_xrelm"]
+[ext_resource type="Texture2D" uid="uid://oyt338ptnswl" path="res://Scenes/MovieScenes/IntroScene/Textures/skip button-Sheet.png" id="4_tbacv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twwir"]
+atlas = ExtResource("4_tbacv")
+region = Rect2(0, 0, 63, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkhhk"]
+atlas = ExtResource("4_tbacv")
+region = Rect2(63, 0, 63, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6jax"]
+atlas = ExtResource("4_tbacv")
+region = Rect2(126, 0, 63, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05af2"]
+atlas = ExtResource("4_tbacv")
+region = Rect2(189, 0, 63, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmxq2"]
+atlas = ExtResource("4_tbacv")
+region = Rect2(252, 0, 63, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uww0d"]
+atlas = ExtResource("4_tbacv")
+region = Rect2(315, 0, 63, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tq1v"]
+atlas = ExtResource("4_tbacv")
+region = Rect2(378, 0, 63, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ckar2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twwir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkhhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6jax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05af2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmxq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uww0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tq1v")
+}],
+"loop": true,
+"name": &"skip",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_7nwno"]
+resource_name = "FadeIn"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VideoStreamPlayer:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mtqnr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VideoStreamPlayer:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v4254"]
+_data = {
+"FadeIn": SubResource("Animation_7nwno"),
+"RESET": SubResource("Animation_mtqnr")
+}
+
+[node name="Outro" type="CanvasLayer"]
+script = ExtResource("1_vbbom")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 5760.0
+offset_bottom = 3230.0
+scale = Vector2(0.2, 0.2)
+stream = ExtResource("2_auqeo")
+autoplay = true
+expand = true
+bus = &"MUSIC"
+script = ExtResource("3_xrelm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(1081, 34)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ckar2")
+animation = &"skip"
+autoplay = "skip"
+
+[node name="Button" type="TextureButton" parent="AnimatedSprite2D"]
+z_index = 2
+offset_left = -30.0
+offset_top = -8.0
+offset_right = 34.0
+offset_bottom = 56.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_v4254")
+}
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="AnimatedSprite2D/Button" to="." method="_on_button_pressed"]

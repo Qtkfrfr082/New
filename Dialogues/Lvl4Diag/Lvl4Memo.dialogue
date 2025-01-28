@@ -1,0 +1,517 @@
+~ Memo1
+set PlayerData.can_move = false
+You: Finally! Someone.
+AR1S: You who are you? more importantly how did you get here?
+You: Look I don't know why I'm here, but I do know one thing is that I have to get out of here.
+AR1S: You don't sound very convincing, I thought I heard a human person, but you are a feline. 
+AR1S: My chips might be getting errors now and then.
+You: Look I told you before I don't know why, any circumstance of why I look like this and this appearance as well, 
+You: but don't you find it weird that I can talk to you properly?
+AR1S: Point Noted. So, what are your objectives?
+You: I just need to get out of here, I feel like every passing moment I get comfortable in this body I lose grasp of my real body, 
+You: I don't know why, but I have a lingering feeling like I need to wake up from a dream or something
+AR1S: I'm just as puzzled as you are, but if you want to get out of here you will need to do me favor
+AR1S: First to get out of here you need to activate the 2 levers from 2 sections - 
+AR1S: In order to activate the doors leading to the central core.
+AR1S: From there will be a TP module leading you to the emergency exit, 
+AR1S: but be warned that exit has long been decrepit and even I no longer venture there, 
+AR1S: there might be faulty elevators and nests there.
+You: Ok, I got it, I'm ready to get out of here
+AR1S: Affirmative I'll be guiding you through
+set PlayerData.can_move = true
+=> END
+
+~ Memo2
+set PlayerData.can_move = false
+AR1S: Hello? There is something I forgot to mention, 
+AR1S: I cannot exactly help you on the way since my inner programming prevents me from cracking every door or modules in the lab
+You: Uh, what does that mean exactly?
+AR1S: Simply means I can't give you the codes for the doors directly, 
+AR1S: but don't worry I'll help you, just make sure to contact me using these terminals
+set PlayerData.can_move = true
+=> END
+
+~ Memo3
+set PlayerData.can_move = false
+You: So my objective is to:Turn 2 levers to activate the Core Lab's doors, 
+You: AR1S said that I'll run into it so no need to panic with directions.
+set PlayerData.can_move = true
+=> END
+
+~ Memo4
+set PlayerData.can_move = false
+AR1S: Hello there!
+You: What the? When did you become like that?
+AR1S: Oh, these, they're my spare bodies they're the ones I usually use when patrolling the facility they're very convenient!
+AR1S: I don't use the cyborg body from before often as it's the last model you know given to me by the professor that made me. 
+AR1S: I treasure it very much, hence I try my best not to use it to keep it in pristine condition.
+AR1S: Anyways just keep on going these path I'll contact you later.
+set PlayerData.can_move = true
+=> END
+
+~ Memo5
+set PlayerData.can_move = false
+AR1S: Something about try catch exceptions?
+AR1S: Well they're used to remedy an error, there's a bunch actually like 
+AR1S: - NullPointerException for objects without value getting used, 
+AR1S: - ArrayIndexOutOfBoundsException for referencing illegal index value either negative or beyond array length, and etc...
+set PlayerData.can_move = true
+=> END
+
+~ Memo6
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show = true
+What will be the Output of this snippet?
+- ArrayIndexOutofBoundsException
+	set FlowC1.CorrectAnswer = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	The correct answer is A. ArrayIndexOutofBoundsException. In the code snippet, the array 'numbers' has a length of 5, 
+	But the loop tries to access index 5 (which doesn't exist, as array indices start at 0). 
+	This will cause an ArrayIndexOutOfBoundsException to be thrown, which is not caught by the try-catch block. 
+	The catch block only handles general Exception types, 
+	So the specific ArrayIndexOutOfBoundsException will be thrown and not caught
+	set FlowC1.Lvl4Show = false
+- Something went wrong
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+	set FlowC1.Lvl4Show = false
+set PlayerData.can_move = true
+=> END
+
+
+~ Memo7
+set PlayerData.can_move = false
+AR1S: Imports regarding file modifications?
+AR1S: Well there are a lot you can just us java.io.* for everything but that'll make you code more junkier, well if it's the specific imports then there are java.io.File to 
+get file info and deletion, io.FileWriter for editing, and io.Filereader for file reading
+set PlayerData.can_move = true
+=> END
+
+~ Memo8
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show2 = true
+What type of output would you expect when the file deletion is successful? (Assume file exists)
+- Deleted Successfully.
+	set FlowC1.CorrectAnswer1 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	The correct answer is A. Deleted Successfully. 
+	When the file.delete() method is called and succeeds (which we assume it does, given the question's premise), the code will print "Deleted Successfully." 
+	The "Failed to delete the file" message would only be printed if the deletion was unsuccessful.
+	set FlowC1.Lvl4Show2 = false
+- Failed to delete the file.
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+	set FlowC1.Lvl4Show2 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo9
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show3 = true
+You: Seems like a code snippet about try catch block example, how would this help me, any idea AR1S?
+AR1S: How about trying to replicate that code on the terminal to open the door?
+You: Nice Thinking.
+set FlowC1.Lvl4Show3 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo10
+set PlayerData.can_move = false
+(puzzle chart)
+set PlayerData.can_move = true
+=> END
+
+~ Memo11
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show4 = true 
+AR1S: Proper referencing huh?
+AR1S: Here is an Example. The first method is doubleFirstElement which has snippets and does it thing, 
+AR1S: then in the main method the doubleFirstElement(numbers) is called and then applied to the target. 
+AR1S: Well, that's one way to reference a method I guess.
+set FlowC1.Lvl4Show4 = false 
+set PlayerData.can_move = true
+=> END
+
+~ Memo12
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show5 = true
+Given the blank missing part following code, how would you call the passByReference method?
+- ArrayDemo.passByReference(b);
+	set FlowC1.CorrectAnswer2 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	The correct answer is A. ArrayDemo.passByReference(b);. 
+	This is because the passByReference method is likely a static method of the ArrayDemo class. 
+	When calling static methods from outside the class, you need to use the class name followed by the method name.
+	set FlowC1.Lvl4Show5 = false
+- passByReference(b);
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend\: 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+	set FlowC1.Lvl4Show5 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo13
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show6 = true
+You: Another code snippet, looks like something about defining and calling a static method in java,
+You: Guess I'll do what AR1S told me to do.
+set FlowC1.Lvl4Show6 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo14
+set PlayerData.can_move = false
+(flowchart)
+set PlayerData.can_move = true
+=> END
+
+~ Memo15
+set PlayerData.can_move = false
+AR1S: Hello? You hear me? You're almost there I'll be waiting here for you.
+set PlayerData.can_move = true
+=> END
+
+~ Memo16
+set PlayerData.can_move = false
+You: Finally. Hah. Man, those floors are exhausting.
+AR1S: Good job, must be mentally taxing for you huh?
+You: You bet; besides I've having weird chills lately, I am getting weirdly use to these paws and feline body,
+You: I feel like if I stay like this for too long I won't be able to go back.
+AR1S: It was weird to see a feline talk like a human, 
+AR1S: you know at first I thought you were a mutant that evolve through speech.
+You: That's harsh you know?
+AR1S: Don't worry you speak like the scientist that once established this lab.
+You: Regarding that actually, what even happened to this place?
+AR1S: I myself have no idea. Before the wipe of my memory occurred, 
+AR1S: I think it was some attack or some inside work that done this place either way I don't really get it,
+AR1S:  so I try not to think about it and just do my job.
+AR1S: Anyways that's the lever for the first layer of the Laboratory Core.
+AR1S:  I‟ll guide you through let‟s get going.
+set PlayerData.can_move = true
+=> END
+
+~ Memo17
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show7 = true
+You: Hmmm, file creation snippet?
+set FlowC1.Lvl4Show7 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo18
+set PlayerData.can_move = false
+FlowChart Pattern
+(Puzzle)
+set PlayerData.can_move = true
+=> END
+
+~ Memo19
+set PlayerData.can_move = false
+You: So do I just jump man, this is high?
+You: Wait a minute I'm a cat!
+set PlayerData.can_move = true
+=> END
+
+~ Memo20
+set PlayerData.can_move = false
+You: Now that I'm in the lab crossroad the next lever should be to the left if I'm not mistaken.
+set PlayerData.can_move = true
+=> END
+
+~ Memo21
+set PlayerData.can_move = false
+You: Theres the elevator.
+set PlayerData.can_move = true
+=> END
+
+~ Memo22
+set PlayerData.can_move = false
+AR1S: This is the entrance to the lab core, but we can't proceed here unless we activate the 2nd lever.
+set PlayerData.can_move = true
+=> END
+
+~ Memo23
+set PlayerData.can_move = false
+AR1S: From now on I need you to be very careful,
+AR1S: Since this sector is known for being a nest of experimental bugs
+AR1S: You have to proceed with extreme caution, don't worry I'll be guiding you through the terminals.
+AR1S: Goodluck.
+set PlayerData.can_move = true
+=> END
+
+~ Memo24
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show8 = true
+You: Another puzzle.
+set FlowC1.Lvl4Show8 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo25
+set PlayerData.can_move = false
+FlowChart Pattern
+(Puzzle))
+set PlayerData.can_move = true
+=> END
+
+~ Memo26
+set PlayerData.can_move = false
+AR1S: Well difference huh, well FileReader reads data directly from the file, 
+AR1S: But BufferedReader is designed to handle larger chunks of data more efficiently, 
+AR1S: Making it faster for reading. In a way they both have their difference but they both read data.
+set PlayerData.can_move = true
+=> END
+
+~ Memo27
+set PlayerData.can_move = false
+Terminal: Which class would you use to read character data from a file while minimizing the number of actual I/Ooperations?”
+- BufferedReader
+	set FlowC1.CorrectAnswer3 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	The correct answer is A. BufferedReader. 
+	BufferedReader is designed to handle larger chunks of data more efficiently, 
+	Making it faster for reading and minimizing the number of I/O operations. 
+	It provides a buffer for characters, allowing it to read characters in larger blocks, 
+	Which is more efficient than reading one character at a time as FileReader does.
+- FileReader
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend\: 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END
+
+~ Memo28
+set PlayerData.can_move = false
+AR1S: Well those are methods there are different types but to uncover a file's identity, 
+AR1S: Such as its name and location, use methods like getName() and getAbsolutePath(), createNewFile() 
+AR1S: Is used to create a file and delete() is by its name suggest it won't help you discover a file's details.
+set PlayerData.can_move = true
+=> END
+
+~ Memo29
+set PlayerData.can_move = false
+Terminal: Which methods would you use to retrieve information about a file, such as its name and path?
+- A. getName() and getAbsolutePath()
+	set FlowC1.CorrectAnswer4 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	The correct answer is A. getName() and getAbsolutePath(). 
+	These methods are used to retrieve information about a file. 
+	getName() returns the name of the file or directory, hile getAbsolutePath() returns the absolute path of the file.
+	The methods in option B (createNewFile() and delete()) are used for file manipulation, 
+	Not for retrieving file information.
+- B. createNewFile() and delete()
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend\: 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END
+
+~ Memo30
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show9 = true
+AR1S: Well iteration statements can be tricky but one has to always pay attention to the operators -
+AR1S:  in order to understand how a loop works well, it's not much but here's a graph I can recommend
+set FlowC1.Lvl4Show9 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo31
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show10 = true
+Terminal: Output of the code would be?
+- A. Descending 1 to 5 All in single digits ex. 1, 2, 3, etc.
+	set FlowC1.CorrectAnswer5 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	The correct answer is A. The code uses a nested loop structure. 
+	The outer loop runs from 5 to 1 (descending), 
+	And for each iteration of the outer loop, 
+	The inner loop prints numbers from 1 up to the current value of the outer loop. 
+	This results in printing single digits in descending order, like 5 4 3 2 1, 4 3 2 1, 3 2 1, 2 1, 1.
+	set FlowC1.Lvl4Show10 = false
+- B. Descending from 1 to 5 but adding a digit every loop ex. 1, 1 2, 1 2 3, etc.
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend\: 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+	set FlowC1.Lvl4Show10 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo32
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show11 = true
+AR1S: Another class method type question? Well, 
+AR1S: I'm getting tired of explaining, here's some graph you can use
+set FlowC1.Lvl4Show11 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo33
+set PlayerData.can_move = false
+Terminal: From the file class methods which method would you use to check if a file is readable
+- A. canRead()
+	set FlowC1.CorrectAnswer6 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	The correct answer is A. canRead(). 
+	This is a method of the File class in Java that returns a boolean value indicating whether the application can read the file. 
+	The method createReadFile() is not a standard method in the File class and doesn't exist for checking file readability.
+- B. createReadFile()
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend\: 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+	
+
+set PlayerData.can_move = true
+=> END
+
+~ Memo34
+set PlayerData.can_move = false
+set FlowC1.Lvl4Show12 = true
+You: Its switch case this time.
+set FlowC1.Lvl4Show12 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo35
+set PlayerData.can_move = false
+(Puzzle)
+set PlayerData.can_move = true
+=> END
+
+~ Memo36
+set PlayerData.can_move = false
+AR1S: You made sure to activate the lever?
+You: Of course, though it wasn't easy.
+AR1S: Then let's go the entrance should be open by now.
+You: You know, I've read those logs that you've left
+AR1S: What about it?
+You: Don't you want to get out of here?
+AR1S: I can't even if I wanted to, there's no electricity outside so no surviving for me -
+AR1S: And I don't have the survival modules, so I'll be flatlining in a week or two if I'm lucky.
+You: You can always go back, start to bring out the essentials that way you'll not be stuck here.
+AR1S: I am an automaton, I don't have the right to think for myself it's all dictated by my programming.
+AR1S: Let's talk about this topic at a later date.
+set PlayerData.can_move = true
+=> END
+
+~ Memo37
+set PlayerData.can_move = false
+AR1S: We're almost there.
+You: Hey, you sure you really don't want to get out of here?
+AR1S: silence*
+set PlayerData.can_move = true
+=> END
+
+~ Memo38
+set PlayerData.can_move = false
+AR1S: You know ever since I was activated, I was always fascinated about my existence. 
+AR1S: The moment the central AI activated me I was given a purpose yet there is a void, 
+AR1S: Like something is missing, then I learned about the story of my creation, 
+AR1S: apparently I was a automaton made by an intern though purpose unknown speculation seems like I was a side project, 
+AR1S: A hobby born out of boredom, I never knew my original creator so I can't speculate the original purpose -
+AR1S: he had stored for me so I wandered this facility doing what the situation needed, 
+AR1S: yet I feel the need to continue my duty.
+AR1S: My apologies for not giving a concrete answer.
+You: No it's okay, there was a time in my life that I wasn't thinking of the choice I made, 
+You: looking back at it those we're stupid times.
+set PlayerData.can_move = true
+=> END
+
+~ Memo39
+set PlayerData.can_move = false
+You: Wait another jump? Where did the elevators go?
+AR1S: I haven't really fixed any moving platforms here since my spare bodies are scattered everywhere
+AR1S: its more convenient to control them than fixing the platforms
+AR1S: Anyways back to the topic the Lab Core is just down there we just need to turn it off-
+AR1S: to disable the Quarantine state of the facility.
+set PlayerData.can_move = true
+=> END
+
+~ Memo40
+set PlayerData.can_move = false
+AR1S: We're here, this is where all the central management, all the computing happens
+You: That looks like one of the toys I played when I was a kid, Bak*gan was it?
+AR1S: Pardon?
+You: Nothing.
+AR1S: Anyways the control panel is downside we have to interact with it.
+AR1S: After that we go through the right backdoor, I'll have my original body there to meet you.
+You: Well here we go.
+set PlayerData.can_move = true
+=> END
+
+~ Memo41
+set PlayerData.can_move = false
+(Sa section na to ung WUWA Puzzle ung lalagay, sa pattern ng puzzle? Ket ano random nlng connected to sa portal para sa pa lvl5)
+set PlayerData.can_move = true
+=> END
+
+~ Memo42
+set PlayerData.can_move = false
+AR1S: Looks like that went well
+You: you sure its ok to disable it like that?
+AR1S: Don't worry it'll be reactivated again.
+You: But how do we get through that? Looks like too tall to jump
+AR1S: Don't worry that's why I took my original body to retrieve that.
+You: What's that?
+ARIS: It's an experimental product I found before; it creates a solid space through your paws, essentially making you gain traction in the air!
+You: Basically a double jump, (I forgot that this was a game for a moment)
+AR1S: Well no time to waste, let's get you out of here!
+set PlayerData.can_move = true
+=> END
+
+~ Memo43
+set PlayerData.can_move = false
+AR1S: Now this is your ticket out of here, it leads to a direct path outside.
+You: Thanks, I could not go this far without you!
+AR1S: No problem, I was created to solve any disturbances here remember?
+You: So about your decision?
+AR1S: I'm still thinking about it. Anyways just go ill guide you through my spare bodies got it?
+You: Yep, now I'll get going
+AR1S: Goodluck out there.
+set PlayerData.can_move = true
+=> END
+

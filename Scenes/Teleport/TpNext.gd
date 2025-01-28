@@ -10,8 +10,7 @@ func _on_body_entered(body):
 		# Get the destination node
 			LoadScene.load_screen_to_scene("res://Scenes/Level2.tscn", {"test": "f"})
 			start_cooldown_timer()
-			var stopsound = get_node("../AudioStreamPlayer")
-			stopsound.stop()
+			
 func start_cooldown_timer():
 	# Start a timer to reset the teleporting state after the cooldown period
 	$"../Cooldown".start(cooldownDuration)
@@ -21,9 +20,6 @@ func _on_cooldown_timeout():
 	isTeleporting = false
 	
 	pass # Replace with function body.
-
-
-
 
 
 func _on_area_2d_body_entered(body):

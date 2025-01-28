@@ -8,22 +8,23 @@ var enhealth = 10
 var is_alive = true
 const KNOCKBACK_DISTANCE = 50
 const KNOCKBACK_FORCE = 500
-const KNOCKBACK_DURATION = 0.2
+const KNOCKBACK_DURATION = 0.3
 var hasRunOnce = false
-@onready var enemy_sprite = $enemy
+@onready var area2d = $playerdeath
 @onready var detection_area = $detection
 
 var previous_position = Vector2.ZERO
 const MOVEMENT_THRESHOLD = 1.0  # Adjust this value as needed
 
 func _ready():
-	enemy_sprite.play("idle")
+	$AnimationPlayer.play("idle")
 	# Hide the enemy initially
 	hide()
 	previous_position = global_position
 
 func _physics_process(delta):
 	if not is_visible_in_tree():
+	
 		return
 
 	if not hasRunOnce: 
@@ -32,7 +33,7 @@ func _physics_process(delta):
 			var playerdie = get_node("../../../PlayerNode/Player/AnimationPlayer")
 			var playerdiescreen = get_node("../../../PlayerNode/Player/DiedScreen")
 			playerdiescreen.show()
-			playerdie.play("Death")
+			$AnimationPlayer.play("Death")
 			hasRunOnce = true
 
 	velocity.y += gravity * delta
@@ -42,9 +43,10 @@ func _physics_process(delta):
 		var direction = (player.position - self.position).normalized()
 		
 		velocity.x = direction.x * SPEED 
-		enemy_sprite.flip_h = direction.x > 0
+		$Sprite2D.flip_h = direction.x > 0
 		$PointLight2Dright.visible = direction.x > 0
 		$PointLight2Dleft.visible = direction.x <= 0
+		
 	else: 
 		velocity.x = 0
 
@@ -55,12 +57,12 @@ func _physics_process(delta):
 	var has_moved = (current_position - previous_position).length() > MOVEMENT_THRESHOLD
 
 	# Update animation based on movement
-	if enemy_sprite.animation != "death":
-		if has_moved:
-			enemy_sprite.play("chase")
+	if has_moved:
+		if $AnimationPlayer.current_animation != "Death" and $AnimationPlayer.has_animation("Chase"):
+				$AnimationPlayer.play("Chase")
 		else:
-			enemy_sprite.play("idle")
-
+			if $AnimationPlayer.current_animation != "Death" and $AnimationPlayer.has_animation("idle"):
+				$AnimationPlayer.play("idle")
 	# Update the previous position for the next frame
 	previous_position = current_position
 
@@ -92,30 +94,38 @@ func _on_playercollision_body_entered(body):
 	if enhealth <= 0:
 		print("Enemy died")
 		death()
+		chase = false
 
 func death():
+	
 	chase = false
-	enemy_sprite.play("death")
-	await enemy_sprite.animation_finished
+	
+	$AnimationPlayer.play("Death")
+	await $AnimationPlayer.animation_finished
+	print("dying")
+	is_alive = false
 	queue_free()
 
 func knockback(body):
-	var direction = (global_position - body.global_position).normalized()
-	direction.y = -1
-	
-	var tween = create_tween()
-	tween.set_ease(Tween.EASE_OUT)
-	tween.set_trans(Tween.TRANS_QUAD)
-	
-	tween.tween_method(apply_knockback_force, KNOCKBACK_FORCE, 0, KNOCKBACK_DURATION)
-	tween.tween_callback(end_knockback)
+	if is_alive:
+		var direction = (global_position - body.global_position).normalized()
+		direction.y = 0  # Ensure we're only applying horizontal knockback
 
-	velocity = direction * KNOCKBACK_FORCE
-	
+		var tween = create_tween()
+		tween.set_ease(Tween.EASE_OUT)
+		tween.set_trans(Tween.TRANS_QUAD)
+		
+		tween.tween_method(apply_knockback_force, KNOCKBACK_FORCE, 0, KNOCKBACK_DURATION)
+		tween.tween_callback(end_knockback)
+
+		velocity = direction * KNOCKBACK_FORCE
+		move_and_slide()
+
+		
 func apply_knockback_force(force):
 	velocity = velocity.normalized() * force
 
 func end_knockback():
-	
+	chase = true
 	PlayerData.can_move = true
 	velocity = Vector2.ZERO

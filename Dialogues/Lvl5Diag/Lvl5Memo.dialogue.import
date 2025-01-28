@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bccdkdpinp56m"
+path="res://.godot/imported/Lvl5Memo.dialogue-fbee843a02a150fc538b1f1569af4931.tres"
+
+[deps]
+
+source_file="res://Dialogues/Lvl5Diag/Lvl5Memo.dialogue"
+dest_files=["res://.godot/imported/Lvl5Memo.dialogue-fbee843a02a150fc538b1f1569af4931.tres"]
+
+[params]
+
+defaults=true

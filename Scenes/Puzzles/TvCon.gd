@@ -5,7 +5,7 @@ var dot_spacing = 70  # Variable for the distance between dots
 const DOT_RADIUS = 5
 const COLOR_COUNT = 4
 const LINE_WIDTH = 15  # Define the width of the lines
-
+var all_connections_complete = false
 var grid = []
 var current_line = []
 var lines = []
@@ -121,8 +121,9 @@ func end_drawing():
 		if (end_dot in end_dots or end_dot in start_dots) and end_dot.color == current_line[0].color and not end_dot.connected:
 			for dot in current_line:
 				dot.connected = true
-				
+			
 			lines.append(current_line)
+			check_all_connections()
 		else:
 			# Revert color to original color if the line is not completed correctly
 			for dot in current_line:
@@ -195,3 +196,20 @@ func _on_reset_pressed():
 	current_line.clear()
 	
 	queue_redraw()
+func check_all_connections():
+	if lines.size() == colored_dot_positions.size():
+		all_connections_complete = true
+		open_gate()
+		print("Connected")
+	else:
+		all_connections_complete = false
+		
+func open_gate():
+	$AudioStreamPlayer3.play()
+	FlowC1.BarrierDeact6 = true
+	pass
+func _on_x_button_pressed():
+	self.hide()
+	PlayerData.can_move = true
+	
+	pass # Replace with function body.

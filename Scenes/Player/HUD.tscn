@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://d4fdahrrfbqo8"]
+[gd_scene load_steps=32 format=3 uid="uid://d4fdahrrfbqo8"]
 
 [ext_resource type="Texture2D" uid="uid://ba0a7ki63gfkv" path="res://Scenes/Player/HudResources/hp_bar_outer_v2 - Copy.png" id="1_2m57u"]
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/Hud.gd" id="1_muv1a"]
@@ -7,9 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://sdnrfcxxdehy" path="res://Scenes/Player/HudResources/SettingBTN.png" id="4_tg0tk"]
 [ext_resource type="Texture2D" uid="uid://btsujiglm5snw" path="res://Scenes/Player/HudResources/SettingBTNClicked.png" id="5_uvhxw"]
 [ext_resource type="Texture2D" uid="uid://qusph8u7om3l" path="res://Scenes/Player/HudResources/SettingBTNHover.png" id="6_8k2h2"]
-[ext_resource type="Texture2D" uid="uid://comi1ramqrttj" path="res://Scenes/Player/HudResources/QuestBTN.png" id="7_6msft"]
-[ext_resource type="Texture2D" uid="uid://ckdabyex7d1v8" path="res://Scenes/Player/HudResources/QuestBTNCliked.png" id="8_fh0nb"]
-[ext_resource type="Texture2D" uid="uid://cdrl8d0w2i7vb" path="res://Scenes/Player/HudResources/QuestBTNHover.png" id="10_so1bq"]
 [ext_resource type="AudioStream" uid="uid://c0lsnx78ynath" path="res://Sounds/Menu/MI_SFX 30.wav" id="11_1g5ai"]
 [ext_resource type="PackedScene" uid="uid://cfr6oq85ofmbc" path="res://Scenes/Player/PauseMenu.tscn" id="11_if10c"]
 [ext_resource type="PackedScene" uid="uid://bk44od6xpbfe6" path="res://Scenes/Tutorials/movement_tuto.tscn" id="13_34jv4"]
@@ -114,12 +111,131 @@ tracks/2/path = NodePath("Sub:text")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
 "values": ["Glimpse Of STARLIGHT
--fRACTALmAN", "Glimpse Of STARLIGHT
 -fRACTALmAN"]
+}
+
+[sub_resource type="Animation" id="Animation_1gf2m"]
+resource_name = "MusicLv3"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1286, 168), Vector2(1019, 168), Vector2(1019, 168), Vector2(1286, 168)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sub:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11.7141, -16), Vector2(-11.7141, -16), Vector2(-11.7141, -16), Vector2(-11.7141, -16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Labyrinth - Rosentwig"]
+}
+
+[sub_resource type="Animation" id="Animation_4yvk0"]
+resource_name = "MusicLv4"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1286, 168), Vector2(1019, 168), Vector2(1019, 168), Vector2(1286, 168)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sub:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11.7141, -16), Vector2(-11.7141, -16), Vector2(-11.7141, -16), Vector2(-11.7141, -16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Rewind - Nightflyer"]
+}
+
+[sub_resource type="Animation" id="Animation_ec3d5"]
+resource_name = "MusicLv5"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1286, 168), Vector2(1019, 168), Vector2(1019, 168), Vector2(1286, 168)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sub:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11.7141, -16), Vector2(-11.7141, -16), Vector2(-11.7141, -16), Vector2(-11.7141, -16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Rewind - Nightflyer"]
 }
 
 [sub_resource type="Animation" id="Animation_w3swu"]
@@ -166,6 +282,9 @@ tracks/2/keys = {
 _data = {
 "MusicLv1": SubResource("Animation_4274p"),
 "MusicLv2": SubResource("Animation_qcf14"),
+"MusicLv3": SubResource("Animation_1gf2m"),
+"MusicLv4": SubResource("Animation_4yvk0"),
+"MusicLv5": SubResource("Animation_ec3d5"),
 "RESET": SubResource("Animation_w3swu")
 }
 
@@ -258,6 +377,114 @@ tracks/2/keys = {
 "values": ["Level 2: Unraveling Java's Secrets"]
 }
 
+[sub_resource type="Animation" id="Animation_vp4al"]
+resource_name = "Level3"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1, 3.1, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Navigation Central"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title/Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Level 3: Elevator Loops"]
+}
+
+[sub_resource type="Animation" id="Animation_33vic"]
+resource_name = "Level4"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1, 3.1, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title/Sub:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Level 4: \"Code Ascent: From Algorithms to Java Foundations\""]
+}
+
+[sub_resource type="Animation" id="Animation_visa1"]
+resource_name = "Level5"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1, 3.1, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Aether Lab"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title/Sub:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Level 5: \"Arrays, Loops, and File Juggling\""]
+}
+
 [sub_resource type="Animation" id="Animation_gdljs"]
 length = 0.001
 tracks/0/type = "value"
@@ -301,6 +528,9 @@ tracks/2/keys = {
 _data = {
 "Level1": SubResource("Animation_m0mgg"),
 "Level2": SubResource("Animation_natqx"),
+"Level3": SubResource("Animation_vp4al"),
+"Level4": SubResource("Animation_33vic"),
+"Level5": SubResource("Animation_visa1"),
 "RESET": SubResource("Animation_gdljs")
 }
 
@@ -330,25 +560,14 @@ value = 30.0
 texture_progress = ExtResource("3_pet5r")
 
 [node name="Menu" type="TextureButton" parent="."]
-offset_left = 1090.0
-offset_top = 2.0
-offset_right = 1130.0
-offset_bottom = 42.0
+offset_left = 1088.0
+offset_top = -5.0
+offset_right = 1128.0
+offset_bottom = 35.0
 scale = Vector2(1.6, 1.6)
 texture_normal = ExtResource("4_tg0tk")
 texture_pressed = ExtResource("5_uvhxw")
 texture_hover = ExtResource("6_8k2h2")
-stretch_mode = 3
-
-[node name="Quest" type="TextureButton" parent="."]
-offset_left = 1090.0
-offset_top = 57.0
-offset_right = 1130.0
-offset_bottom = 97.0
-scale = Vector2(1.6, 1.6)
-texture_normal = ExtResource("7_6msft")
-texture_pressed = ExtResource("8_fh0nb")
-texture_hover = ExtResource("10_so1bq")
 stretch_mode = 3
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
@@ -403,10 +622,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="Label" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 168.0
-offset_top = 72.0
-offset_right = 999.0
-offset_bottom = 174.0
+offset_left = 144.0
+offset_top = 69.0
+offset_right = 1031.0
+offset_bottom = 171.0
 theme_override_colors/font_color = Color(0.211765, 0.239216, 0.709804, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 11

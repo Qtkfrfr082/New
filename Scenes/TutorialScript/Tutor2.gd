@@ -1,5 +1,5 @@
 extends Area2D
-var Duration = 0.5
+var Duration = 2.0
 var runonce = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,6 +17,7 @@ func _on_body_entered(body):
 		var idle = get_node("../../PlayerNode/Player/AnimationPlayer")
 		idle.play("Idle")
 		runonce = false
+		$"../../PlayerNode/Player/TutorialText/Interact".show()
 		PlayerData.can_move = false
 		print("f")
 	
@@ -28,14 +29,14 @@ func start_cooldown_timer():
 	
 
 func _on_timer_timeout():
-	var MoveEt = get_node("../../PlayerNode/Player/CanvasLayer/MovementTuto")
-	MoveEt.movement3()
+	
 	
 	$Timer.stop()
 	pass # Replace with function body.
 
 
 func _on_body_exited(_body):
+	$"../../PlayerNode/Player/TutorialText/Interact".hide()
 	$Timer.stop()
 	
 	pass # Replace with function body.

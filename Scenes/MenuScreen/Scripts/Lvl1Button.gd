@@ -61,3 +61,6 @@ func _on_confirmation_confirmed():
 func _on_mouse_entered():
 	$"../../Lvl1".show()
 	$"../../Lvl2".hide()
+	$"../../Lvl3".hide()
+	$"../../Lvl4".hide()
+	$"../../Lvl5".hide()

@@ -20,7 +20,7 @@ func _process(_delta):
 	if ResourceLoader.load_threaded_get_status(next_scene_path) == ResourceLoader.THREAD_LOAD_LOADED: # Checks to see if the file is finished loading
 		print("Loaded")
 		set_process(false) # Stops the process function; otherwise this block will be called multiple times and cause errors
-		await get_tree().create_timer(15).timeout # Added a delay for testing purposes. Can be removed in the final game.
+		await get_tree().create_timer(7).timeout # Added a delay for testing purposes. Can be removed in the final game.
 		var new_scene: PackedScene = ResourceLoader.load_threaded_get(next_scene_path) # Gets the loaded scene, which is packed, so it'll have to be manually instantiated
 		
 		var new_node = new_scene.instantiate() # Instantiates a copy of the loaded scene

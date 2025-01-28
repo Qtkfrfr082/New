@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://2mtwg5et1163"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Scripts/DoubleJumpCoin.gd" id="1_818rp"]
+[ext_resource type="Texture2D" uid="uid://5ht67q2pyaok" path="res://Tilemaps/GlobalTexture/DoubleJumpCoin.png" id="2_gkham"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mkycj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hj16"]
+atlas = ExtResource("2_gkham")
+region = Rect2(0, 0, 188, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3oox"]
+atlas = ExtResource("2_gkham")
+region = Rect2(188, 0, 188, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k1q8"]
+atlas = ExtResource("2_gkham")
+region = Rect2(376, 0, 188, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6f35"]
+atlas = ExtResource("2_gkham")
+region = Rect2(564, 0, 188, 201)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wv8r5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hj16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3oox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k1q8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6f35")
+}],
+"loop": true,
+"name": &"DobJump",
+"speed": 6.0
+}]
+
+[node name="PowerUp" type="Node2D"]
+position = Vector2(620, 154)
+
+[node name="Coin" type="Area2D" parent="." groups=["double_jump_coin"]]
+position = Vector2(23, 1)
+script = ExtResource("1_818rp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
+position = Vector2(-24.2079, -1.5874)
+shape = SubResource("CircleShape2D_mkycj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Coin"]
+modulate = Color(3, 3, 2, 1)
+position = Vector2(-24, -2)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_wv8r5")
+animation = &"DobJump"
+autoplay = "DobJump"
+
+[connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]

@@ -29,6 +29,7 @@ Button/styles/normal = SubResource("StyleBoxTexture_cmoxv")
 script = ExtResource("1_6w1dj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.415686)
 offset_top = -1.0
 offset_right = 1152.0
 offset_bottom = 648.0

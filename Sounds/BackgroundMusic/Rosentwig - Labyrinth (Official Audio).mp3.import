@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbmt162ml8kjl"
+path="res://.godot/imported/Rosentwig - Labyrinth (Official Audio).mp3-1d03694cf9c2906a86788433285301a3.mp3str"
+
+[deps]
+
+source_file="res://Sounds/BackgroundMusic/Rosentwig - Labyrinth (Official Audio).mp3"
+dest_files=["res://.godot/imported/Rosentwig - Labyrinth (Official Audio).mp3-1d03694cf9c2906a86788433285301a3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

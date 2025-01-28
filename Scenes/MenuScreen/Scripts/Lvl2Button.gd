@@ -64,5 +64,8 @@ func _on_confirmation_confirmed():
 func _on_mouse_entered():
 	$"../../Lvl2".show()
 	$"../../Lvl1".hide()
+	$"../../Lvl3".hide()
+	$"../../Lvl4".hide()
+	$"../../Lvl5".hide()
 	pass # Replace with function body.
 

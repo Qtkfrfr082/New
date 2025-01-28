@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://iwsgyjtl86ev"
+path="res://.godot/imported/Elevator Running.mp3-2613ec7509d9cdad35a9da511c8f5568.mp3str"
+
+[deps]
+
+source_file="res://Sounds/SFX/Elevator Running.mp3"
+dest_files=["res://.godot/imported/Elevator Running.mp3-2613ec7509d9cdad35a9da511c8f5568.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

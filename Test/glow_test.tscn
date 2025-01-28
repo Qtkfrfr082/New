@@ -1,31 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://bw6r82cqndq5l"]
+[gd_scene load_steps=3 format=3 uid="uid://bw6r82cqndq5l"]
 
-[ext_resource type="PackedScene" uid="uid://wfmumvqosofn" path="res://Test/Computer.tscn" id="1_xnv7e"]
+[ext_resource type="Texture2D" uid="uid://d34vte4iddtw4" path="res://Tilemaps/GlobalTexture/StarParticle.png" id="1_4rr4t"]
 
 [sub_resource type="Environment" id="Environment_xcjxk"]
 background_mode = 3
+background_canvas_max_layer = 1
 glow_enabled = true
 glow_normalized = true
-glow_intensity = 0.2
-glow_bloom = 1.0
-glow_blend_mode = 0
-
-[sub_resource type="Gradient" id="Gradient_awtlh"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.0431373, 0.0431373, 0.0431373, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_vihb8"]
-gradient = SubResource("Gradient_awtlh")
+glow_bloom = 0.8
+glow_blend_mode = 1
 
 [node name="GlowTest" type="Node2D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xcjxk")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 814.0
-offset_bottom = 509.0
-texture = SubResource("GradientTexture2D_vihb8")
-
-[node name="Node2D" parent="." instance=ExtResource("1_xnv7e")]
-position = Vector2(201, 147)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(2, 2, 2, 1)
+texture = ExtResource("1_4rr4t")

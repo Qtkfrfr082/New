@@ -1,0 +1,1286 @@
+~ Memo1
+set PlayerData.can_move = false
+You: Finally! I'm out, now just got to get through this whole section. 
+You: This whole section is too damn huge! AR1S said to contact her if I needed any assistance...
+set PlayerData.can_move = true
+=> END
+
+~ Memo2
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show = true
+Terminal: Oh, hey didn't know you're already there, either way, here's an Example:
+In programming, the same basic principle applies You give the program some data (input).
+The program processes that data according to some rules or logic (process). The program provides you with the result (output). 
+The IPO model helps in understanding how data flows through a program, making it easier to design and debug software.
+set FlowC1.Lvl5Show = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo3
+set PlayerData.can_move = false
+Terminal: Question: \nIn the IPO model, what does "Process" refer to?
+- A. The information you give to a program. 
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. The result you get from the program.
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. What the program does with the input.
+		set FlowC1.Lvl5CorrectAnswer = true
+		% Purr-fect! You nailed it like a cat on a laser pointer.
+		% Meow-velous! You've solved this like a pro kitty!
+		% That’s right! You’ve just leveled up in the feline coding league.
+		% Purrr-fect answer! You’re as sharp as a cat’s claw.
+		% Well done! You’ve achieved ‘meowster’ status in coding.
+		The process is what you do with the input to change it into something else, like cooking ingredients to make a meal.
+set PlayerData.can_move = true
+=> END
+
+~ Memo4
+set PlayerData.can_move = false
+AR1S: Use the IPO model to outline your approach: \nInput: The total annual subscription amount. 
+AR1S: Process: Calculate the monthly reduction and how it affects the refund.
+AR1S: Output: The amount to be refunded
+AR1S: For Example, if you're given the annual amount, first figure out the monthly rate and then apply the reduction to determine the refund.
+set PlayerData.can_move = true
+=> END
+
+~ Memo5
+set PlayerData.can_move = false
+Terminal: Complete The IPO: In the middle of a yearly subscription, the rate of Internet subscription was reduced by 10% per month. 
+If a subscriber paid an annual Internet subscription specified by the user, how much will be the refund of the subscriber?.
+- A. Input Annual subscription amount; Process Calculate total reduction; Output Refund.
+	set FlowC1.Lvl5CorrectAnswer2 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Correct because it explains how to calculate the refund by using the total amount paid and the reduced rate.
+- B. Input Monthly rate; Process Calculate new rate; Output Reduced rate.
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. Input Monthly reduction; Process Apply reduction; Output New monthly rate.
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END
+
+~ Memo6
+set PlayerData.can_move = false
+AR1S: An algorithm is a set of clear, step-by-step instructions for solving a problem or performing a task. An algorithm is like a recipe. 
+It's a set of clear steps to follow to solve a problem or complete a task. 
+For example, making a cup of tea involves steps like boiling water and steeping the tea. 
+In programming, algorithms provide instructions for the computer to get a result. 
+Ex. An algorithm for making sandwich
+Get Ingredients>Place Bread>Add Fillings>Serve
+set PlayerData.can_move = true
+=> END
+
+~ Memo7
+set PlayerData.can_move = false
+Terminal: Question: What is an algorithm for finding the largest number in a list of numbers?
+- A. Sort the list and pick the first number.
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. Compare each number with the current largest and update if necessary.
+	set FlowC1.Lvl5CorrectAnswer3 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Correct because it describes an algorithm that compares each number in the list and updates the largest number found,
+	ensuring you find the maximum value.
+- C. Add all numbers together and divide by the number of items.
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END
+
+~ Memo8
+set PlayerData.can_move = false
+You: Man, this place is no joke! Too big and eerie, if not for AR1S I think I'll go crazy here.
+set PlayerData.can_move = true
+=> END
+
+~ Memo9
+set PlayerData.can_move = false
+AR1S: Pseudocode is a way to plan out a program using simple, plain language. 
+AR1S: It's like writing a recipe for what you want to do, without worrying about specific programming details.
+AR1S: For example, instead of writing code, you describe steps in easy terms, 
+AR1S: Another example. 
+AR1S: Boil water. > Put tea bag in cup.> Pour water into cup. > Steep. > Remove tea bag. You then use this plan to write actual code.
+set PlayerData.can_move = true
+=> END
+
+~ Memo10
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show2 = true
+Terminal: What is this PSEUDOCODE about?
+- A. Student Going to school.
+	set FlowC1.Lvl5CorrectAnswer4 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Correct because the pseudocode outlines the steps a student takes to get ready and leave for school.
+- B. Typical Sunday morning
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. Student schedule on school
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set FlowC1.Lvl5Show2 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo11
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show3 = true
+AR1S: Pseudocode uses terms and structures similar to actual coding languages, such as DECLARE for variables, to resemble how code would work. 
+AR1S: In contrast, an algorithm is a general step-by-step method for solving a problem, without specific coding syntax.
+set FlowC1.Lvl5Show3 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo12
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show4 = true
+Terminal: What is this Pseudocode about?
+- A. Multiplication
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. Addition
+	set FlowC1.Lvl5CorrectAnswer5 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	The pseudocode exhibit process of addition.
+- C. Subtraction
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set FlowC1.Lvl5Show4 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo13
+set PlayerData.can_move = false
+You: This is exceedingly getting harder to climb, just how deep is this lab?
+set PlayerData.can_move = true
+=> END
+
+~ Memo14
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show5 = true
+AR1S: Oh, about flowcharts well, Flowcharts are used in programming to visually represent the steps and decisions involved in a process or algorithm.
+AR1S: They help in Planning, Designing, Debugging and Communication. 
+AR1S: Flowcharts use symbols like rectangles for processes, diamonds for decisions, and arrows for flow direction to map out the program's structure and logic.
+set FlowC1.Lvl5Show5 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo15
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show6 = true
+Terminal: Here is an example of a Flowchart. What function does the shape parallelogram represent?
+- A. Process
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. Decision
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. Input/Output
+	set FlowC1.Lvl5CorrectAnswer6 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	A parallelogram in flowchart represents the input and output of data.
+set FlowC1.Lvl5Show6 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo16
+set PlayerData.can_move = false
+[AR1S]: Still having problems with flowchart? Just 
+Start Simple\: Use basic shapes like rectangles, diamonds, and arrows to represent actions, decisions, and flow.
+Follow Flow\: Ensure arrows clearly show the direction of process steps.
+Keep It Clear\: Label each shape with a brief description of the step or decision.
+Break It Down\: Divide complex processes into smaller, manageable sections.
+Practice\: Create flowcharts for simple tasks to get familiar with the symbols and structure.
+set PlayerData.can_move = true
+=> END
+
+~ Memo17
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show7 = true
+Terminal: What process does the diamond represent? And if the grade is 61 what would be the output?
+- A. Process, Fail 
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. Initialize, Pass 
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. Decision, Pass
+	set FlowC1.Lvl5CorrectAnswer7 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	A diamond in Flowchart represents decision and the grade is 61 and in the passing range.
+set FlowC1.Lvl5Show7 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo18
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show8 = true
+AR1S: Selection control structures are programming constructs that allow the program to make decisions based on conditions. 
+AR1S: They determine which path of code to execute depending on whether a condition is true or false. Common types include 
+If Statement: which Executes a block of code if a condition is true, 
+If-Else Statement: Executes one block of code if a condition is true and another block if it's false. 
+Switch Statement: Chooses from among multiple options based on the value of a variable.
+These structures help control the flow of a program based on different conditions.
+set FlowC1.Lvl5Show8 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo19
+set PlayerData.can_move = false
+You: I'm feeling a little bit frustrated that I can't help AR1S especially with all the help I've been getting from her. 
+You: Well, not that I have any right to question an individual's decision, let's just focus on getting out here.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo20
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show9 = true
+Terminal: What kind of Structure is this?
+- A. IF Statement
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. IF/ELSE Statement
+	set FlowC1.Lvl5CorrectAnswer8 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Correct because it Executes one block of code if the condition is true, and a different block of code if the condition is false.
+- C. NESTED IF Statement
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set FlowC1.Lvl5Show9 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo21
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show10 = true
+AR1S: Here's a table of different data types, data types have different uses and types depends on how they're used in context.
+For example int is used for whole numbers, double is also like int but with decimals, char is a single letter, string is for a sequence of letters or a word, 
+AR1S: and Boolean for true or false, there are many different data types that is used but these are the common ones.
+set FlowC1.Lvl5Show10 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo22
+set PlayerData.can_move = false
+You: After these two gates should be the elevator if the info AR1S said is right.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo23
+set PlayerData.can_move = false
+Terminal: Which of the following is an incorrect variable declaration for a double data type in Java?
+- A. double amount = 15.75;
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. double amount = 15.75f;
+	set FlowC1.Lvl5CorrectAnswer9 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Correct its the wrong one because there is "f" in its value making it a float type variable.
+- C. double amount = 15.75D;
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo24
+set PlayerData.can_move = false
+Terminal: Money is a common variable in programming that is almost always present in programs related to finance, 
+Question: what type of variable is more suited to representing money?
+- A. Boolean
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. Int
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. Double
+	set FlowC1.Lvl5CorrectAnswer10 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Money can be initialized as many different type of variable since it needs to be precise. 
+	int and boolean won't be a good pick since int can't handle decimal, and boolean is 1 and 0.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo25
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show11 = true
+AR1S: There are many rules regarding variable declaration so here's a small table of dos and don'ts.
+set FlowC1.Lvl5Show11 = false
+set PlayerData.can_move = true
+=> END
+
+~ Memo26
+set PlayerData.can_move = false
+You: Well, that was quite the climb.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo27
+set PlayerData.can_move = false
+AR1S: Rules for Naming an Identifier. No Keywords cannot be a reserved word.
+Case-Sensitive: differentiates between uppercase and lowercase. Valid characters include letters, digits, $, or _. 
+Case-Sensitive: Must start with a letter, $, or _; cannot start with a digit. No Spaces or Symbols and No whitespaces or symbols like @, #.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo28
+set PlayerData.can_move = false
+Terminal: Which of this is the right variable declaration?
+- A. int age = 30; 
+	set FlowC1.Lvl5CorrectAnswer11 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Correct! because it  follows the conventional do's and dont's of variable declaration.
+- B. int 2age = 30;
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. int age@ = 30;
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo29
+set PlayerData.can_move = false
+You: AR1S? hello? This must be broken.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo30
+set PlayerData.can_move = false
+Terminal: Which of the following is an incorrect use of data types in Java?
+- A. int price = "100";
+	set FlowC1.Lvl5CorrectAnswer12 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	This one is incorrect because it uses "" which when declarint an int value shouldn't be used.
+	As its used on string and char variable data type.
+- B. double temperature = 98.6;
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. char initial = 'A';
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo31
+set PlayerData.can_move = false
+AR1S: Imported Classes are like bench players that came from another team they can do their own role without you telling them, 
+Examples are BufferedStreamReader and Scanner class after importing them to the code you can unlock their functionality this way you don't have to code.
+AR1S: They're useful for Code Reusability, Organizes Code, and Encourages Use of Libraries. 
+AR1S: Libraries you ask? Libraries in Java are collections of pre-written classes and methods that provide functionality you can use in your programs. 
+By using libraries, you can enhance your application's capabilities and focus on implementing specific application logic rather than basic functionalities.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo32
+set PlayerData.can_move = false
+Terminal: What functionality does the Scanner class in Java provide?
+- A. Reading input from the keyboard
+	set FlowC1.Lvl5CorrectAnswer13 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Scanner Class provides the functionality of recording data from user input.
+- B. Connecting to a database
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. Writing files to disk
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo33
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show12 = true
+AR1S: There is a thing called simple input and output in java, for input this is where 
+classes like Scanner and BufferedStreamReader shine they record your inputs and initializes them for output. 
+Here's an example snippet, the “System.out.println(‘Hello,’+name)” is the code which outputs "Hello + (the name you input)".
+set FlowC1.Lvl5Show12 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo34
+set PlayerData.can_move = false
+Terminal: How do you correctly read an integer from the user and display it back in Java?
+- A. Use Scanner to read the integer and System.out.println to display it
+	set FlowC1.Lvl5CorrectAnswer14 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	(System.out.println) is used to output a data.
+- B. Use ScanReader to read the integer and System.in.print to display it
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. Use System.in directly to read the integer and System.out.print to display it
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo35
+set PlayerData.can_move = false
+Player: Seems the only way to go is up.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo36
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show13 = true
+AR1S: BufferedReader Class first reads the initial input as String data type.
+So before using the data you must convert it to other data types such as the example provided here.
+set FlowC1.Lvl5Show13 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo37
+set PlayerData.can_move = false
+Terminal: BufferedReader reads data as which type?
+- A. int
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. double
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. String
+	set FlowC1.Lvl5CorrectAnswer15 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	BufferedReader first read an input as string before being converted into other data types.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo38
+set PlayerData.can_move = false
+AR1S: Hello? Are you doing fine?
+Player: Yes, I guess, seems like some terminals here don't work.
+AR1S: regarding some interference is causing the transmission system to malfunction.
+AR1S: I might have trouble contacting you in some parts of the lab.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo39
+set PlayerData.can_move = false
+Player: This one looks broken, it's all static.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo40
+set PlayerData.can_move = false
+Terminal: If you use BufferedReader to read user input for a variable that represents money,
+Terminal: What type will the data be initially and how should it be converted to a suitable type?
+- A. int number = scanner.nextInt();
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. double money = Double.parseDouble();
+	set FlowC1.Lvl5CorrectAnswer16 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Correct because BufferedReader reads data as a String initially. 
+	To convert it to a suitable type for money, you use Double.parseDouble() to convert the String to a double.
+- C. double number = scanner.nextDouble();
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo41
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show14 = true
+AR1S: I personally prefer using scanner since its easier than BufferedReader it requires fewer lines too. 
+AR1S: Here is an example of how it's used, you don't have to convert it from string you just have to initialize it as its data type. 
+AR1S: Example here is if your data type is INT you'll only need "Int num = scanner.nextInt();" 
+AR1S: Easy right?
+set FlowC1.Lvl5Show14 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo42
+set PlayerData.can_move = false
+Terminal: If you use the Scanner class to read user input for a variable that represents money how would it look?
+- A. int number = scanner.nextInt(); 
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- B. double money = Double.parseDouble(input);
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. double money = scanner.nextDouble();
+	set FlowC1.Lvl5CorrectAnswer17 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Correct because scanner.nextDouble() reads the input directly as a double, which is suitable for representing money.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo43
+set PlayerData.can_move = false
+You: Nope, not working.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo44
+set PlayerData.can_move = false
+AR1S: Finally made contact, anyways scanner class doesn't really differ much from BufferedReader, 
+difference is it dictates the data type depends on the nextLine(), if its INT then its .nextInt(), double is .nextDouble() or for String its .nextLine().
+set PlayerData.can_move = true
+=> END!
+
+~ Memo45
+set PlayerData.can_move = false
+Terminal: How to convert string into int using scanner? String word = "100".
+- A. int number = Integer.parseInt(word)
+	set FlowC1.Lvl5CorrectAnswer18 = true
+	% Purr-fect! You nailed it like a cat on a laser pointer.
+	% Meow-velous! You've solved this like a pro kitty!
+	% That’s right! You’ve just leveled up in the feline coding league.
+	% Purrr-fect answer! You’re as sharp as a cat’s claw.
+	% Well done! You’ve achieved ‘meowster’ status in coding.
+	Correct because Integer.parseInt(word) converts the String "100" into an int.
+- B. double number = Double.parseDouble(word)
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+- C. int number = Int.parseDouble(word)
+	% Well, that was a brilliant attempt... at making me question my career choices!
+	% You must be trying to start a new trend 'How to Fail at IT with Style.
+	% Nice try! But I think you just created a new algorithm for 'How Not to Solve Problems.
+	% Oops! Did you mean to test if I’m still awake?
+	% Close, but not quite! Your answer seems to be written in Klingon.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo46
+set PlayerData.can_move = false
+You: Finally, the elevator room.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo47
+set PlayerData.can_move = false
+You: All I got to do is to hop on that TP Module.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo48
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show15 = true
+Terminal: Referring to the table above. 
+Terminal: What operator should be used if building is taller than a house, assume the building is A, and house is B.
+set FlowC1.Lvl5Show15 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo49
+set PlayerData.can_move = false
+Terminal: A > B
+set PlayerData.can_move = true
+=> END!
+
+~ Memo50
+set PlayerData.can_move = false
+Terminal: B > A
+set PlayerData.can_move = true
+=> END!
+
+~ Memo51
+set PlayerData.can_move = false
+Terminal: Bzzzt.. Bzzzzt
+You: Yep, not working either.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo52
+set PlayerData.can_move = false
+Terminal: Recovery TP.
+You: huh.?
+set PlayerData.can_move = true
+=> END!
+
+~ Memo53
+set PlayerData.can_move = false
+Terminal: Bzzzt.. Bzzzzt
+You: Yep, not working either.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo54
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show7 = true
+Terminal: This flowchart inhibits the use of conditional operation, what is the operator that is being used?
+set FlowC1.Lvl5Show7 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo55
+set PlayerData.can_move = false
+Terminal: Grade Less Than 60.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo56
+set PlayerData.can_move = false
+Terminal: Grade Less than and equal 60.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo57
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show16 = true
+Terminal: What condition is presented here?
+set FlowC1.Lvl5Show16 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo58
+set PlayerData.can_move = false
+Terminal: A and B is Equal to C.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo59
+set PlayerData.can_move = false
+Terminal: A is equal to C and B.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo60
+set PlayerData.can_move = false
+Terminal: B and C is equal.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo61
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show17 = true
+Terminal: Above is an example of a Switch case architecture. 
+Terminal: it enables the code to have multiple condition without the constant use of IF-ELSE. 
+Terminal: When building a simple program that has multiple conditions and rules what is the more viable structure to use?
+set FlowC1.Lvl5Show17 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo62
+set PlayerData.can_move = false
+Terminal: If - Else
+set PlayerData.can_move = true
+=> END!
+
+~ Memo63
+set PlayerData.can_move = false
+Terminal: Switch - Case
+set PlayerData.can_move = true
+=> END!
+
+~ Memo64
+set PlayerData.can_move = false
+Terminal: Nested If – Else
+set PlayerData.can_move = true
+=> END!
+
+~ Memo65
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show17 = true
+Terminal: When deciding between using switch-case and if-else structures in a Java program, which scenario is most suitable for using switch-case?
+set FlowC1.Lvl5Show17 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo66
+set PlayerData.can_move = false
+Terminal: When you need to evaluate ranges of values
+set PlayerData.can_move = true
+=> END!
+
+~ Memo67
+set PlayerData.can_move = false
+Terminal: When you have complex conditions involving multiple variables
+set PlayerData.can_move = true
+=> END!
+
+~ Memo68
+set PlayerData.can_move = false
+Terminal: When you have a single variable to compare against multiple distinct values
+set PlayerData.can_move = true
+=> END!
+
+~ Memo69
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show18 = true
+Terminal: Repetition Control Structure Also known as looping or iteration, it repeatedly executes one or more steps of an algorithm or program. 
+Iterative Structures are Groupings of code that repeat a set of related statements. This repetition continues until a specific condition or control value stops it.
+Loops Consist of two parts first is Condition, The logic that evaluates whether to continue the loop. 
+Loop Body is the code that runs each time the loop repeats.
+Terminal: Question what best describes the repetition structure?
+set FlowC1.Lvl5Show18 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo70
+set PlayerData.can_move = false
+Terminal: It repeatedly executes one or more steps of an algorithm or program
+set PlayerData.can_move = true
+=> END!
+
+~ Memo71
+set PlayerData.can_move = false
+Terminal: It executes a block of code once and then checks the condition
+set PlayerData.can_move = true
+=> END!
+
+~ Memo72
+set PlayerData.can_move = false
+Terminal: It executes a block of code a fixed number of times regardless of any condition
+set PlayerData.can_move = true
+=> END!
+
+~ Memo73
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show18 = true
+Terminal: Given this Loop what will happen if the condition is not met a dozen times, then ending the loop. 
+Terminal: what happened that stopped the loop and how many loops would it have?
+set FlowC1.Lvl5Show18 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo74
+set PlayerData.can_move = false
+Terminal: 12 loops, the condition is not fulfilled causing an error
+set PlayerData.can_move = true
+=> END!
+
+~ Memo75
+set PlayerData.can_move = false
+Terminal:13, the condition is fulfilled therefore ending the loop
+set PlayerData.can_move = true
+=> END!
+
+~ Memo76
+set PlayerData.can_move = false
+Terminal: 11, the condition is not feasible causing an error
+set PlayerData.can_move = true
+=> END!
+
+~ Memo77
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show19 = true
+Terminal: An array is a data structure in programming that stores a fixed-size sequence of elements of the same type. 
+Each element in the array is accessed by its index, with the first element starting at index 0. 
+Arrays allow you to efficiently store and manage multiple values in a single variable.
+Terminal: Array Characteristics include Fixed Size: In the example, the size of numbers is 5 and cannot be changed after initialization. 
+Its also Indexed Access means You can access elements using their index, starting from 0 up to length-1. 
+Another characteristic is Homogeneous Elements meaning All elements in the numbers array are integers.
+Terminal: Yes, arrays can be seen to efficiently combine variables. 
+Arrays allow you to group multiple variables of the same type under a single name. 
+Instead of declaring individual variables, you use an array to store and manage a collection of related data items.
+Question: In an array index what is the address of the first item?
+set FlowC1.Lvl5Show19 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo78
+set PlayerData.can_move = false
+Terminal: 1
+set PlayerData.can_move = true
+=> END!
+
+~ Memo79
+set PlayerData.can_move = false
+Terminal: 0
+set PlayerData.can_move = true
+=> END!
+
+~ Memo80
+set PlayerData.can_move = false
+Terminal: -1
+set PlayerData.can_move = true
+=> END!
+
+~ Memo81
+set PlayerData.can_move = false
+Terminal: Here is a snippet of code containing an array:
+int[] numbers = {1, 2, 3, 4, 5}; \nSystem.out.println(______________); 
+Question: What is needed to complete the blank in order to show the integer on the third index of an array.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo82
+set PlayerData.can_move = false
+Terminal: number[4]
+set PlayerData.can_move = true
+=> END!
+
+~ Memo83
+set PlayerData.can_move = false
+Terminal: number[3]
+set PlayerData.can_move = true
+=> END!
+
+~ Memo84
+set PlayerData.can_move = false
+Terminal: number[2]
+set PlayerData.can_move = true
+=> END!
+
+~ Memo85
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show20 = true
+Terminal: Here is an example of a 2d Array, its different in initialization and contents but it's a expanded version of a normal array, 
+As to how to print an element inside an 2d? 
+Array one uses [][] first bracket on row and second bracket on column as shown here the output would be 6, don't forget that array starts on 0.
+Question: if the address is matrix[0][2] what would be the output?
+set FlowC1.Lvl5Show20 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo86
+set PlayerData.can_move = false
+Terminal: 3
+set PlayerData.can_move = true
+=> END!
+
+~ Memo87
+set PlayerData.can_move = false
+Terminal: 5
+set PlayerData.can_move = true
+=> END!
+
+~ Memo88
+set PlayerData.can_move = false
+Terminal: 2
+set PlayerData.can_move = true
+=> END!
+
+~ Memo89
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show21 = true
+Terminal: To print the 3rd, index what would be placed in the blank:
+set FlowC1.Lvl5Show21 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo90
+set PlayerData.can_move = false
+Terminal: numbers[2]
+set PlayerData.can_move = true
+=> END!
+
+~ Memo91
+set PlayerData.can_move = false
+Terminal: numbers[3]
+set PlayerData.can_move = true
+=> END!
+
+~ Memo92
+set PlayerData.can_move = false
+Terminal: num[3]
+set PlayerData.can_move = true
+=> END!
+
+~ Memo93
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show22 = true
+Terminal: Methods in Java are blocks of code designed to perform specific tasks. 
+Terminal: They are used to define the behavior of objects and can be called to execute the code they contain. 
+Terminal: Methods help in organizing code, avoiding repetition, and improving readability.
+Terminal: Which of the following statements is false about methods?
+set FlowC1.Lvl5Show22 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo94
+set PlayerData.can_move = false
+Terminal: Methods are used to perform specific tasks.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo95
+set PlayerData.can_move = false
+Terminal: Methods help in organizing code and avoiding repetition.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo96
+set PlayerData.can_move = false
+Terminal: Methods are blocks of code that cannot be called or executed.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo97
+set PlayerData.can_move = false
+You: Finally, I am out of that place, this should be the last sector and I'm a free cat
+set PlayerData.can_move = true
+=> END!
+
+~ Memo98
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show23 = true
+Terminal: Above is an example of a method used in a simple code, in this snippet how does the method work?
+set FlowC1.Lvl5Show23 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo99
+set PlayerData.can_move = false
+Terminal: The main operates then calls addNumbers method where it adds two numbers and returns the sum.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo100
+set PlayerData.can_move = false
+Terminal: The main method calls the addNumbers method where it subtracts two numbers and returns the difference.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo101
+set PlayerData.can_move = false
+Terminal: The main method operates independently without calling any other methods.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo102
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show24 = true
+Terminal: These methods are part of the File class in Java, which is part of the java.io package. 
+The File class provides methods for performing various operations on files and directories. 
+Terminal: they are packaged in a way to organize and group related classes and interfaces. 
+They provide a namespace to avoid class name conflicts and help in managing the code structure efficiently. 
+A package can contain multiple classes, interfaces, Enums, annotations, and sub-packages.
+Terminal: What package does this method belong to?
+set FlowC1.Lvl5Show24 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo103
+set PlayerData.can_move = false
+Terminal: java.net
+set PlayerData.can_move = true
+=> END!
+
+~ Memo104
+set PlayerData.can_move = false
+Terminal: java.util
+set PlayerData.can_move = true
+=> END!
+
+~ Memo105
+set PlayerData.can_move = false
+Terminal: java.io
+set PlayerData.can_move = true
+=> END!
+
+~ Memo106
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show25 = true
+Terminal: This is an Example of File creation in java, 
+Terminal: Based on this snippet what is the name of the file created and what will it output if the file isn’t created?
+set FlowC1.Lvl5Show25 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo107
+set PlayerData.can_move = false
+Terminal: The file name is newfile.txt, and it will output "File already exists." if the file isn't created.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo108
+set PlayerData.can_move = false
+Terminal: The file name is file.txt, and it will output "File created\: file.txt" if the file isn't created.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo109
+set PlayerData.can_move = false
+Terminal: The file name is example.txt, and it will output "An error occurred." if the file isn't created.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo110
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show26 = true
+Terminal: Here is an example of Deletion function used on a file using java.io.file but it is incomplete, 
+Terminal: in order for the file to be deleted what function is needed to fill in the blank?
+set FlowC1.Lvl5Show26 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo111
+set PlayerData.can_move = false
+Terminal: myFile.erase()
+set PlayerData.can_move = true
+=> END!
+
+~ Memo112
+set PlayerData.can_move = false
+Terminal: myFile.discard()
+set PlayerData.can_move = true
+=> END!
+
+~ Memo113
+set PlayerData.can_move = false
+Terminal: myFile.delete()
+set PlayerData.can_move = true
+=> END!
+
+~ Memo114
+set PlayerData.can_move = false
+set FlowC1.Lvl5Show27 = true
+Terminal: This code snippet is an example of writing to a file or manipulating the contents of a text file. 
+Terminal: It first specifies a file path to locate the file and then uses a class to write to the text file.
+Terminal: What class was used to manipulate the contents of the text file?
+set FlowC1.Lvl5Show27 = false
+set PlayerData.can_move = true
+=> END!
+
+~ Memo115
+set PlayerData.can_move = false
+Terminal: FileWriter
+set PlayerData.can_move = true
+=> END!
+
+~ Memo116
+set PlayerData.can_move = false
+Terminal: FileReader
+set PlayerData.can_move = true
+=> END!
+
+~ Memo117
+set PlayerData.can_move = false
+Terminal: BufferedReader
+set PlayerData.can_move = true
+=> END!
+
+~ Memo118
+set PlayerData.can_move = false
+You: Finally, that looks like the last TP Module.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo119
+set PlayerData.can_move = false
+You: I can't believe I'll be happy when seeing a TP Module well, time to get out of here. no more puzzles.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo120
+set PlayerData.can_move = false
+You: Yes, more obstacles before freedom.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo121
+set PlayerData.can_move = false
+You: Almost there, I think the biggest surprises are behind me.
+set PlayerData.can_move = true
+=> END!
+
+~ Memo122
+set PlayerData.can_move = false
+You: Light? Its so bright.
+You: How many years was it when I last appreciated being outside?
+set PlayerData.can_move = true
+=> END!
+
+~ Memo123
+set PlayerData.can_move = false
+You: This grass, this place feels so... nostalgic I feel like a kid again.
+You: Without any responsibilities, nothing weighing my mind.
+You: I was always preoccupied with what's happening I forgot why I'm here. I vaguely remembered being in my room and being too sleepy for no apparent reason.
+You: Did I die back then? I probably died there, no? man that's just so embarrassing. Can I even go back? 
+You: No use crying over spilled milk. 
+Unknown: Hey!.. Hey!.. Come Here...
+You: Wait... Who's that?
+You: Is that.... AR1S??
+set PlayerData.can_move = true
+=> END!
+
+~ Memo124
+set PlayerData.can_move = false
+set FlowC1.EndSGame = true
+You: Wait, how are you here?
+AR1S: Surprising, isn't it?
+You: But... how?
+AR1S: Well, it's a long story. We've been observing you for a while and decided to take a bet. Your soul is rather dull, 
+AR1S: and we even questioned whether you deserved another chance. 
+AR1S: You're at the peak of your life, but you've been stagnating-no motivation, no personality. 
+AR1S: We thought you needed a push. So, we set up this game to test you, and look at that-you've learned quite a bit.
+AR1S: Life is like a boat, and you're the captain. If you let others steer for you, you'll end up adrift. 
+AR1S: Life isn't just about hardship and suffering. Stand firm, do your thing, and remember, everyone starts as a beginner. 
+AR1S: It's okay to fail; it's part of the journey.
+AR1S: So.....
+AR1S: Did you have fun?
+You: Well.... i think i did.
+You: You're not AR1S you act too human.......
+You: If you're not the real AR1S how is she?
+Unknown Android: Well..
+Unknown Android: Lets just say she's doing her duty right now.
+Unknown Android: Thanks to you she'd finally decided on what she wanted to do.
+Unknown Android: Anyway, I'm afraid we're running out of time. I'll send you back for real this time.
+You: Will I remember any of this?
+Unknown Android: Probably not, but you'll learn.
+Unknown Android: Take care out there, kid..
+set PlayerData.can_move = true
+set FlowC1.EndGame = true
+=> END!

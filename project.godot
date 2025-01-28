@@ -13,7 +13,6 @@ config_version=5
 config/name="CatFormarNew"
 run/main_scene="res://Scenes/LoadingScene/GameBoot.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-run/max_fps=60
 config/icon="res://icon.svg"
 
 [autoload]
@@ -25,7 +24,9 @@ FlowC1="*res://addons/dialogue_manager/example_balloon/FlowC1.gd"
 
 [display]
 
+window/size/resizable=false
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
 
 [dotnet]
@@ -90,9 +91,16 @@ interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogues/Lvl1Diag/Lvl1Memo\'s.dialogue", "res://Dialogues/Lvl2Diag/Lvl2Memo.dialogue", "res://Dialogues/Lvl3Diag/Lvl3Memo.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogues/Lvl1Diag/Lvl1Memo\'s.dialogue", "res://Dialogues/Lvl2Diag/Lvl2Memo.dialogue", "res://Dialogues/Lvl3Diag/Lvl3Memo.dialogue", "res://Dialogues/Lvl4Diag/Lvl4Memo.dialogue", "res://Dialogues/Lvl5Diag/Lvl5Memo.dialogue")
+
+[physics]
+
+2d/run_on_separate_thread=true
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+environment/glow/upscale_mode=0
+viewport/hdr_2d=true

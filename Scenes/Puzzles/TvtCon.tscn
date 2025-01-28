@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dyvtymntcjc25"]
+[gd_scene load_steps=32 format=3 uid="uid://dyvtymntcjc25"]
 
 [ext_resource type="Script" path="res://Scenes/Puzzles/TvCon.gd" id="1_4d281"]
 [ext_resource type="Texture2D" uid="uid://bh647v0ydqcdj" path="res://Scenes/Puzzles/ConnectPuzResources/Lvl2PuzzleHolder-Sheet-.png" id="2_r7r3b"]
@@ -10,6 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://65d30k0q5wv7" path="res://Scenes/Puzzles/ConnectPuzResources/BlueDot.png" id="8_x6auw"]
 [ext_resource type="Texture2D" uid="uid://cv4fu45ha7ugu" path="res://Scenes/Puzzles/ConnectPuzResources/GuiButton/ResetBut-Sheet.png" id="9_kjc0c"]
 [ext_resource type="AudioStream" uid="uid://b0h4870iruqkf" path="res://Sounds/SFX/bloop.wav" id="10_8nymo"]
+[ext_resource type="Texture2D" uid="uid://dwb2xrxcihqg7" path="res://Scenes/Puzzles/Resources/ButtonX.png" id="11_2jnoc"]
+[ext_resource type="Texture2D" uid="uid://b3gaebmrsyxfk" path="res://Scenes/Puzzles/Resources/helpButton1.png" id="12_3dh4i"]
+[ext_resource type="Texture2D" uid="uid://hnvdocll2oqp" path="res://Scenes/Puzzles/Resources/helpButton2.png" id="13_5saua"]
+[ext_resource type="Script" path="res://Scenes/Puzzles/GuideLvl4_1.gd" id="14_5ke8w"]
+[ext_resource type="FontFile" uid="uid://dal5hpyj3amgs" path="res://Fonts/ThaleahFat.ttf" id="15_fsuns"]
+[ext_resource type="AudioStream" uid="uid://def5bhd2brdty" path="res://Sounds/SFX/mixkit-completion-of-a-level-2063.wav" id="16_mh0ls"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gprmo"]
 atlas = ExtResource("2_r7r3b")
@@ -67,6 +73,22 @@ region = Rect2(0, 0, 66, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_rfpb1"]
 atlas = ExtResource("9_kjc0c")
 region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="Gradient" id="Gradient_tmmcx"]
+offsets = PackedFloat32Array(0, 0.219697, 0.80303, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.00784314, 0.00784314, 0.00784314, 1, 0.00784314, 0.00784314, 0.00784314, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2skx7"]
+gradient = SubResource("Gradient_tmmcx")
+use_hdr = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nqfv2"]
+texture = SubResource("GradientTexture2D_2skx7")
+
+[sub_resource type="Theme" id="Theme_yttfo"]
+default_font = ExtResource("15_fsuns")
+default_font_size = 36
+RichTextLabel/styles/normal = SubResource("StyleBoxTexture_nqfv2")
 
 [node name="TvCon" type="Node2D"]
 position = Vector2(-11, -10)
@@ -221,12 +243,97 @@ offset_bottom = 512.0
 texture_normal = SubResource("AtlasTexture_dvq1p")
 texture_pressed = SubResource("AtlasTexture_rfpb1")
 
-[node name="Bloop" type="AudioStreamPlayer2D" parent="."]
+[node name="Bloop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_8nymo")
 
-[node name="Bloop2" type="AudioStreamPlayer2D" parent="."]
+[node name="Bloop2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_8nymo")
 volume_db = 4.039
 pitch_scale = 1.33
 
+[node name="Button" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1076.0
+offset_top = 60.0
+offset_right = 1116.0
+offset_bottom = 100.0
+
+[node name="XButton" type="TextureButton" parent="Button"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = -46.0
+offset_right = 66.0
+offset_bottom = -16.0
+scale = Vector2(1.6, 1.6)
+texture_normal = ExtResource("11_2jnoc")
+texture_pressed = ExtResource("11_2jnoc")
+
+[node name="HelpButton" type="TextureButton" parent="Button"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -46.0
+offset_right = 14.0
+offset_bottom = -16.0
+scale = Vector2(1.6, 1.6)
+texture_normal = ExtResource("12_3dh4i")
+texture_pressed = ExtResource("13_5saua")
+
+[node name="Guide" type="Control" parent="."]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("14_5ke8w")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Guide"]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 69.0
+offset_right = 1278.0
+offset_bottom = 219.0
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_yttfo")
+bbcode_enabled = true
+text = "Arrange the charts to create a correct structure."
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Guide"]
+visible = false
+layout_mode = 0
+offset_left = 204.0
+offset_top = 552.0
+offset_right = 1248.0
+offset_bottom = 642.0
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_yttfo")
+bbcode_enabled = true
+text = "You are presented with five charts and a pseudocode display on the left side. Your task is to drag and drop these charts into the correct order to form a proper loop structure."
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Guide"]
+visible = false
+layout_mode = 0
+offset_left = 243.0
+offset_top = 190.0
+offset_right = 1173.0
+offset_bottom = 289.0
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_yttfo")
+bbcode_enabled = true
+text = "The pseudocode helps you understand how the loop should be structured. Refer to this pseudocode to guide your arrangement of the charts."
+fit_content = true
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="Guide"]
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_mh0ls")
+
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Button/XButton" to="." method="_on_x_button_pressed"]
+[connection signal="pressed" from="Button/HelpButton" to="Guide" method="_on_help_button_pressed"]
+[connection signal="timeout" from="Guide/Timer" to="Guide" method="_on_timer_timeout"]

@@ -1,0 +1,718 @@
+[gd_scene load_steps=26 format=3 uid="uid://b24nvob0x4s3o"]
+
+[ext_resource type="Texture2D" uid="uid://qisw1m2e6pww" path="res://Scenes/Elevator/Textures/ElevatorBig-Sheet.png" id="2_5242n"]
+[ext_resource type="Script" path="res://Scenes/Elevator/Activate.gd" id="2_lhchu"]
+[ext_resource type="Texture2D" uid="uid://hfc1r06rtrg5" path="res://Scenes/Interactables/Textures/Interact.png" id="3_jwv7v"]
+[ext_resource type="AudioStream" uid="uid://b01hca7whaepw" path="res://Sounds/SFX/ElevatorStart.mp3" id="4_jstq0"]
+[ext_resource type="AudioStream" uid="uid://iwsgyjtl86ev" path="res://Sounds/SFX/Elevator Running.mp3" id="5_qx0ms"]
+[ext_resource type="AudioStream" uid="uid://bn5s83yem28tv" path="res://Sounds/SFX/ElevatorEnd.mp3" id="6_pmcmp"]
+[ext_resource type="Script" path="res://Scenes/Elevator/ElevatorUp.gd" id="7_dwlka"]
+
+[sub_resource type="Curve2D" id="Curve2D_o63uu"]
+bake_interval = 7.0
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1.16583, -639.307, 0, 0, 0, 0, -1.00745, 94.166)
+}
+point_count = 2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_64ybj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwtlw"]
+atlas = ExtResource("2_5242n")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5y50"]
+atlas = ExtResource("2_5242n")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qngwe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwtlw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5y50")
+}],
+"loop": true,
+"name": &"Elevator",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3y05b"]
+size = Vector2(58.3333, 15.693)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8orf"]
+size = Vector2(13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aep5j"]
+atlas = ExtResource("3_jwv7v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bywui"]
+atlas = ExtResource("3_jwv7v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcjjl"]
+atlas = ExtResource("3_jwv7v")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cig2"]
+atlas = ExtResource("3_jwv7v")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_boqd0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aep5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bywui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcjjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cig2")
+}],
+"loop": true,
+"name": &"interact",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_wkrxa"]
+resource_name = "ElevateDown"
+length = 8.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.928572, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatableBody2D/Area2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_jstq0")
+}, {
+"end_offset": 10.4407,
+"start_offset": 0.881699,
+"stream": ExtResource("5_qx0ms")
+}, {
+"end_offset": 0.0,
+"start_offset": 1.4516,
+"stream": ExtResource("6_pmcmp")
+}],
+"times": PackedFloat32Array(0, 2.5, 6.7)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_vavku"]
+resource_name = "ElevateUp"
+length = 8.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 6, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.08, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatableBody2D/Area2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.8147e-06, 0)]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_jstq0")
+}, {
+"end_offset": 10.3938,
+"start_offset": 0.8817,
+"stream": ExtResource("5_qx0ms")
+}, {
+"end_offset": 0.0,
+"start_offset": 1.4516,
+"stream": ExtResource("6_pmcmp")
+}],
+"times": PackedFloat32Array(0, 2.5, 6.6)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_atvhj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatableBody2D/Area2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r5q7u"]
+_data = {
+"ElevateDown": SubResource("Animation_wkrxa"),
+"ElevateUp": SubResource("Animation_vavku"),
+"RESET": SubResource("Animation_atvhj")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pv21s"]
+size = Vector2(125, 13.6205)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bp8js"]
+size = Vector2(124, 18.7885)
+
+[node name="NodeElevator" type="Node2D"]
+
+[node name="Elevator" type="Node2D" parent="."]
+position = Vector2(63, 33)
+
+[node name="Path2D" type="Path2D" parent="Elevator"]
+curve = SubResource("Curve2D_o63uu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Elevator/Path2D"]
+position = Vector2(-1.16583, -639.307)
+rotation = -1.5708
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Elevator/Path2D/PathFollow2D"]
+position = Vector2(3.8147e-06, -1)
+remote_path = NodePath("../../AnimatableBody2D")
+update_rotation = false
+update_scale = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Elevator/Path2D"]
+position = Vector2(-2.16583, -639.307)
+physics_material_override = SubResource("PhysicsMaterial_64ybj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator/Path2D/AnimatableBody2D"]
+position = Vector2(1, -12)
+sprite_frames = SubResource("SpriteFrames_qngwe")
+animation = &"Elevator"
+frame = 1
+frame_progress = 0.124169
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator/Path2D/AnimatableBody2D"]
+position = Vector2(1.16583, 2.1535)
+scale = Vector2(2.16, 1)
+shape = SubResource("RectangleShape2D_3y05b")
+
+[node name="Area2D" type="Area2D" parent="Elevator/Path2D/AnimatableBody2D"]
+script = ExtResource("2_lhchu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator/Path2D/AnimatableBody2D/Area2D"]
+position = Vector2(35.5, -12.5)
+shape = SubResource("RectangleShape2D_a8orf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator/Path2D/AnimatableBody2D/Area2D"]
+visible = false
+position = Vector2(37, -33)
+sprite_frames = SubResource("SpriteFrames_boqd0")
+animation = &"interact"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator/Path2D"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_r5q7u")
+}
+
+[node name="Elevator2" type="Node2D" parent="."]
+position = Vector2(63, 33)
+
+[node name="Path2D" type="Path2D" parent="Elevator2"]
+curve = SubResource("Curve2D_o63uu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Elevator2/Path2D"]
+position = Vector2(-1.16583, -639.307)
+rotation = -1.5708
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Elevator2/Path2D/PathFollow2D"]
+position = Vector2(3.8147e-06, -1)
+remote_path = NodePath("../../AnimatableBody2D")
+update_rotation = false
+update_scale = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Elevator2/Path2D"]
+position = Vector2(-2.16583, -639.307)
+physics_material_override = SubResource("PhysicsMaterial_64ybj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator2/Path2D/AnimatableBody2D"]
+position = Vector2(1, -12)
+sprite_frames = SubResource("SpriteFrames_qngwe")
+animation = &"Elevator"
+autoplay = "Elevator"
+frame = 1
+frame_progress = 0.124169
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator2/Path2D/AnimatableBody2D"]
+position = Vector2(1.66583, -0.192993)
+shape = SubResource("RectangleShape2D_pv21s")
+
+[node name="Area2D" type="Area2D" parent="Elevator2/Path2D/AnimatableBody2D"]
+script = ExtResource("2_lhchu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator2/Path2D/AnimatableBody2D/Area2D"]
+position = Vector2(35.5, -12.5)
+shape = SubResource("RectangleShape2D_a8orf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator2/Path2D/AnimatableBody2D/Area2D"]
+visible = false
+position = Vector2(37, -33)
+sprite_frames = SubResource("SpriteFrames_boqd0")
+animation = &"interact"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator2/Path2D"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_r5q7u")
+}
+
+[node name="Elevator3" type="Node2D" parent="."]
+position = Vector2(63, 33)
+
+[node name="Path2D" type="Path2D" parent="Elevator3"]
+curve = SubResource("Curve2D_o63uu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Elevator3/Path2D"]
+position = Vector2(-1.16583, -639.307)
+rotation = -1.5708
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Elevator3/Path2D/PathFollow2D"]
+position = Vector2(3.8147e-06, -1)
+remote_path = NodePath("../../AnimatableBody2D")
+update_rotation = false
+update_scale = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Elevator3/Path2D"]
+position = Vector2(-2.16583, -639.307)
+physics_material_override = SubResource("PhysicsMaterial_64ybj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator3/Path2D/AnimatableBody2D"]
+position = Vector2(1, -12)
+sprite_frames = SubResource("SpriteFrames_qngwe")
+animation = &"Elevator"
+autoplay = "Elevator"
+frame = 1
+frame_progress = 0.124169
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator3/Path2D/AnimatableBody2D"]
+position = Vector2(1.16583, 3.70123)
+shape = SubResource("RectangleShape2D_bp8js")
+
+[node name="Area2D" type="Area2D" parent="Elevator3/Path2D/AnimatableBody2D"]
+script = ExtResource("2_lhchu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator3/Path2D/AnimatableBody2D/Area2D"]
+position = Vector2(35.5, -12.5)
+shape = SubResource("RectangleShape2D_a8orf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator3/Path2D/AnimatableBody2D/Area2D"]
+visible = false
+position = Vector2(37, -33)
+sprite_frames = SubResource("SpriteFrames_boqd0")
+animation = &"interact"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator3/Path2D"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_r5q7u")
+}
+
+[node name="Elevator4" type="Node2D" parent="."]
+position = Vector2(63, 33)
+
+[node name="Path2D" type="Path2D" parent="Elevator4"]
+curve = SubResource("Curve2D_o63uu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Elevator4/Path2D"]
+position = Vector2(-1.00745, 94.166)
+rotation = -1.5708
+progress = 733.473
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Elevator4/Path2D/PathFollow2D"]
+position = Vector2(3.8147e-06, -1)
+remote_path = NodePath("../../AnimatableBody2D")
+update_rotation = false
+update_scale = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Elevator4/Path2D"]
+position = Vector2(-2.00745, 94.166)
+physics_material_override = SubResource("PhysicsMaterial_64ybj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator4/Path2D/AnimatableBody2D"]
+position = Vector2(1, -12)
+sprite_frames = SubResource("SpriteFrames_qngwe")
+animation = &"Elevator"
+autoplay = "Elevator"
+frame = 1
+frame_progress = 0.124169
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator4/Path2D/AnimatableBody2D"]
+position = Vector2(1.16583, 3.70123)
+shape = SubResource("RectangleShape2D_bp8js")
+
+[node name="Area2D" type="Area2D" parent="Elevator4/Path2D/AnimatableBody2D"]
+position = Vector2(-3.8147e-06, 0)
+script = ExtResource("7_dwlka")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator4/Path2D/AnimatableBody2D/Area2D"]
+position = Vector2(35.5, -12.5)
+shape = SubResource("RectangleShape2D_a8orf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator4/Path2D/AnimatableBody2D/Area2D"]
+visible = false
+position = Vector2(37, -33)
+sprite_frames = SubResource("SpriteFrames_boqd0")
+animation = &"interact"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator4/Path2D"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_r5q7u")
+}
+
+[node name="Elevator5" type="Node2D" parent="."]
+position = Vector2(63, 33)
+
+[node name="Path2D" type="Path2D" parent="Elevator5"]
+curve = SubResource("Curve2D_o63uu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Elevator5/Path2D"]
+position = Vector2(-1.16583, -639.307)
+rotation = -1.5708
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Elevator5/Path2D/PathFollow2D"]
+position = Vector2(3.8147e-06, -1)
+remote_path = NodePath("../../AnimatableBody2D")
+update_rotation = false
+update_scale = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Elevator5/Path2D"]
+position = Vector2(-2.16583, -639.307)
+physics_material_override = SubResource("PhysicsMaterial_64ybj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator5/Path2D/AnimatableBody2D"]
+position = Vector2(1, -12)
+sprite_frames = SubResource("SpriteFrames_qngwe")
+animation = &"Elevator"
+autoplay = "Elevator"
+frame = 1
+frame_progress = 0.124169
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator5/Path2D/AnimatableBody2D"]
+position = Vector2(1.16583, 3.70123)
+shape = SubResource("RectangleShape2D_bp8js")
+
+[node name="Area2D" type="Area2D" parent="Elevator5/Path2D/AnimatableBody2D"]
+script = ExtResource("2_lhchu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator5/Path2D/AnimatableBody2D/Area2D"]
+position = Vector2(35.5, -12.5)
+shape = SubResource("RectangleShape2D_a8orf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator5/Path2D/AnimatableBody2D/Area2D"]
+visible = false
+position = Vector2(37, -33)
+sprite_frames = SubResource("SpriteFrames_boqd0")
+animation = &"interact"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator5/Path2D"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_r5q7u")
+}
+
+[node name="Elevator6" type="Node2D" parent="."]
+position = Vector2(63, 33)
+
+[node name="Path2D" type="Path2D" parent="Elevator6"]
+curve = SubResource("Curve2D_o63uu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Elevator6/Path2D"]
+position = Vector2(-1.16583, -639.307)
+rotation = -1.5708
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Elevator6/Path2D/PathFollow2D"]
+position = Vector2(3.8147e-06, -1)
+remote_path = NodePath("../../AnimatableBody2D")
+update_rotation = false
+update_scale = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Elevator6/Path2D"]
+position = Vector2(-2.16583, -639.307)
+physics_material_override = SubResource("PhysicsMaterial_64ybj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator6/Path2D/AnimatableBody2D"]
+position = Vector2(1, -12)
+sprite_frames = SubResource("SpriteFrames_qngwe")
+animation = &"Elevator"
+autoplay = "Elevator"
+frame = 1
+frame_progress = 0.124169
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator6/Path2D/AnimatableBody2D"]
+position = Vector2(1.16583, 3.70123)
+shape = SubResource("RectangleShape2D_bp8js")
+
+[node name="Area2D" type="Area2D" parent="Elevator6/Path2D/AnimatableBody2D"]
+script = ExtResource("2_lhchu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator6/Path2D/AnimatableBody2D/Area2D"]
+position = Vector2(35.5, -12.5)
+shape = SubResource("RectangleShape2D_a8orf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator6/Path2D/AnimatableBody2D/Area2D"]
+visible = false
+position = Vector2(37, -33)
+sprite_frames = SubResource("SpriteFrames_boqd0")
+animation = &"interact"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator6/Path2D"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_r5q7u")
+}
+
+[node name="Elevator7" type="Node2D" parent="."]
+position = Vector2(63, 33)
+
+[node name="Path2D" type="Path2D" parent="Elevator7"]
+curve = SubResource("Curve2D_o63uu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Elevator7/Path2D"]
+position = Vector2(-1.16583, -639.307)
+rotation = -1.5708
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Elevator7/Path2D/PathFollow2D"]
+position = Vector2(3.8147e-06, -1)
+remote_path = NodePath("../../AnimatableBody2D")
+update_rotation = false
+update_scale = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Elevator7/Path2D"]
+position = Vector2(-2.16583, -639.307)
+physics_material_override = SubResource("PhysicsMaterial_64ybj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator7/Path2D/AnimatableBody2D"]
+position = Vector2(1, -12)
+sprite_frames = SubResource("SpriteFrames_qngwe")
+animation = &"Elevator"
+autoplay = "Elevator"
+frame = 1
+frame_progress = 0.124169
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator7/Path2D/AnimatableBody2D"]
+position = Vector2(1.16583, 3.70123)
+shape = SubResource("RectangleShape2D_bp8js")
+
+[node name="Area2D" type="Area2D" parent="Elevator7/Path2D/AnimatableBody2D"]
+script = ExtResource("2_lhchu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator7/Path2D/AnimatableBody2D/Area2D"]
+position = Vector2(35.5, -12.5)
+shape = SubResource("RectangleShape2D_a8orf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator7/Path2D/AnimatableBody2D/Area2D"]
+visible = false
+position = Vector2(37, -33)
+sprite_frames = SubResource("SpriteFrames_boqd0")
+animation = &"interact"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator7/Path2D"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_r5q7u")
+}
+
+[node name="Elevator8" type="Node2D" parent="."]
+position = Vector2(63, 33)
+
+[node name="Path2D" type="Path2D" parent="Elevator8"]
+curve = SubResource("Curve2D_o63uu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Elevator8/Path2D"]
+position = Vector2(-1.16583, -639.307)
+rotation = -1.5708
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Elevator8/Path2D/PathFollow2D"]
+position = Vector2(3.8147e-06, -1)
+remote_path = NodePath("../../AnimatableBody2D")
+update_rotation = false
+update_scale = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Elevator8/Path2D"]
+position = Vector2(-2.16583, -639.307)
+physics_material_override = SubResource("PhysicsMaterial_64ybj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator8/Path2D/AnimatableBody2D"]
+position = Vector2(1, -12)
+sprite_frames = SubResource("SpriteFrames_qngwe")
+animation = &"Elevator"
+autoplay = "Elevator"
+frame = 1
+frame_progress = 0.124169
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator8/Path2D/AnimatableBody2D"]
+position = Vector2(1.16583, 3.70123)
+shape = SubResource("RectangleShape2D_bp8js")
+
+[node name="Area2D" type="Area2D" parent="Elevator8/Path2D/AnimatableBody2D"]
+script = ExtResource("2_lhchu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator8/Path2D/AnimatableBody2D/Area2D"]
+position = Vector2(35.5, -12.5)
+shape = SubResource("RectangleShape2D_a8orf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator8/Path2D/AnimatableBody2D/Area2D"]
+visible = false
+position = Vector2(37, -33)
+sprite_frames = SubResource("SpriteFrames_boqd0")
+animation = &"interact"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator8/Path2D"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_r5q7u")
+}
+
+[node name="Elevator9" type="Node2D" parent="."]
+position = Vector2(63, 33)
+
+[node name="Path2D" type="Path2D" parent="Elevator9"]
+curve = SubResource("Curve2D_o63uu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Elevator9/Path2D"]
+position = Vector2(-1.16583, -639.307)
+rotation = -1.5708
+rotates = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Elevator9/Path2D/PathFollow2D"]
+position = Vector2(3.8147e-06, -1)
+remote_path = NodePath("../../AnimatableBody2D")
+update_rotation = false
+update_scale = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Elevator9/Path2D"]
+position = Vector2(-2.16583, -639.307)
+physics_material_override = SubResource("PhysicsMaterial_64ybj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator9/Path2D/AnimatableBody2D"]
+position = Vector2(1, -12)
+sprite_frames = SubResource("SpriteFrames_qngwe")
+animation = &"Elevator"
+autoplay = "Elevator"
+frame_progress = 0.879898
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator9/Path2D/AnimatableBody2D"]
+position = Vector2(1.16583, 3.70123)
+shape = SubResource("RectangleShape2D_bp8js")
+
+[node name="Area2D" type="Area2D" parent="Elevator9/Path2D/AnimatableBody2D"]
+script = ExtResource("2_lhchu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator9/Path2D/AnimatableBody2D/Area2D"]
+position = Vector2(35.5, -12.5)
+shape = SubResource("RectangleShape2D_a8orf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elevator9/Path2D/AnimatableBody2D/Area2D"]
+visible = false
+position = Vector2(37, -33)
+sprite_frames = SubResource("SpriteFrames_boqd0")
+animation = &"interact"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator9/Path2D"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_r5q7u")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[connection signal="body_entered" from="Elevator/Path2D/AnimatableBody2D/Area2D" to="Elevator/Path2D/AnimatableBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Elevator/Path2D/AnimatableBody2D/Area2D" to="Elevator/Path2D/AnimatableBody2D/Area2D" method="_on_body_exited"]
+[connection signal="animation_finished" from="Elevator/Path2D/AnimationPlayer" to="Elevator/Path2D/AnimatableBody2D/Area2D" method="_on_animation_player_animation_finished"]
+[connection signal="body_entered" from="Elevator2/Path2D/AnimatableBody2D/Area2D" to="Elevator2/Path2D/AnimatableBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Elevator2/Path2D/AnimatableBody2D/Area2D" to="Elevator2/Path2D/AnimatableBody2D/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Elevator3/Path2D/AnimatableBody2D/Area2D" to="Elevator3/Path2D/AnimatableBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Elevator3/Path2D/AnimatableBody2D/Area2D" to="Elevator3/Path2D/AnimatableBody2D/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Elevator4/Path2D/AnimatableBody2D/Area2D" to="Elevator4/Path2D/AnimatableBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Elevator4/Path2D/AnimatableBody2D/Area2D" to="Elevator4/Path2D/AnimatableBody2D/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Elevator5/Path2D/AnimatableBody2D/Area2D" to="Elevator5/Path2D/AnimatableBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Elevator5/Path2D/AnimatableBody2D/Area2D" to="Elevator5/Path2D/AnimatableBody2D/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Elevator6/Path2D/AnimatableBody2D/Area2D" to="Elevator6/Path2D/AnimatableBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Elevator6/Path2D/AnimatableBody2D/Area2D" to="Elevator6/Path2D/AnimatableBody2D/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Elevator7/Path2D/AnimatableBody2D/Area2D" to="Elevator7/Path2D/AnimatableBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Elevator7/Path2D/AnimatableBody2D/Area2D" to="Elevator7/Path2D/AnimatableBody2D/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Elevator8/Path2D/AnimatableBody2D/Area2D" to="Elevator8/Path2D/AnimatableBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Elevator8/Path2D/AnimatableBody2D/Area2D" to="Elevator8/Path2D/AnimatableBody2D/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Elevator9/Path2D/AnimatableBody2D/Area2D" to="Elevator9/Path2D/AnimatableBody2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Elevator9/Path2D/AnimatableBody2D/Area2D" to="Elevator9/Path2D/AnimatableBody2D/Area2D" method="_on_body_exited"]

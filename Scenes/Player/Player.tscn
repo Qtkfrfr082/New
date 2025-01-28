@@ -1,8 +1,9 @@
-[gd_scene load_steps=33 format=3 uid="uid://6q7x72nvtr1d"]
+[gd_scene load_steps=59 format=3 uid="uid://6q7x72nvtr1d"]
 
 [ext_resource type="Texture2D" uid="uid://btn7qgqgxf6u0" path="res://Scenes/Player/PlayerResources/Cat Revamped Run Latest-Sheet.png" id="1_ud1qu"]
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/player.gd" id="1_xiil8"]
 [ext_resource type="Texture2D" uid="uid://c8fmym2xxtqi3" path="res://Scenes/Player/PlayerResources/CatDeath-Sheet.png" id="2_hkqco"]
+[ext_resource type="Script" path="res://Scenes/Player/Camera2D.gd" id="2_jo4c6"]
 [ext_resource type="AudioStream" uid="uid://xyh8vl424sxa" path="res://Sounds/PlayerSounds/Cartoon Jump Sound Effect.wav" id="3_hwcvs"]
 [ext_resource type="Texture2D" uid="uid://d1bd5d6ew18ok" path="res://Scenes/Player/PlayerResources/Cat Revamped Sit Latest Remade-Sheet.png" id="3_ugn78"]
 [ext_resource type="Texture2D" uid="uid://b0fj48op2bmlb" path="res://Scenes/Player/PlayerResources/Cat Revamped Jump Latest-Sheet.png" id="4_0vvsb"]
@@ -14,6 +15,19 @@
 [ext_resource type="PackedScene" uid="uid://b2klrbwx37se0" path="res://Scenes/Player/diedScreen.tscn" id="12_kdwmr"]
 [ext_resource type="AudioStream" uid="uid://cbxsvpppul1ce" path="res://Sounds/SFX/teleporter-102110.ogg" id="13_oytrg"]
 [ext_resource type="Texture2D" uid="uid://b3818bdbjh78d" path="res://Scenes/Player/TrailRun.tres" id="14_6lehy"]
+[ext_resource type="Texture2D" uid="uid://d34vte4iddtw4" path="res://Tilemaps/GlobalTexture/StarParticle.png" id="16_14crf"]
+[ext_resource type="AudioStream" uid="uid://cudw2o8gy3g3c" path="res://Sounds/SFX/coin-pickup-98269.mp3" id="17_ifi48"]
+[ext_resource type="Script" path="res://Scenes/Player/Scripts/Move.gd" id="19_8pueg"]
+[ext_resource type="FontFile" uid="uid://dal5hpyj3amgs" path="res://Fonts/ThaleahFat.ttf" id="19_gteo4"]
+[ext_resource type="PackedScene" uid="uid://dew50eaid0ixa" path="res://Scenes/Puzzles/puzzle_chartlvl1.tscn" id="20_72n6d"]
+[ext_resource type="PackedScene" uid="uid://wpxyti8pj2rx" path="res://Scenes/Puzzles/puzzle_chart.tscn" id="20_wp3rs"]
+[ext_resource type="PackedScene" uid="uid://b7tkuqes3adge" path="res://Scenes/Puzzles/puzzle_chart2.tscn" id="21_8sj1j"]
+[ext_resource type="PackedScene" uid="uid://40jtgsigai63" path="res://Scenes/Puzzles/puzzle_chartLvl4_1.tscn" id="23_i02r2"]
+[ext_resource type="PackedScene" uid="uid://dyvtymntcjc25" path="res://Scenes/Puzzles/TvtCon.tscn" id="24_eundu"]
+[ext_resource type="PackedScene" uid="uid://lpw8bcmwywx5" path="res://Scenes/Puzzles/puzzle_chartLvl4_2.tscn" id="25_4eps1"]
+[ext_resource type="PackedScene" uid="uid://sis4xfvhyped" path="res://Scenes/Puzzles/puzzle_chartLvl4_3.tscn" id="26_yrbpi"]
+[ext_resource type="PackedScene" uid="uid://cv2dh2v5x52i" path="res://Scenes/Puzzles/puzzle_chartLvl4_4.tscn" id="27_d6m3u"]
+[ext_resource type="PackedScene" uid="uid://dy5mbqqmvytjf" path="res://Scenes/Puzzles/puzzle_chartLvl4_5.tscn" id="28_iwqkf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aqame"]
 radius = 29.0172
@@ -76,6 +90,46 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0)
 }
 tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_q4hqq"]
+resource_name = "DoubleJump"
+length = 0.92
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("4_0vvsb")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
 
 [sub_resource type="Animation" id="Animation_86bxy"]
 resource_name = "Idle"
@@ -165,7 +219,7 @@ tracks/2/path = NodePath("Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
@@ -290,12 +344,15 @@ step = 0.2
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_08y3x"]
 _data = {
 "Death": SubResource("Animation_tobiv"),
+"DoubleJump": SubResource("Animation_q4hqq"),
 "Idle": SubResource("Animation_86bxy"),
 "Jump": SubResource("Animation_4qufu"),
 "RESET": SubResource("Animation_71q3t"),
 "Run": SubResource("Animation_8uk3v"),
 "spawn": SubResource("Animation_chs08")
 }
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vth8d"]
 
 [sub_resource type="Gradient" id="Gradient_vr01i"]
 colors = PackedColorArray(1, 1, 1, 0.329412, 0, 0, 0, 1)
@@ -327,7 +384,7 @@ point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_8an2k"]
 offsets = PackedFloat32Array(0, 0.434783, 0.807453)
-colors = PackedColorArray(0, 1, 1, 1, 0.278431, 0.14902, 1, 1, 1, 0, 0, 1)
+colors = PackedColorArray(0, 1, 1, 1, 0.286275, 0, 0.839216, 1, 1, 0, 0, 1)
 
 [sub_resource type="Curve" id="Curve_yvcir"]
 _data = [Vector2(0, 0.501887), 0.0, 0.0, 0, 0, Vector2(1, 0.0943396), 0.0, 0.0, 0, 0]
@@ -337,19 +394,140 @@ point_count = 2
 _data = [Vector2(0.0191257, 0.501887), 0.0, 0.0, 0, 0, Vector2(1, 0.109434), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="Curve" id="Curve_itinn"]
+_data = [Vector2(0, 0.124528), 0.0, 0.0, 0, 0, Vector2(0.568681, 0.169811), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Animation" id="Animation_vnxhs"]
+resource_name = "DoubleJumpAcquired"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Double Jump Acquired"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0239392, 0.174103, 0.26986, 0.364625, 0.474913, 0.570936, 0.686061, 0.875179, 1.20892, 1.48297),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RichTextLabel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.877045),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-53, -15), Vector2(-53, -27)]
+}
+
+[sub_resource type="Animation" id="Animation_u8rmy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Double Jump Acquired"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RichTextLabel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-53, -15)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ropmf"]
+_data = {
+"DoubleJumpAcquired": SubResource("Animation_vnxhs"),
+"RESET": SubResource("Animation_u8rmy")
+}
+
+[sub_resource type="Gradient" id="Gradient_gqhcn"]
+offsets = PackedFloat32Array(0.180723)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_evtso"]
+gradient = SubResource("Gradient_gqhcn")
+use_hdr = true
+fill = 2
+fill_from = Vector2(0.478632, 0.481481)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxb2r"]
+texture = SubResource("GradientTexture2D_evtso")
+modulate_color = Color(1, 1, 1, 0.74902)
+
+[sub_resource type="Theme" id="Theme_qostb"]
+RichTextLabel/styles/normal = SubResource("StyleBoxTexture_cxb2r")
+
+[sub_resource type="Gradient" id="Gradient_xjkso"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_853tw"]
+gradient = SubResource("Gradient_xjkso")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
+
 [node name="PlayerNode" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
 script = ExtResource("1_xiil8")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Player"]
-polygon = PackedVector2Array(2, 21, 5, 20, 6, 18, 9, 13, 7, 7, 2, 7, -4, 7, -6, 13, -3, 18, -2, 20, 0, 21)
+position = Vector2(0, 1)
+polygon = PackedVector2Array(2, 19, 6, 19, 7, 18, 9, 13, 7, 7, 2, 7, -4, 7, -6, 13, -4, 18, -3, 19, 0, 19)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2.3, 2.3)
+zoom = Vector2(2.7, 2.7)
 process_callback = 0
+limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 7.0
+position_smoothing_speed = 10.0
+rotation_smoothing_enabled = true
+script = ExtResource("2_jo4c6")
 
 [node name="Running" type="AudioStreamPlayer2D" parent="Player"]
 volume_db = -20.348
@@ -395,6 +573,12 @@ visible = false
 
 [node name="Marker2D" type="Marker2D" parent="Player"]
 
+[node name="Area2D" type="Area2D" parent="Player/Marker2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Marker2D/Area2D"]
+position = Vector2(50, 1)
+shape = SubResource("CircleShape2D_vth8d")
+
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
 visible = false
 position = Vector2(0, 6)
@@ -406,11 +590,12 @@ texture = SubResource("GradientTexture2D_1ynmq")
 occluder = SubResource("OccluderPolygon2D_ppn0k")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Player"]
+self_modulate = Color(2, 2, 2, 1)
 position = Vector2(0, -2)
 scale = Vector2(0.3, 0.3)
 emitting = false
 amount = 200
-lifetime = 3.0
+lifetime = 1.5
 one_shot = true
 speed_scale = 1.5
 randomness = 1.0
@@ -469,6 +654,166 @@ initial_velocity_min = 18.0
 initial_velocity_max = 40.0
 scale_amount_curve = SubResource("Curve_p1yhb")
 
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Player"]
+self_modulate = Color(3, 3, 1, 1)
+scale = Vector2(4, 4)
+emitting = false
+amount = 50
+lifetime = 1.1
+one_shot = true
+explosiveness = 0.13
+texture = ExtResource("16_14crf")
+emission_shape = 2
+emission_sphere_radius = 2.59
+direction = Vector2(1, 1)
+gravity = Vector2(0, 0)
+radial_accel_min = 54.54
+radial_accel_max = 54.54
+scale_amount_curve = SubResource("Curve_itinn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player/CPUParticles2D2"]
+stream = ExtResource("17_ifi48")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Player"]
+visible = false
+offset_left = -53.0
+offset_top = -15.0
+offset_right = 98.0
+offset_bottom = 2.0
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/normal_font = ExtResource("19_gteo4")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Double Jump Acquired"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Player"]
+libraries = {
+"": SubResource("AnimationLibrary_ropmf")
+}
+
+[node name="TutorialText" type="Node2D" parent="Player"]
+script = ExtResource("19_8pueg")
+
+[node name="Move" type="RichTextLabel" parent="Player/TutorialText"]
+visible = false
+offset_left = -67.0
+offset_top = -22.0
+offset_right = 126.0
+offset_bottom = -7.0
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_qostb")
+theme_override_fonts/normal_font = ExtResource("19_gteo4")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Move"
+fit_content = true
+scroll_active = false
+
+[node name="Jump" type="RichTextLabel" parent="Player/TutorialText"]
+visible = false
+offset_left = -67.0
+offset_top = -22.0
+offset_right = 126.0
+offset_bottom = -7.0
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_qostb")
+theme_override_fonts/normal_font = ExtResource("19_gteo4")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Move"
+fit_content = true
+scroll_active = false
+
+[node name="Interact" type="RichTextLabel" parent="Player/TutorialText"]
+visible = false
+offset_left = -67.0
+offset_top = -22.0
+offset_right = 126.0
+offset_bottom = -7.0
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_qostb")
+theme_override_fonts/normal_font = ExtResource("19_gteo4")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Move"
+fit_content = true
+scroll_active = false
+
+[node name="PopOutSay" type="Node2D" parent="Player"]
+
+[node name="Pop1" type="RichTextLabel" parent="Player/PopOutSay"]
+visible = false
+modulate = Color(1, 1, 1, 0.26126)
+offset_left = -53.0
+offset_top = -21.8412
+offset_right = 98.0
+offset_bottom = -4.84115
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/normal_font = ExtResource("19_gteo4")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Double Jump Acquired"
+
+[node name="PointLight2D2" type="PointLight2D" parent="Player"]
+visible = false
+position = Vector2(0, 8)
+energy = 0.5
+texture = SubResource("GradientTexture2D_853tw")
+
+[node name="CanvasLayerLvl1" type="CanvasLayer" parent="Player"]
+
+[node name="PuzzleChart" parent="Player/CanvasLayerLvl1" instance=ExtResource("20_72n6d")]
+visible = false
+
+[node name="CanvasLayerLvl3" type="CanvasLayer" parent="Player"]
+layer = 0
+visible = false
+
+[node name="PuzzleChart" parent="Player/CanvasLayerLvl3" instance=ExtResource("20_wp3rs")]
+visible = false
+
+[node name="PuzzleChart2" parent="Player/CanvasLayerLvl3" instance=ExtResource("21_8sj1j")]
+visible = false
+
+[node name="CanvasLayerLvl4" type="CanvasLayer" parent="Player"]
+layer = 0
+
+[node name="PuzzleChart" parent="Player/CanvasLayerLvl4" instance=ExtResource("23_i02r2")]
+visible = false
+
+[node name="TvCon" parent="Player/CanvasLayerLvl4" instance=ExtResource("24_eundu")]
+visible = false
+
+[node name="Button" parent="Player/CanvasLayerLvl4/TvCon" index="8"]
+offset_left = 1067.0
+offset_top = 10.0
+offset_right = 1107.0
+offset_bottom = 50.0
+
+[node name="XButton" parent="Player/CanvasLayerLvl4/TvCon/Button" index="0"]
+offset_left = 46.0
+offset_top = 0.0
+offset_right = 76.0
+offset_bottom = 30.0
+
+[node name="HelpButton" parent="Player/CanvasLayerLvl4/TvCon/Button" index="1"]
+offset_left = -5.0
+offset_top = 0.0
+offset_right = 25.0
+offset_bottom = 30.0
+
+[node name="PuzzleChart2" parent="Player/CanvasLayerLvl4" instance=ExtResource("25_4eps1")]
+visible = false
+
+[node name="PuzzleChart3" parent="Player/CanvasLayerLvl4" instance=ExtResource("26_yrbpi")]
+visible = false
+
+[node name="PuzzleChart4" parent="Player/CanvasLayerLvl4" instance=ExtResource("27_d6m3u")]
+visible = false
+
+[node name="PuzzleChart5" parent="Player/CanvasLayerLvl4" instance=ExtResource("28_iwqkf")]
+visible = false
+
 [node name="Teleport" type="Node2D" parent="."]
 
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_timer_timeout"]
@@ -476,3 +821,5 @@ scale_amount_curve = SubResource("Curve_p1yhb")
 [connection signal="body_entered" from="Player/Body" to="Player" method="_on_body_body_entered"]
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Player/SpawnTime" to="Player" method="_on_spawn_time_timeout"]
+
+[editable path="Player/CanvasLayerLvl4/TvCon"]

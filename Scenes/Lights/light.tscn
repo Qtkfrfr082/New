@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bm5olpp0pq14r"]
+[gd_scene load_steps=6 format=3 uid="uid://bm5olpp0pq14r"]
 
-[sub_resource type="Gradient" id="Gradient_erlcc"]
+[sub_resource type="Gradient" id="Gradient_1whs2"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4o5ey"]
-gradient = SubResource("Gradient_erlcc")
-height = 150
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ekyo0"]
+gradient = SubResource("Gradient_1whs2")
+height = 153
 use_hdr = true
 fill = 1
-fill_from = Vector2(0.496599, 0.0102041)
-fill_to = Vector2(0.521546, 0.492877)
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 0.4)
+metadata/_snap_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_f7btu"]
 colors = PackedColorArray(0.498039, 0.498039, 0.498039, 0.678431, 1, 1, 1, 0)
@@ -21,14 +22,20 @@ fill = 1
 fill_from = Vector2(0.495726, 0.521368)
 fill_to = Vector2(0.769231, 0.150997)
 
+[sub_resource type="Curve" id="Curve_avle5"]
+_data = [Vector2(0, 0.773585), 0.0, 0.0, 0, 0, Vector2(0.996644, 0.381132), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Light" type="Node2D"]
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+self_modulate = Color(4, 4, 4, 1)
 position = Vector2(209, 34)
+color = Color(2, 2, 2, 1)
 energy = 1.45
 blend_mode = 2
 shadow_enabled = true
-texture = SubResource("GradientTexture2D_4o5ey")
+texture = SubResource("GradientTexture2D_ekyo0")
 offset = Vector2(2, 73)
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
@@ -43,3 +50,4 @@ initial_velocity_min = 5.0
 initial_velocity_max = 5.0
 scale_amount_min = 0.01
 scale_amount_max = 0.02
+scale_amount_curve = SubResource("Curve_avle5")

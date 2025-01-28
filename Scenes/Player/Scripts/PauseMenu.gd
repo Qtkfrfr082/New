@@ -12,12 +12,14 @@ func _on_continue_pressed():
 		self.hide()
 		$AudioStreamPlayer.play()
 		Engine.time_scale = 1
+		$TextureRect.hide()
 	
 	pass # Replace with function body.
 
 
 func _on_restart_pressed():
-	#This is restart (PS; This is not working well when gets back to home and play again, it doesnt load the game after)
+	
+	await get_tree().create_timer(0.1).timeout
 	get_tree().reload_current_scene()
 	pass # Replace with function body.
 

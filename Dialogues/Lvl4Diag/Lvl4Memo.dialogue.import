@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://c6eilpt6qjuff"
+path="res://.godot/imported/Lvl4Memo.dialogue-a0bc0e3a6d52d5e1d1ec12be1bdd1069.tres"
+
+[deps]
+
+source_file="res://Dialogues/Lvl4Diag/Lvl4Memo.dialogue"
+dest_files=["res://.godot/imported/Lvl4Memo.dialogue-a0bc0e3a6d52d5e1d1ec12be1bdd1069.tres"]
+
+[params]
+
+defaults=true
